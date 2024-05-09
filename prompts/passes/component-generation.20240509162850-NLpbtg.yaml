@@ -11,12 +11,7 @@ parameters:
         parameters:
           framework: "{{framework}}"
           question: "{{question}}"
-  - id: JMjlqshkn7Sj5GeZjAlAd
-    key: framework
-    from: agentParameter
-  - id: ct0nF8tGlQBscnl0eN2NQ
-    key: question
-    from: agentParameter
+          components: "{{components}}"
   - id: Vs5TNf47Eyx45JqkfC3ZX
     key: components
     type: source
@@ -27,6 +22,12 @@ parameters:
         from: knowledge
         parameters:
           message: "{{framework}}"
+  - id: oWhG7SP6wlGnKIVzkO4Li
+    key: framework
+    from: agentParameter
+  - id: dtwSV45oO6fwV8rid9uoS
+    key: question
+    from: agentParameter
 prompts:
   - type: message
     data:
@@ -35,8 +36,10 @@ prompts:
       content: >-
         You are an expert at writing {{framework}} components.
 
+
         Your task is to write a new {{framework}}  component for a web app,
         according to the provided task details.
+
 
         The {{framework}}  component you write can make use of Tailwind ...
   - type: message
@@ -59,6 +62,17 @@ prompts:
 
 
         Suggested components: {{designed.components}}
+
+
+        You can import component this way:
+
+        ```tsx
+
+        import ${componentName} from
+        '@blocklet/pages-kit/builtin/${componentName}'
+
+        ```
+    visibility: hidden
   - type: message
     data:
       id: 20240509164116-OxvZUd
@@ -67,6 +81,18 @@ prompts:
         Icons can optionally be used when making the {{framework}} component
 
         Suggested icons: {{designed.icons}}
+
+        You can import component this way:
+        ```tsx
+        import icons from '@blocklet/pages-kit/builtin/icons'
+        ```
+    visibility: hidden
+  - type: message
+    data:
+      id: 20240509234536-SKMufj
+      role: user
+      content: "Very important :  The full code avoid any import dependencies, include
+        react library"
   - type: message
     data:
       id: 20240509164656-jcRG7Q
@@ -99,6 +125,7 @@ prompts:
         backgrounds in dark: classes should be black), and optionally, library
         components and icons, based on the provided design task.
 
+
         The full code of the new {{framework}} component that you write will be
         written directly to a .tsx file inside the {{framework}} project. Make
         sure all necessary imports are done, and that your full code is enclosed
@@ -107,6 +134,7 @@ prompts:
         Answer with generated code only. DO NOT ADD ANY EXTRA TEXT DESCRIPTION
         OR COMMENTS BESIDES THE CODE. Your answer contains code only ! component
         code only !
+
 
         Important :
 
@@ -135,11 +163,30 @@ prompts:
         Write the {{framework}} component code as the creative genius and
         {{framework}} component genius you are - with good ui formatting.
 outputVariables:
-  - id: 0h1-Ii1dG8OowImWkWGPH
+  - id: ip6ao3TM7d_piNDsI2M7s
+    name: code
+    type: string
+    required: true
+    description: the full code
+  - id: FH_jXQV_SSYspHm86V6ly
     name: $text
+    type: string
+  - id: Q2WTzv6RMk9ICJsX6vGPL
+    name: $appearance.input
+    type: string
+    initialValue:
+      componentId: 1wwtemqcdio6nqf0
+      componentName: Auto Form
+  - id: mpHHz4WeIEv1a14H6oP4R
+    name: $appearance.output
+    type: string
+    initialValue:
+      componentId: q0ckknkxph4hfwas
+      componentName: Simple Output
 id: 20240509162850-NLpbtg
 createdAt: 2024-05-09T08:28:50.229Z
 updatedAt: 2024-05-09T08:28:50.229Z
 createdBy: z1TCComgCJNHbHWetTWGdhPB6NYZ2ReDjLu
 updatedBy: z1TCComgCJNHbHWetTWGdhPB6NYZ2ReDjLu
 name: component-generation
+model: gpt-4

@@ -47,9 +47,16 @@ parameters:
     from: editor
     defaultValue: react
     label: Framework
+    type: select
+    options:
+      - id: E03qLnMEICQ4fEEV
+        label: React
+        value: react
   - id: Yr4O4d88k0PTZ0l4bkl5r
     key: question
     from: editor
+    placeholder: Say anything
+    required: true
   - id: ZD2SzDknyG7YZ1gbfY3lv
     key: components
     type: source

@@ -1,8 +1,5 @@
 type: agent
-parameters:
-  - id: TzHk_9ZahQJ2vGi4sq4fG
-    type: string
-    key: question
+parameters: []
 prompts: {}
 outputVariables:
   - id: Br9Jp3A_V03m7LLO-v0fk
@@ -10,11 +7,22 @@ outputVariables:
     type: string
     initialValue:
       agents:
-        - id: 20240509110939-PKK9oJ
-          name: design_new_component_api
+        - id: 20240509162850-NLpbtg
+          name: component-generation
   - id: 3PupJ717K70m8mGPf84U2
     name: $text
     type: string
+  - id: tf6rMh_Qg49KIU4uDPmGJ
+    name: $appearance.page
+    type: string
+    initialValue:
+      componentId: ctnxha29uu8cx4xv
+      componentName: Simple Page
+      componentProps:
+        evl2bioet801efpe:
+          value: Here
+        okdfqqnpsmwpf454:
+          value: "#333"
 id: 20240509110947-QZqdHD
 createdAt: 2024-05-09T03:09:47.771Z
 updatedAt: 2024-05-09T03:09:47.771Z
