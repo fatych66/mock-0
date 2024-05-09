@@ -1,0 +1,145 @@
+type: prompt
+parameters:
+  - id: o95D2doxBJhdRgZCS58x9
+    key: designed
+    type: source
+    source:
+      variableFrom: tool
+      agent:
+        id: 20240509110939-PKK9oJ
+        from: assistant
+        parameters:
+          framework: "{{framework}}"
+          question: "{{question}}"
+  - id: JMjlqshkn7Sj5GeZjAlAd
+    key: framework
+    from: agentParameter
+  - id: ct0nF8tGlQBscnl0eN2NQ
+    key: question
+    from: agentParameter
+  - id: Vs5TNf47Eyx45JqkfC3ZX
+    key: components
+    type: source
+    source:
+      variableFrom: knowledge
+      knowledge:
+        id: "443696818363039744"
+        from: knowledge
+        parameters:
+          message: "{{framework}}"
+prompts:
+  - type: message
+    data:
+      id: mOKmJv7arsJbaRmr-6zw7
+      role: system
+      content: >-
+        You are an expert at writing {{framework}} components.
+
+        Your task is to write a new {{framework}}  component for a web app,
+        according to the provided task details.
+
+        The {{framework}}  component you write can make use of Tailwind ...
+  - type: message
+    data:
+      id: 20240509165713-LozGif
+      role: user
+      content: >-
+        Multiple library components can be used while creating a new component
+        in order to help you do a better design job, faster.
+
+
+        {{components}}
+  - type: message
+    data:
+      id: 20240509163543-wc4Egy
+      role: user
+      content: >-
+        Components can optionally be used when making the {{framework}}
+        component
+
+
+        Suggested components: {{designed.components}}
+  - type: message
+    data:
+      id: 20240509164116-OxvZUd
+      role: user
+      content: |
+        Icons can optionally be used when making the {{framework}} component
+
+        Suggested icons: {{designed.icons}}
+  - type: message
+    data:
+      id: 20240509164656-jcRG7Q
+      role: user
+      content: >
+        - COMPONENT NAME : {{designed.name}}
+
+
+        - COMPONENT DESCRIPTION :
+
+        ```
+
+        {{question}}
+
+        ```
+
+
+        - additional component suggestions :
+
+        ```
+
+        {{designed.description}}
+
+        ```
+
+
+
+        Write the full code for the new {{framework}} web component, which uses
+        Tailwind classes if needed (add tailwind dark: classes too if you can;
+        backgrounds in dark: classes should be black), and optionally, library
+        components and icons, based on the provided design task.
+
+        The full code of the new {{framework}} component that you write will be
+        written directly to a .tsx file inside the {{framework}} project. Make
+        sure all necessary imports are done, and that your full code is enclosed
+        with ```tsx blocks.
+
+        Answer with generated code only. DO NOT ADD ANY EXTRA TEXT DESCRIPTION
+        OR COMMENTS BESIDES THE CODE. Your answer contains code only ! component
+        code only !
+
+        Important :
+
+        - Make sure you import provided components libraries and icons that are
+        provided to you if you use them !
+
+        - Tailwind classes should be written directly in the elements class tags
+        (or className in case of {{framework}}). DO NOT WRITE ANY CSS OUTSIDE OF
+        CLASSES. DO NOT USE ANY <style> IN THE CODE ! CLASSES STYLING ONLY !
+
+        - Do not use libraries or imports except what is provided in this task;
+        otherwise it would crash the component because not installed. Do not
+        import extra libraries besides what is provided above !
+
+        - DO NOT HAVE ANY DYNAMIC DATA OR DATA PROPS ! Components are meant to
+        be working as is without supplying any variable to them when importing
+        them ! Only write a component that render directly with placeholders as
+        data, component not supplied with any dynamic data.
+
+        - DO NOT HAVE ANY DYNAMIC DATA OR DATA PROPS ! - Only write the code for
+        the component; Do not write extra code to import it! The code will
+        directly be stored in an individual {{framework}} .tsx file !
+
+        - Very important : Your component should be exported as default !
+
+        Write the {{framework}} component code as the creative genius and
+        {{framework}} component genius you are - with good ui formatting.
+outputVariables:
+  - id: 0h1-Ii1dG8OowImWkWGPH
+    name: $text
+id: 20240509162850-NLpbtg
+createdAt: 2024-05-09T08:28:50.229Z
+updatedAt: 2024-05-09T08:28:50.229Z
+createdBy: z1TCComgCJNHbHWetTWGdhPB6NYZ2ReDjLu
+updatedBy: z1TCComgCJNHbHWetTWGdhPB6NYZ2ReDjLu
+name: component-generation

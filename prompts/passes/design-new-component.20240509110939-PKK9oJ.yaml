@@ -1,0 +1,125 @@
+id: 20240509110939-PKK9oJ
+type: prompt
+name: design-new-component
+prompts:
+  - type: message
+    data:
+      id: 20231208131000-LgzRpn
+      content: >-
+        Your task is to design a {{framework}} component for a web app,
+        according to the user's request.
+
+        If you judge it is relevant to do so, you can specify pre-made library
+        components to use in the component update.
+
+        You can also specify the use of icons if you see that the user's update
+        request requires it.
+      role: system
+  - type: message
+    data:
+      id: 20240509111635-mSMXKW
+      role: user
+      content: >-
+        Multiple library components can be used while creating a new component
+        in order to help you do a better design job, faster.
+
+
+        {{components}}
+  - type: message
+    data:
+      id: 20240509112755-aNk72Z
+      role: user
+      content: >
+        Design the new {{framework}}  web component task for the user as the
+        creative genius you are.
+
+
+        USER QUERY: 
+
+        ```
+
+        {{question}}
+
+        ```
+parameters:
+  - id: WgbfJldbD6q29Uqghf8Xr
+    key: framework
+    from: editor
+    defaultValue: react
+    label: Framework
+  - id: Yr4O4d88k0PTZ0l4bkl5r
+    key: question
+    from: editor
+  - id: ZD2SzDknyG7YZ1gbfY3lv
+    key: components
+    type: source
+    source:
+      variableFrom: knowledge
+      knowledge:
+        id: "443696818363039744"
+        from: knowledge
+        parameters:
+          message: "{{framework}}"
+outputVariables:
+  - id: 8UloarJU8HEOIrMFc1Aih
+    name: name
+    type: string
+    required: true
+  - id: BLKzpe8BoTPYVn1Zy0Wc5
+    name: description
+    type: string
+    description: Write a description for the component design task based on the user
+      query. Stick strictly to what the user wants in their request - do not go
+      off track
+    required: true
+  - id: sshhAUcg3VcYhh6AyMG2t
+    name: icons
+    type: array
+    properties: {}
+    required: true
+    element:
+      id: 7-qNBKsldaUgHBQMEFVGC
+      name: element
+      type: string
+  - id: QSlnf1Fo58rgsT1MQO2U5
+    name: components
+    type: array
+    properties:
+      ZymVgVVFrMgzGavy0asQ7:
+        index: 0
+        data:
+          id: ZymVgVVFrMgzGavy0asQ7
+          type: string
+    element:
+      id: 3S_7lATi6NmNL71wfEKRG
+      name: element
+      type: object
+      properties:
+        - id: ItB_cUlvQSnIDjzrhCapb
+          type: string
+          name: name
+          element:
+            id: 0AcD-2qxsOrhJU2c0zHrJ
+            name: element
+            type: string
+          description: 'Enum: [     "Accordion",     "Alert
+            Dialog",     "Alert",     "Aspect
+            Ratio",     "Avatar",     "Badge",     "Button",     "Calendar",     "Card",     "Checkbox",     "Collapsible",     "Combobox",     "Command",     "Context
+            Menu",     "Date Picker",     "Dialog",     "Dropdown
+            Menu",     "Hover
+            Card",     "Input",     "Label",     "Menubar",     "Navigation
+            Menu",     "Popover",     "Progress",     "Radio Group",     "Scroll
+            Area",     "Select",     "Separator",     "Sheet",     "Skeleton",     "Slider",     "Switch",     "Table",     "Tabs",     "Textarea",     "Toast",     "Toggle",     "Tooltip"
+            ]'
+        - id: 4cctOPx8yyEhkbObniMal
+          type: string
+          name: usage_reason
+          description: ""
+    required: true
+createdBy: zNKn8FYNB9Dw2gX6qHQZJjnWzS4tU3QHTWKX
+updatedBy: zNKn8FYNB9Dw2gX6qHQZJjnWzS4tU3QHTWKX
+createdAt: 2023-09-30T12:23:04.603Z
+updatedAt: 2023-09-30T12:23:04.603Z
+model: gpt-4
+description: generate the required design details to create a new component
+temperature: 1

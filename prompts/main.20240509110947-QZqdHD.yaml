@@ -1,0 +1,23 @@
+type: agent
+parameters:
+  - id: TzHk_9ZahQJ2vGi4sq4fG
+    type: string
+    key: question
+prompts: {}
+outputVariables:
+  - id: Br9Jp3A_V03m7LLO-v0fk
+    name: $children
+    type: string
+    initialValue:
+      agents:
+        - id: 20240509110939-PKK9oJ
+          name: design_new_component_api
+  - id: 3PupJ717K70m8mGPf84U2
+    name: $text
+    type: string
+id: 20240509110947-QZqdHD
+createdAt: 2024-05-09T03:09:47.771Z
+updatedAt: 2024-05-09T03:09:47.771Z
+createdBy: z1TCComgCJNHbHWetTWGdhPB6NYZ2ReDjLu
+updatedBy: z1TCComgCJNHbHWetTWGdhPB6NYZ2ReDjLu
+name: main
