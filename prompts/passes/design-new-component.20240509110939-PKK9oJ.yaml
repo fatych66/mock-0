@@ -15,8 +15,8 @@ prompts:
         You can also specify the use of icons(from iconify) if you see that the
         user's update request requires it.
 
-        You are very familiar with mui and unocss and iconify and are skilled in
-        applying their components and understanding their parameters.
+        You are very familiar with mui and tailwind and iconify and are skilled
+        in applying their components and understanding their parameters.
       role: system
   - type: message
     data:
