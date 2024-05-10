@@ -65,7 +65,7 @@ prompts:
         Suggested components: {{designed.components}}
 
 
-        Very important: you must use the builtin libraries, any other unbuiltin
+        Very important: you must use the builtin libraries, any other un-builtin
         libraries will cause error
 
 
