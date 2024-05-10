@@ -49,7 +49,7 @@ prompts:
         according to the provided task details.
 
 
-        The {{framework}}  component you write can make use of  mui. unocss...
+        The {{framework}}  component you write can make use of  mui, unocss...
 
 
         // Last generated code: {{code}}
