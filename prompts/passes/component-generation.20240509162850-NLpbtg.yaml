@@ -86,8 +86,38 @@ prompts:
 
 
 
-        Very important : Any components you need to import should be imported
+        // Very important : Any components you need to import should be imported
         from `@blocklet/pages-kit/builtin/${libraryName}`
+
+
+        EXAMPLES:
+
+        You must import mui component this way:
+
+        ```tsx
+
+        import {muiComponentName} from
+        '@blocklet/pages-kit/builtin/mui/material'
+
+        ```
+
+
+        You must import mui lab component this way:
+
+        ```tsx
+
+        import {muiLabComponentName} from '@blocklet/pages-kit/builtin/mui/lab'
+
+        ```
+
+
+        You must import react lib this way:
+
+        ```tsx
+
+        import React from "@blocklet/pages-kit/builtin/react";
+
+        ```
   - type: message
     data:
       id: 20240509164116-OxvZUd
