@@ -28,6 +28,14 @@ parameters:
   - id: dtwSV45oO6fwV8rid9uoS
     key: question
     from: agentParameter
+  - id: Ge8IIfOxTFDTvRYGQGSl7
+    key: code
+    type: source
+    source:
+      variableFrom: datastore
+      variable:
+        key: codes
+        scope: session
 prompts:
   - type: message
     data:
@@ -41,7 +49,10 @@ prompts:
         according to the provided task details.
 
 
-        The {{framework}}  component you write can make use of Tailwind ...
+        The {{framework}}  component you write can make use of  mui. unocss...
+
+
+        // Last generated code: {{code}}
   - type: message
     data:
       id: 20240509165713-LozGif
@@ -51,7 +62,17 @@ prompts:
         in order to help you do a better design job, faster.
 
 
+        Very important: you must use the builtin libraries, any other unbuiltin
+        libraries will cause error
+
+
+        builtin libraries: 
+
+        ```
+
         {{components}}
+
+        ```
   - type: message
     data:
       id: 20240509163543-wc4Egy
@@ -64,15 +85,9 @@ prompts:
         Suggested components: {{designed.components}}
 
 
-        You can import component this way:
 
-        ```tsx
-
-        import ${componentName} from
-        '@blocklet/pages-kit/builtin/${componentName}'
-
-        ```
-    visibility: hidden
+        Very important : Any components you need to import should be imported
+        from `@blocklet/pages-kit/builtin/${libraryName}`
   - type: message
     data:
       id: 20240509164116-OxvZUd
@@ -82,17 +97,12 @@ prompts:
 
         Suggested icons: {{designed.icons}}
 
-        You can import component this way:
+        You must import icon this way:
         ```tsx
-        import icons from '@blocklet/pages-kit/builtin/icons'
+        import { Icon } from '@blocklet/pages-kit/builtin/iconify/react'
+
+        <Icon icon="iconName"/>
         ```
-    visibility: hidden
-  - type: message
-    data:
-      id: 20240509234536-SKMufj
-      role: user
-      content: "Very important :  The full code avoid any import dependencies, include
-        react library"
   - type: message
     data:
       id: 20240509164656-jcRG7Q
@@ -121,7 +131,7 @@ prompts:
 
 
         Write the full code for the new {{framework}} web component, which uses
-        Tailwind classes if needed (add tailwind dark: classes too if you can;
+        unocss classes if needed (add unocss dark: classes too if you can;
         backgrounds in dark: classes should be black), and optionally, library
         components and icons, based on the provided design task.
 
@@ -141,9 +151,10 @@ prompts:
         - Make sure you import provided components libraries and icons that are
         provided to you if you use them !
 
-        - Tailwind classes should be written directly in the elements class tags
-        (or className in case of {{framework}}). DO NOT WRITE ANY CSS OUTSIDE OF
-        CLASSES. DO NOT USE ANY <style> IN THE CODE ! CLASSES STYLING ONLY !
+        - The unocss classes should be written directly in the elements class
+        tags (or className in case of {{framework}}). DO NOT WRITE ANY CSS
+        OUTSIDE OF CLASSES. DO NOT IMPORT ANY CSS FILE.  DO NOT USE ANY <style>
+        IN THE CODE ! CLASSES STYLING ONLY !
 
         - Do not use libraries or imports except what is provided in this task;
         otherwise it would crash the component because not installed. Do not
@@ -160,14 +171,10 @@ prompts:
 
         - Very important : Your component should be exported as default !
 
+
         Write the {{framework}} component code as the creative genius and
         {{framework}} component genius you are - with good ui formatting.
 outputVariables:
-  - id: ip6ao3TM7d_piNDsI2M7s
-    name: code
-    type: string
-    required: true
-    description: the full code
   - id: FH_jXQV_SSYspHm86V6ly
     name: $text
     type: string
@@ -177,12 +184,26 @@ outputVariables:
     initialValue:
       componentId: 1wwtemqcdio6nqf0
       componentName: Auto Form
+      componentProps:
+        wd7bj76kom8y46cj:
+          value: true
+        otf831cy4ebbdwil:
+          value: true
+        4y8wjmju1pllq6f1:
+          value: true
+        a1pldnt6iwmfghqc:
+          value: Generate Code
   - id: mpHHz4WeIEv1a14H6oP4R
     name: $appearance.output
     type: string
     initialValue:
-      componentId: q0ckknkxph4hfwas
-      componentName: Simple Output
+      componentId: cjjrsoiyh0ka2dq6
+      componentName: Chat Output
+  - id: zRvuVDKK-NCOSxR8pa4bu
+    name: code
+    type: string
+    description: the full code wrapper by ```tsx ```
+    required: true
 id: 20240509162850-NLpbtg
 createdAt: 2024-05-09T08:28:50.229Z
 updatedAt: 2024-05-09T08:28:50.229Z
@@ -190,3 +211,4 @@ createdBy: z1TCComgCJNHbHWetTWGdhPB6NYZ2ReDjLu
 updatedBy: z1TCComgCJNHbHWetTWGdhPB6NYZ2ReDjLu
 name: component-generation
 model: gpt-4
+temperature: 1

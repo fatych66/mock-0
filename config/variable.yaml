@@ -1,1 +1,8 @@
-variables: []
+variables:
+  - key: codes
+    scope: session
+    type:
+      type: string
+      id: ziQ4vTa7_kIdoWdjdY-IIwiv8apQMUuh
+    reset: true
+    defaultValue: ""

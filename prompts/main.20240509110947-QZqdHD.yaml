@@ -16,12 +16,14 @@ outputVariables:
     name: $appearance.page
     type: string
     initialValue:
-      componentId: ctnxha29uu8cx4xv
-      componentName: Simple Page
+      componentId: wvqnnr1wl624vho5
+      componentName: Simple Chat
       componentProps:
         evl2bioet801efpe:
           value: Here
         okdfqqnpsmwpf454:
+          value: "#333"
+        221i6we6srwk66fm:
           value: "#333"
 id: 20240509110947-QZqdHD
 createdAt: 2024-05-09T03:09:47.771Z

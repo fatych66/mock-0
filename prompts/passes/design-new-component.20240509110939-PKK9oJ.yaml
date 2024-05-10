@@ -9,11 +9,14 @@ prompts:
         Your task is to design a {{framework}} component for a web app,
         according to the user's request.
 
-        If you judge it is relevant to do so, you can specify pre-made library
+        If you judge it is relevant to do so, you can specify builtin library
         components to use in the component update.
 
-        You can also specify the use of icons if you see that the user's update
-        request requires it.
+        You can also specify the use of icons(from iconify) if you see that the
+        user's update request requires it.
+
+        You are very familiar with mui and unocss and iconify and are skilled in
+        applying their components and understanding their parameters.
       role: system
   - type: message
     data:
@@ -24,7 +27,17 @@ prompts:
         in order to help you do a better design job, faster.
 
 
+        Very important: you must use the builtin libraries, any other unbuiltin
+        libraries will cause error
+
+
+        builtin libraries: 
+
+        ```
+
         {{components}}
+
+        ```
   - type: message
     data:
       id: 20240509112755-aNk72Z
