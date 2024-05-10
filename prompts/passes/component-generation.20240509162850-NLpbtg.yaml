@@ -52,7 +52,7 @@ prompts:
         The {{framework}}  component you write can make use of  mui. unocss...
 
 
-        Last generated code: {{code}}
+        // Last generated code: {{code}}
   - type: message
     data:
       id: 20240509163543-wc4Egy
