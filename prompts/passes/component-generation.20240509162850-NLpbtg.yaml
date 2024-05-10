@@ -55,11 +55,14 @@ prompts:
         // Last generated code: {{code}}
   - type: message
     data:
-      id: 20240509165713-LozGif
+      id: 20240509163543-wc4Egy
       role: user
       content: >-
-        Multiple library components can be used while creating a new component
-        in order to help you do a better design job, faster.
+        Components can optionally be used when making the {{framework}}
+        component
+
+
+        Suggested components: {{designed.components}}
 
 
         Very important: you must use the builtin libraries, any other unbuiltin
@@ -73,16 +76,6 @@ prompts:
         {{components}}
 
         ```
-  - type: message
-    data:
-      id: 20240509163543-wc4Egy
-      role: user
-      content: >-
-        Components can optionally be used when making the {{framework}}
-        component
-
-
-        Suggested components: {{designed.components}}
 
 
 
