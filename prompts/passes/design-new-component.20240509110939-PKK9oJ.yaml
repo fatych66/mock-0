@@ -37,7 +37,7 @@ prompts:
 
         ```
 
-        {{components}}
+        {{components1}}
 
         ```
   - type: message
@@ -82,6 +82,15 @@ parameters:
         from: knowledge
         parameters:
           message: inject-global-components-dump-json
+  - id: ia6q5iSuTyYGOmKZtvhWh
+    key: components1
+    type: source
+    source:
+      variableFrom: tool
+      agent:
+        id: 20240513213411-LpgUcm
+        from: assistant
+        parameters: {}
 outputVariables:
   - id: 8UloarJU8HEOIrMFc1Aih
     name: name
