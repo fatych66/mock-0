@@ -81,7 +81,7 @@ parameters:
         id: "443696818363039744"
         from: knowledge
         parameters:
-          message: "{{framework}}"
+          message: inject-global-components-dump-json
 outputVariables:
   - id: 8UloarJU8HEOIrMFc1Aih
     name: name

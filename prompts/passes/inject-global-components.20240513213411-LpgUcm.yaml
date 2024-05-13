@@ -1,0 +1,1049 @@
+type: function
+parameters: []
+prompts:
+  Uj0m-ctvoWgzA_IJFDPGu:
+    index: 0
+    data:
+      type: message
+      data:
+        id: Uj0m-ctvoWgzA_IJFDPGu
+        role: user
+        content: "{{ question }}"
+outputVariables: []
+id: 20240513213411-LpgUcm
+createdAt: 2024-05-13T13:34:11.700Z
+updatedAt: 2024-05-13T13:34:11.700Z
+createdBy: z1TCComgCJNHbHWetTWGdhPB6NYZ2ReDjLu
+updatedBy: z1TCComgCJNHbHWetTWGdhPB6NYZ2ReDjLu
+name: inject-global-components
+code: >
+  type DumpJSONProps = {
+    name: string;
+    description: string;
+    docs: {
+      import: string;
+      export: string;
+      examples?: {
+        source: string;
+        code: string;
+      }[];
+    };
+  }[];
+
+
+  const dumpJSON: DumpJSONProps = [
+    // '@blocklet/pages-kit/builtin/dayjs'
+    {
+      name: '@blocklet/pages-kit/builtin/dayjs',
+      description: 'A dayjs component for pages-kit builtin package',
+      docs: {
+        import: "import dayjs from '@blocklet/pages-kit/builtin/dayjs'",
+        export: "import dayjs from 'dayjs'; export default dayjs;",
+        examples: [
+          {
+            source: 'format-time-demo.tsx',
+            code: `
+  import dayjs from '@blocklet/pages-kit/builtin/dayjs'
+
+
+  export default function DayjsDemo() {
+    return <div>{dayjs().format('YYYY-MM-DD HH:mm:ss')}</div>
+  }`,
+          },
+          {
+            source: 'get-relative-time-demo.tsx',
+            code: `
+  import dayjs from '@blocklet/pages-kit/builtin/dayjs'
+
+
+  export default function DayjsDemo() {
+    return <div>{dayjs().fromNow()}</div>
+  }
+
+  `,
+          },
+        ],
+      },
+    },
+    // '@blocklet/pages-kit/builtin/utils'
+    {
+      name: '@blocklet/pages-kit/builtin/utils',
+      description: 'A utils component for pages-kit builtin package',
+      docs: {
+        import: "import * as utils from '@blocklet/pages-kit/builtin/utils'",
+        export: `
+  export { joinURL, withQuery, getQuery } from 'ufo';
+
+
+  export function getComponentMountPoint(name: string) {
+    if (typeof window === 'undefined') {
+      // eslint-disable-next-line global-require
+      return require('@blocklet/sdk/lib/component').getComponentMountPoint(name);
+    }
+    return globalThis.blocklet?.componentMountPoints.find((i) => i.name === name || i.did === name)?.mountPoint;
+  }
+
+  `,
+        examples: [
+          {
+            source: 'get-component-mount-point-demo.tsx',
+            code: `
+  import { getComponentMountPoint } from '@blocklet/pages-kit/builtin/utils';
+
+
+  const componentMountPoint = getComponentMountPoint('pages-kit');
+
+  `,
+          },
+          {
+            source: 'join-url-demo.tsx',
+            code: `
+  import { joinURL } from '@blocklet/pages-kit/builtin/utils';
+
+
+  const newUrl = joinURL('https://example.com', '/path');
+
+  `,
+          },
+        ],
+      },
+    },
+    // '@blocklet/pages-kit/builtin/react'
+    {
+      name: '@blocklet/pages-kit/builtin/react',
+      description: 'A React component for pages-kit builtin package, export React and all React hooks',
+      docs: {
+        import: "import React from '@blocklet/pages-kit/builtin/react'",
+        export: `
+  import * as React from 'react';
+
+
+  export default React;
+
+
+  export {
+    Children,
+    Component,
+    Fragment,
+    Profiler,
+    PureComponent,
+    StrictMode,
+    Suspense,
+    cloneElement,
+    createContext,
+    createElement,
+    createFactory,
+    createRef,
+    forwardRef,
+    isValidElement,
+    lazy,
+    memo,
+    startTransition,
+    useCallback,
+    useContext,
+    useDebugValue,
+    useDeferredValue,
+    useEffect,
+    useId,
+    useImperativeHandle,
+    useInsertionEffect,
+    useLayoutEffect,
+    useMemo,
+    useReducer,
+    useRef,
+    useState,
+    useSyncExternalStore,
+    useTransition,
+    version,
+  } from 'react';`,
+        examples: [
+          {
+            source: 'count-down.tsx',
+            code: `
+  import React, { useEffect, useState } from
+  '@blocklet/pages-kit/builtin/react';
+
+
+  export default function CountDown() {
+    const [count, setCount] = useState(10);
+    useEffect(() => {
+      const timer = setInterval(() => {
+        setCount(count - 1);
+      }
+      , 1000);
+      return () => clearInterval(timer);
+    }
+    , [count]);
+    return <div>{count}</div>;
+  }
+          `,
+          },
+          {
+            source: 'hello-world.tsx',
+            code: `
+  import React from '@blocklet/pages-kit/builtin/react';
+
+
+  export default function HelloWorld() {
+    return <div>Hello World</div>;
+  }
+          `,
+          },
+        ],
+      },
+    },
+    // '@blocklet/pages-kit/builtin/emotion/css'
+    {
+      name: '@blocklet/pages-kit/builtin/emotion/css',
+      description: 'A emotion/css component for pages-kit builtin package, provide css to style component',
+      docs: {
+        import: "import { css } from '@blocklet/pages-kit/builtin/emotion/css'",
+        export: `
+  export { css } from '@emotion/css';
+
+  `,
+        examples: [
+          {
+            source: 'css-demo.tsx',
+            code: `
+  import { css } from '@blocklet/pages-kit/builtin/emotion/css';
+
+
+  const style = css\`
+    color: hotpink;
+  \`;
+
+
+  export default function CssDemo() {
+    return <div className={style}>Hello World</div>;
+  `,
+          },
+        ],
+      },
+    },
+    // '@blocklet/pages-kit/builtin/mui/material'
+    {
+      name: '@blocklet/pages-kit/builtin/mui/material',
+      description: 'A material component for pages-kit builtin package, export a part of @mui/material',
+      docs: {
+        import: "import { Button } from '@blocklet/pages-kit/builtin/mui/material'",
+        export: `
+  export {
+    Alert,
+    AlertTitle,
+    Autocomplete,
+    Avatar,
+    Box,
+    Button,
+    ButtonGroup,
+    Card,
+    CardActionArea,
+    CardActions,
+    CardContent,
+    CardHeader,
+    CardMedia,
+    CircularProgress,
+    ClickAwayListener,
+    Collapse,
+    Container,
+    Dialog,
+    DialogActions,
+    DialogContent,
+    DialogTitle,
+    Divider,
+    Fade,
+    GlobalStyles,
+    Grid,
+    Grow,
+    LinearProgress,
+    Link,
+    List,
+    ListItem,
+    ListItemAvatar,
+    ListItemButton,
+    ListItemIcon,
+    ListItemSecondaryAction,
+    ListSubheader,
+    Menu,
+    MenuItem,
+    MenuList,
+    Paper,
+    Popper,
+    Slide,
+    Stack,
+    Switch,
+    TextField,
+    ThemeProvider,
+    Tooltip,
+    Typography,
+    Zoom,
+    alpha,
+    createTheme,
+    styled,
+    useMediaQuery,
+    useTheme,
+  } from '@mui/material';
+
+
+  `,
+        examples: [
+          {
+            source: 'button-demo.tsx',
+            code: `
+  import { Button } from '@blocklet/pages-kit/builtin/mui/material,';
+
+
+  export default function ButtonDemo() {
+    return <Button variant="contained">Hello World</Button>;
+  }
+          `,
+          },
+          {
+            source: 'alert-demo.tsx',
+            code: `
+  import { Alert } from '@blocklet/pages-kit/builtin/mui/material';
+
+
+  export default function AlertDemo() {
+    return <Alert severity="error">This is an error alert — check it out!</Alert>;
+  }
+          `,
+          },
+        ],
+      },
+    },
+    // '@blocklet/pages-kit/builtin/mui/lab'
+    {
+      name: '@blocklet/pages-kit/builtin/mui/lab',
+      description: 'A material lab component for pages-kit builtin package, export a part of @mui/lab',
+      docs: {
+        import: "import { Button } from '@blocklet/pages-kit/builtin/mui/core'",
+        export: `
+  export { LoadingButton } from '@mui/lab';
+
+  `,
+        examples: [
+          {
+            source: 'loading-button-demo.tsx',
+            code: `
+   import { LoadingButton } from '@blocklet/pages-kit/builtin/mui/lab';
+
+   export default function LoadingButtonDemo() {
+      return <LoadingButton loading variant="contained">Hello World</LoadingButton>;
+    }
+            `,
+          },
+        ],
+      },
+    },
+    // '@blocklet/pages-kit/builtin/react-hook-form'
+    {
+      name: '@blocklet/pages-kit/builtin/react-hook-form',
+      description: 'A react-hook-form component for pages-kit builtin package, use react-hook-form to manage form state',
+      docs: {
+        import: "import * as reactHookForm from '@blocklet/pages-kit/builtin/react-hook-form'",
+        export: "export * from 'react-hook-form';",
+        examples: [
+          {
+            source: 'form-demo.tsx',
+            code: `
+  import { useForm } from '@blocklet/pages-kit/builtin/react-hook-form';
+
+
+  export default function FormDemo() {
+    const { register, handleSubmit } = useForm();
+    const onSubmit = (data) => {
+      console.log(data);
+    };
+    return (
+      <form onSubmit={handleSubmit(onSubmit)}>
+        <input {...register('name')} />
+        <button type="submit">Submit</button>
+      </form>
+    );
+  }`,
+          },
+        ],
+      },
+    },
+    // '@blocklet/pages-kit/builtin/iconify/react'
+    {
+      name: '@blocklet/pages-kit/builtin/iconify/react',
+      description: 'A iconify/react component for pages-kit builtin package, all icons use this component',
+      docs: {
+        import: 'import { Icon } from "@blocklet/pages-kit/builtin/iconify/react"',
+        export: "export { Icon } from '@iconify/react';",
+        examples: [
+          {
+            source: 'tabler-success-icon.tsx',
+            code: `
+  import { Icon } from '@blocklet/pages-kit/builtin/iconify/react';
+
+
+  export default function TablerSuccessIcon() {
+    return <Icon icon="tabler:check" />;
+  }
+            `,
+          },
+        ],
+      },
+    },
+    // '@blocklet/pages-kit/builtin/zustand'
+    {
+      name: '@blocklet/pages-kit/builtin/zustand',
+      description: 'A zustand component for pages-kit builtin package, use zustand to manage global state',
+      docs: {
+        import: "import * as zustand from '@blocklet/pages-kit/builtin/zustand'",
+        export: "export * from 'zustand';",
+        examples: [
+          {
+            source: 'counter.tsx',
+            code: `
+  import { create } from '@blocklet/pages-kit/builtin/zustand';
+
+
+  export const useStore = create((set) => ({
+    count: 0,
+    inc: () => set((state) => ({ count: state.count + 1 })),
+    dec: () => set((state) => ({ count: state.count - 1 })),
+  }));
+
+
+  export default function Counter() {
+    const { count, inc, dec } = useStore();
+    return (
+      <div>
+        {count}
+        <button onClick={inc}>+</button>
+        <button onClick={dec}>-</button>
+      </div>
+    );
+  }
+            `,
+          },
+        ],
+      },
+    },
+    // '@blocklet/pages-kit/builtin/zustand/middleware/immer'
+    {
+      name: '@blocklet/pages-kit/builtin/zustand/middleware/immer',
+      description:
+        'A immer middleware for zustand component in pages-kit builtin package, use immer to manage global state',
+      docs: {
+        import: "import * as zustandImmer  from '@blocklet/pages-kit/builtin/zustand/middleware/immer'",
+        export: "export * from 'zustand/middleware/immer';",
+        examples: [
+          {
+            source: 'immer-global-loading-state.tsx',
+            code: `
+  import { create } from '@blocklet/pages-kit/builtin/zustand';
+
+  import { immer } from '@blocklet/pages-kit/builtin/zustand/middleware/immer';
+            
+  export interface GlobalLoadingState {
+    loading: boolean;
+    count: number;
+    run: <T>(fn: Promise<T> | (() => Promise<T>)) => Promise<T>;
+    start: () => void;
+    end: () => void;
+  }
+
+
+  export const globalLoadingState = create<GlobalLoadingState>()(
+    immer((set, get) => ({
+      loading: false,
+      count: 0,
+      run: async (fn: Promise<any> | (() => any)) => {
+        try {
+          get().start();
+          return (await (typeof fn === 'function' ? fn() : fn)) as any;
+        } finally {
+          get().end();
+        }
+      },
+      start: () => {
+        set((state) => {
+          state.count += 1;
+          state.loading = true;
+        });
+      },
+      end: () => {
+        set((state) => {
+          state.count = Math.max(0, state.count - 1);
+          state.loading = state.count > 0;
+        });
+      },
+    }))
+  );
+
+
+  `,
+          },
+        ],
+      },
+    },
+    // '@blocklet/pages-kit/builtin/immer'
+    {
+      name: '@blocklet/pages-kit/builtin/immer',
+      description: 'A immer component for pages-kit builtin package',
+      docs: {
+        import: "import * as immer from '@blocklet/pages-kit/builtin/immer'",
+        export: "export * from 'immer';",
+        examples: [
+          {
+            source: 'immer-demo.tsx',
+            code: `
+  import { original, produce } from '@blocklet/pages-kit/builtin/immer';
+
+
+  export default function ImmerDemo() {
+    const [state, setState] = useState({ count: 0 });
+
+    const increment = () => {
+      setState(
+        produce((draft) => {
+          draft.count += 1;
+        })
+      );
+    }
+
+    const reset = () => {
+      setState(
+        produce((draft) => {
+          draft.count = 0;
+        })
+      );
+    }
+
+    return (
+      <div>
+        <div>{state.count}</div>
+        <button onClick={increment}>Increment</button>
+        <button onClick={reset}>Reset</button>
+      </div>
+    );
+  }
+            `,
+          },
+        ],
+      },
+    },
+    // '@blocklet/pages-kit/builtin/react-wrap-balancer'
+    {
+      name: '@blocklet/pages-kit/builtin/react-wrap-balancer',
+      description: 'A react-wrap-balancer component for pages-kit builtin package, use to manage text wrap balance',
+      docs: {
+        import: "import * as ReactWrapperBlancer from '@blocklet/pages-kit/builtin/react-wrap-balancer'",
+        export: `
+  import Balancer from 'react-wrap-balancer';
+
+
+  export default Balancer;
+
+
+  export * from 'react-wrap-balancer';
+
+
+  `,
+        examples: [
+          {
+            source: 'balancer-text-demo.tsx',
+            code: `
+  import Balancer from '@blocklet/pages-kit/builtin/react-wrap-balancer';
+
+
+  export default function BalancerTextDemo() {
+    return <Balancer>
+      <div>
+        <p>hello world</p>
+        <p>I am soooooooooooooo long text to wait balance</p>
+      </div>
+    </Balancer>;
+  }
+
+  `,
+          },
+        ],
+      },
+    },
+    // '@blocklet/pages-kit/builtin/call'
+    {
+      name: '@blocklet/pages-kit/builtin/call',
+      description: "A call component for pages-kit builtin package, use to call other blocklet's api",
+      docs: {
+        import: "import * as call from '@blocklet/pages-kit/builtin/call'",
+        export: `
+  import { getComponentMountPoint, joinURL, withQuery } from './utils';
+
+
+  export interface CallInput {
+    name: string;
+    path: string;
+    method: string;
+    headers?: { [key: string]: any };
+    query?: { [key: string]: any };
+    body?: any;
+  }
+
+
+  export async function call(input: CallInput) {
+    // call component directly at server side
+    if (typeof window === 'undefined') {
+      const { getComponentWebEndpoint }: typeof import('@blocklet/sdk/lib/component') =
+        // eslint-disable-next-line global-require
+        require('@blocklet/sdk/lib/component');
+      const { sign }: typeof import('@blocklet/sdk/lib/util/verify-sign') =
+        // eslint-disable-next-line global-require
+        require('@blocklet/sdk/lib/util/verify-sign');
+
+      const fetch: typeof import('node-fetch') =
+        // eslint-disable-next-line global-require
+        require('node-fetch');
+
+      return fetch(withQuery(joinURL(getComponentWebEndpoint(input.name), input.path), input.query ?? {}), {
+        method: input.method,
+        headers: {
+          ...input.headers,
+          'x-component-sig': sign(input.body ?? {}),
+          'x-component-did': process.env.BLOCKLET_COMPONENT_DID!,
+          'Content-Type': 'application/json',
+        },
+        body:
+          typeof input.body !== 'undefined' && input.method.toLowerCase() !== 'get'
+            ? JSON.stringify(input.body)
+            : undefined,
+      });
+    }
+
+    const prefix = getComponentMountPoint('pages-kit');
+    return fetch(joinURL(prefix!, '/api/call'), {
+      method: 'POST',
+      headers: {
+        ...input.headers,
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(input),
+    });
+  }
+
+  `,
+        examples: [
+          {
+            source: 'ai-call-demo.tsx',
+            code: `
+  import { call } from '@blocklet/pages-kit/builtin/call';
+
+  import { useState } from '@blocklet/pages-kit/builtin/react';
+
+
+  export default AICallInput(){
+    const [result, setResult] = useState();
+    const [loading, setLoading] = useState(false);
+
+    const handleCall = async () => {
+      setLoading(true);
+      const res = await call({
+        name: 'ai-kit',
+        path: '/api/v1/sdk/completions',
+        method: 'POST',
+        body: {
+          text: 'hello world',
+        },
+      });
+      const data = await res.json();
+      setResult(data);
+      setLoading(false);
+    };
+
+    return (
+      <div>
+        <button onClick={handleCall}>Call AI</button>
+        {loading && <div>Loading...</div>}
+        {result && <div>{result}</div>}
+      </div>
+    );
+  }
+
+  `,
+          },
+        ],
+      },
+    },
+    // '@blocklet/pages-kit/builtin/stream'
+    {
+      name: '@blocklet/pages-kit/builtin/stream',
+      description: 'A stream component for pages-kit builtin package',
+      docs: {
+        import: "import * as stream from '@blocklet/pages-kit/builtin/stream'",
+        export: `
+        import { createParser } from 'eventsource-parser';
+
+  const requireNodeJs = typeof require !== 'undefined' ? require : undefined;
+
+
+  const TransformStream: typeof globalThis.TransformStream =
+    typeof window !== 'undefined' || !requireNodeJs
+      ? globalThis.TransformStream
+      : requireNodeJs('stream/web').TransformStream;
+
+  export class EventSourceParserStream<T> extends TransformStream<any, T> {
+    constructor() {
+      let parser: ReturnType<typeof createParser> | undefined;
+
+      super({
+        start(controller) {
+          parser = createParser((event) => {
+            if (event.type === 'event') {
+              try {
+                const json = JSON.parse(event.data) as T;
+                controller.enqueue(json);
+              } catch (error) {
+                console.error('parse chunk error', { error, data: event.data });
+              }
+            }
+          });
+        },
+        transform(chunk) {
+          parser?.feed(chunk);
+        },
+      });
+    }
+  }
+
+  `,
+        examples: [],
+      },
+    },
+    // '@blocklet/pages-kit/builtin/session'
+    {
+      name: '@blocklet/pages-kit/builtin/session',
+      description:
+        'A session component for pages-kit builtin package, use to manage user session, export from @arcblock/did-connect/lib/Session',
+      docs: {
+        import: "import * as authSession from '@blocklet/pages-kit/builtin/session'",
+        export: `
+  import { SessionContext } from '@arcblock/did-connect/lib/Session';
+
+  import { useContext } from 'react';
+
+
+  export function useSessionContext(): {
+    session: {
+      user?: { did: string; fullName: string; avatar: string };
+      loading?: boolean;
+      login: (cb?: () => void) => any;
+    };
+  } {
+    return useContext(SessionContext);
+  }      
+
+  `,
+        examples: [
+          {
+            source: 'current-user-did.tsx',
+            code: `
+  import { useSessionContext } from '@blocklet/pages-kit/builtin/session';
+
+
+  export default function CurrentUserDid() {
+      const { session } = useSessionContext();
+      return <div>{session.user?.did}</div>;
+  }
+
+  `,
+          },
+        ],
+      },
+    },
+    // '@blocklet/pages-kit/builtin/locale'
+    {
+      name: '@blocklet/pages-kit/builtin/locale',
+      description: 'A locale component for pages-kit builtin package, use to manage i18n locale',
+      docs: {
+        import: "import * as locale from '@blocklet/pages-kit/builtin/locale'",
+        export: "export { LocaleProvider, useLocaleContext } from '@arcblock/ux/lib/Locale/context';",
+        examples: [
+          {
+            source: 'locale-demo.tsx',
+            code: `
+  import { LocaleProvider, useLocaleContext } from
+  '@blocklet/pages-kit/builtin/locale';
+
+
+  const translations = {
+      en: {
+          hello: 'Hello',
+      },
+      zh: {
+          hello: '你好',
+      },
+  };
+
+
+  const LocaleHello = () => {
+      const { t } = useLocaleContext();
+      return <div>{t('hello')}</div>;
+  }
+
+
+  export default LocalDemo(){
+      const { locale } = useLocaleContext();
+
+      return (
+          <LocaleProvider translations={translations} locale={locale} fallbackLocale="en">
+              <LocaleHello />
+          </LocaleProvider>
+      );
+  };
+
+  `,
+          },
+        ],
+      },
+    },
+    // '@blocklet/pages-kit/builtin/react-router-dom'
+    {
+      name: '@blocklet/pages-kit/builtin/react-router-dom',
+      description: 'A react-router-dom component for pages-kit builtin package, export from react-router-dom',
+      docs: {
+        import: "import * as reactRouterDom from '@blocklet/pages-kit/builtin/react-router-dom'",
+        export: "export * from 'react-router-dom';",
+        examples: [
+          {
+            source: 'navigator-to-other-page.tsx',
+            code: `
+  import { Link } from '@blocklet/pages-kit/builtin/react-router-dom';
+
+
+  export default function NavigatorToOtherPage() {
+      return <Link to="/other-page">Go to other page</Link>;
+  }
+            `,
+          },
+          {
+            source: 'use-location.tsx',
+            code: `
+  import { useLocation } from '@blocklet/pages-kit/builtin/react-router-dom';
+
+
+  export default function UseLocation() {
+      const location = useLocation();
+      return <div>{location.pathname} {location.search}</div>;
+  }
+            `,
+          },
+        ],
+      },
+    },
+    // '@blocklet/pages-kit/builtin/arcblock/ux'
+    {
+      name: '@blocklet/pages-kit/builtin/arcblock/ux',
+      description: 'A arcblock/ux component for pages-kit builtin package, export a part of @arcblock/ux',
+      docs: {
+        import: "import * as arcblockUx from '@blocklet/pages-kit/builtin/arcblock/ux'",
+        export: `
+  export { default as RelativeTime } from '@arcblock/ux/lib/RelativeTime';
+
+  export { default as DID } from '@arcblock/ux/lib/DID';
+
+  export { default as Avatar } from '@arcblock/ux/lib/Avatar';
+
+  export { default as Address } from '@arcblock/ux/lib/Address';
+
+  export { default as Result } from '@arcblock/ux/lib/Result';
+
+  export { default as Toast } from '@arcblock/ux/lib/Toast';
+            `,
+        examples: [
+          {
+            source: 'relative-time-demo.tsx',
+            code: `
+  import { RelativeTime } from '@blocklet/pages-kit/builtin/arcblock/ux';
+
+
+  export default ShowRelativeTime() {
+    return <div>
+      Relative Time:
+      <RelativeTime value={new Date()} />
+    </div>
+  }
+
+  `,
+          },
+          {
+            source: 'show-did-demo.tsx',
+            code: `
+  import { DID } from '@blocklet/pages-kit/builtin/arcblock/ux';
+
+
+  export default ShowDIDDemo() {
+    return <div>
+      DID:
+      <DID did="z1dnPVvKHWNuSBdk1FC1gNC1oYKi73CqADX" copyable={false} />
+    </div>
+  }
+
+  `,
+          },
+        ],
+      },
+    },
+    // '@blocklet/pages-kit/builtin/page/header'
+    {
+      name: '@blocklet/pages-kit/builtin/page/header',
+      description: 'A header component for pages-kit builtin package, use to manage header state',
+      docs: {
+        import: "import * as headerState from '@blocklet/pages-kit/builtin/page/header'",
+        export: `
+  import { create } from 'zustand';
+
+  import { immer } from 'zustand/middleware/immer';
+
+
+  export interface HeaderState {
+    logo?: any;
+    brand?: any;
+    description?: any;
+    addons?: (...exists: any[]) => any[];
+  }
+
+
+  export const useHeaderState = create<HeaderState>()(immer(() => ({})));
+
+  `,
+        examples: [
+          {
+            source: 'header-state-demo.tsx',
+            code: `
+  import { useHeaderState } from '@blocklet/pages-kit/builtin/page/header';
+
+
+  export default function HeaderStateDemo() {
+      const { logo, brand, description, setState } = useHeaderState();
+
+      const setHeader = () => {
+          setState((state) => {
+              state.logo = 'https://arcblock.io/logo.png';
+              state.brand = 'ArcBlock';
+              state.description = 'ArcBlock is a blockchain platform for building decentralized applications';
+          });
+      }
+      return <div>
+          {logo} {brand} {description}
+          <button onClick={setHeader} >Set Header</button>
+      </div>
+  }
+
+  `,
+          },
+        ],
+      },
+    },
+    // // The following packages are lazy loading
+    // '@blocklet/pages-kit/builtin/async/react-scroll-to-bottom'
+    {
+      name: '@blocklet/pages-kit/builtin/async/react-scroll-to-bottom',
+      description: 'A react-scroll-to-bottom component for pages-kit builtin package',
+      docs: {
+        import: "import * as ScrollToBottom from '@blocklet/pages-kit/builtin/async/react-scroll-to-bottom'",
+        export: `
+  export default () =>
+    Promise.all([
+      import('react-scroll-to-bottom'),
+      typeof window !== 'undefined'
+        ? // @ts-ignore
+          import('react-scroll-to-bottom/lib/esm/hooks/internal/useInternalContext')
+        : // @ts-ignore
+          import('react-scroll-to-bottom/lib/hooks/internal/useInternalContext'),
+    ]).then(([mod, { default: useInternalContext }]) => ({
+      ...mod,
+      Composer: (mod as any).Composer as typeof mod.default,
+      useInternalContext,
+    }));
+  `,
+        examples: [],
+      },
+    },
+    // '@blocklet/pages-kit/builtin/async/react-markdown'
+    {
+      name: '@blocklet/pages-kit/builtin/async/react-markdown',
+      description: 'A react-markdown component for pages-kit builtin package',
+      docs: {
+        import: "import * as ReactMarkdown from '@blocklet/pages-kit/builtin/async/react-markdown'",
+        export: "export default () => import('react-markdown');",
+        examples: [],
+      },
+    },
+    // '@blocklet/pages-kit/builtin/async/react-syntax-highlighter'
+    {
+      name: '@blocklet/pages-kit/builtin/async/react-syntax-highlighter',
+      description: 'A react-syntax-highlighter component for pages-kit builtin package',
+      docs: {
+        import: "import * as ReactSyntaxHighlighter from '@blocklet/pages-kit/builtin/async/react-syntax-highlighter'",
+        export: "export default () => import('react-syntax-highlighter');",
+        examples: [],
+      },
+    },
+    // '@blocklet/pages-kit/builtin/async/image-preview'
+    {
+      name: '@blocklet/pages-kit/builtin/async/image-preview',
+      description: 'A image-preview component for pages-kit builtin package',
+      docs: {
+        import: "import * as ImagePreview from '@blocklet/pages-kit/builtin/async/image-preview'",
+        export: "export default () => import('@blocklet/ai-kit/components/image-preview');",
+        examples: [],
+      },
+    },
+    // '@blocklet/pages-kit/builtin/async/ai-runtime'
+    {
+      name: '@blocklet/pages-kit/builtin/async/ai-runtime',
+      description: 'A ai-runtime component for pages-kit builtin package',
+      docs: {
+        import: "import * as AiRuntime from '@blocklet/pages-kit/builtin/async/ai-runtime'",
+        export: `
+  export * from './contexts/CurrentAgent';
+
+  export { default as CurrentAgentProvider } from './contexts/CurrentAgent';
+
+
+  export * from './contexts/CurrentMessage';
+
+  export { default as CurrentMessageProvider } from './contexts/CurrentMessage';
+
+
+  export * from './state/runtime';
+
+  export * from './state/session';
+
+
+  export { default as Runtime } from './runtime/Runtime';
+
+  export { default as ChatBotButton } from './runtime/ChatBotButton';
+
+
+  export { default as SimplePage } from './runtime-components/SimplePage';
+
+  export { default as SimpleChat } from './runtime-components/SimpleChat';
+
+  export { default as PhotoGallery } from './runtime-components/PhotoGallery';
+
+  export { default as AutoForm } from './runtime-components/AutoForm';
+
+  export { default as SimpleOutput } from './runtime-components/SimpleOutput';
+
+  export { default as ChatOutput } from './runtime-components/ChatOutput';
+
+  export { default as PhotoGalleryItem } from
+  './runtime-components/PhotoGalleryItem';
+
+  `,
+        examples: [],
+      },
+    },
+  ];
+
+
+
+
+
+  return dumpJSON
