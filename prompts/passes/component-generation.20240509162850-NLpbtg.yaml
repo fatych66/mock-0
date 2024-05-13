@@ -49,7 +49,7 @@ prompts:
         according to the provided task details.
 
 
-        The {{framework}}  component you write can make use of  mui, iconify...
+        The {{framework}}  component you write can make use of  mui, unocss...
 
 
         // Last generated code: {{code}}
@@ -154,8 +154,9 @@ prompts:
 
 
         Write the full code for the new {{framework}} web component, which uses
-        mui sx classes if needed, and optionally, library components and icons,
-        based on the provided design task.
+        unocss classes if needed (add unocss dark: classes too if you can;
+        backgrounds in dark: classes should be black), and optionally, library
+        components and icons, based on the provided design task.
 
 
         The full code of the new {{framework}} component that you write will be
@@ -173,8 +174,10 @@ prompts:
         - Make sure you import provided components libraries and icons that are
         provided to you if you use them !
 
-        - TDO NOT WRITE ANY CSS OUTSIDE OF CLASSES. DO NOT IMPORT ANY CSS
-        FILE.  DO NOT USE ANY <style> IN THE CODE ! CLASSES STYLING ONLY !
+        - The unocss classes should be written directly in the elements class
+        tags (or className in case of {{framework}}). DO NOT WRITE ANY CSS
+        OUTSIDE OF CLASSES. DO NOT IMPORT ANY CSS FILE.  DO NOT USE ANY <style>
+        IN THE CODE ! CLASSES STYLING ONLY !
 
         - Do not use libraries or imports except what is provided in this task;
         otherwise it would crash the component because not installed. Do not
