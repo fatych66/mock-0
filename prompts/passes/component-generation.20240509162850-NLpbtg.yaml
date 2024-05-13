@@ -22,12 +22,6 @@ parameters:
         from: knowledge
         parameters:
           message: "{{framework}}"
-  - id: oWhG7SP6wlGnKIVzkO4Li
-    key: framework
-    from: agentParameter
-  - id: dtwSV45oO6fwV8rid9uoS
-    key: question
-    from: agentParameter
   - id: Ge8IIfOxTFDTvRYGQGSl7
     key: code
     type: source
@@ -36,6 +30,20 @@ parameters:
       variable:
         key: codes
         scope: session
+  - id: KnI2yA801cjf3XsgBMPxu
+    key: componentsFromScript
+    type: source
+    source:
+      variableFrom: tool
+      agent:
+        id: 20240513213411-LpgUcm
+        from: assistant
+        parameters: {}
+  - id: EDHr1ZYu7vOet16THY5U2
+    key: framework
+  - id: RjPXQ6v8EcwzFqtjoMtID
+    key: question
+    from: editor
 prompts:
   - type: message
     data:
@@ -73,7 +81,7 @@ prompts:
 
         ```
 
-        {{components}}
+        {{componentsFromScript.value}}
 
         ```
 

@@ -37,7 +37,7 @@ prompts:
 
         ```
 
-        // {{components}}
+        {{componentsFromScript.value}}
 
         ```
   - type: message
@@ -83,7 +83,7 @@ parameters:
         parameters:
           message: inject-global-components-dump-json
   - id: ia6q5iSuTyYGOmKZtvhWh
-    key: components1
+    key: componentsFromScript
     type: source
     source:
       variableFrom: tool
