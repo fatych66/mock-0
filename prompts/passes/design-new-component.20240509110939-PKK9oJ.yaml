@@ -37,7 +37,7 @@ prompts:
 
         ```
 
-        {{components1}}
+        // {{components}}
 
         ```
   - type: message
