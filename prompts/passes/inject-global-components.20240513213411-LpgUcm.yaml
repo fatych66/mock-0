@@ -21,9 +21,9 @@ updatedAt: 2024-05-13T13:34:11.700Z
 createdBy: z1TCComgCJNHbHWetTWGdhPB6NYZ2ReDjLu
 updatedBy: z1TCComgCJNHbHWetTWGdhPB6NYZ2ReDjLu
 name: inject-global-components
-code: >
-  const componentString = '@blocklet/pages-kit/builtin/dayjs: A dayjs component
-  for pages-kit builtin package;\n' +
+code: >-
+  return {
+    value: '@blocklet/pages-kit/builtin/dayjs: A dayjs component for pages-kit builtin package;\n' +
       '@blocklet/pages-kit/builtin/utils: A utils component for pages-kit builtin package;\n' +
       '@blocklet/pages-kit/builtin/react: A React component for pages-kit builtin package, export React and all React hooks;\n' +
       '@blocklet/pages-kit/builtin/emotion/css: A emotion/css component for pages-kit builtin package, provide css to style component;\n' +
@@ -47,7 +47,4 @@ code: >
       '@blocklet/pages-kit/builtin/async/react-syntax-highlighter: A react-syntax-highlighter component for pages-kit builtin package;\n' +
       '@blocklet/pages-kit/builtin/async/image-preview: A image-preview component for pages-kit builtin package;\n' +
       '@blocklet/pages-kit/builtin/async/ai-runtime: A ai-runtime component for pages-kit builtin package;'
-
-  return {
-    value: componentString
   }
