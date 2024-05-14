@@ -19,9 +19,10 @@ parameters:
     source:
       variableFrom: tool
       agent:
-        id: 20240509110939-PKK9oJ
+        id: 20240514194312-Jdkxzd
         from: assistant
         parameters:
+          designed: "{{designed}}"
           components: "{{components}}"
           framework: "{{framework}}"
           question: "{{question}}"
@@ -42,11 +43,6 @@ prompts:
         Your task is to detect component errors based on the provided code and
         built-in components and user requirements, and if there are errors, you
         need to fix the {{framework}} component code.
-
-
-        You will write the complete {{framework}} component code, which should
-        include all imports, and the component files will be used directly in
-        production!
   - type: message
     data:
       id: o-BWJhQXYjkicLge2LB7t
@@ -56,22 +52,25 @@ prompts:
         ```
         {{code}} 
         ```
-
-        {{designedComponents.componentCondition}}
   - type: message
     data:
       id: 20240514172326-sLBGQs
       role: user
       content: >-
+        {{designedComponents.componentCondition}}
+
+
         {{designedComponents.componentMetadata}}
 
 
         {{designedComponents.importantCondition}}
 
-        - Fix all bugs according to the bugs you find.
+        - Fix all bugs according to the bugs you find
 
         - You are allowed to remove any problematic part of the code and replace
-        it.
+        it
+
+        - Very important: You must follow the Component Condition
   - type: message
     data:
       id: 20240514173100-YFEmgg

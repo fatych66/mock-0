@@ -35,14 +35,10 @@ prompts:
     data:
       id: 20240514153747-En2uvb
       role: user
-      content: "{{designedComponents.componentCondition}}"
-  - type: message
-    data:
-      id: 20240509164656-jcRG7Q
-      role: user
-      content: |
-        {{designedComponents.componentMetadata}}
+      content: |-
+        {{designedComponents.componentCondition}}
 
+        {{designedComponents.componentMetadata}}
 
         {{designedComponents.importantCondition}}
   - type: message
@@ -81,6 +77,13 @@ outputVariables:
   - id: QRB4PuL-20erle1l0B9z1
     name: $text
     type: string
+  - id: yf1YvMd1U0DYzHcyvsHRj
+    name: $children
+    type: string
+    initialValue:
+      agents:
+        - id: 20240514164403-bQLkAR
+          name: validate-new-component
 id: 20240514162612-Pf7ouJ
 createdAt: 2024-05-09T08:28:50.229Z
 updatedAt: 2024-05-09T08:28:50.229Z
