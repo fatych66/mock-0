@@ -18,10 +18,13 @@ parameters:
     source:
       variableFrom: tool
       agent:
-        id: 20240513213411-LpgUcm
+        id: 20240514194312-Jdkxzd
         from: assistant
         parameters:
           designed: "{{designed}}"
+          components: "{{components}}"
+          framework: "{{framework}}"
+          question: "{{question}}"
   - id: EDHr1ZYu7vOet16THY5U2
     key: framework
   - id: RjPXQ6v8EcwzFqtjoMtID
@@ -60,6 +63,15 @@ prompts:
         ```
 
         {{components.supportedList}}
+
+        ```
+
+
+        Builtin Libraries Example: 
+
+        ```
+
+        {{components.examplesList}}
 
         ```
 

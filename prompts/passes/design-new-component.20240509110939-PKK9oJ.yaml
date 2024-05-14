@@ -24,7 +24,7 @@ prompts:
     data:
       id: 20240509111635-mSMXKW
       role: user
-      content: >-
+      content: >
         Multiple library components can be used while creating a new component
         in order to help you do a better design job, faster.
 

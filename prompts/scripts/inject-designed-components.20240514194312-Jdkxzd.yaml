@@ -1,0 +1,129 @@
+type: function
+parameters:
+  - id: mElAMdW9foRjZXTbLpUNW
+    key: designed
+    type: source
+    source:
+      variableFrom: tool
+      agent:
+        id: 20240509110939-PKK9oJ
+        from: assistant
+        parameters:
+          components: "{{components}}"
+          framework: "{{framework}}"
+          question: "{{question}}"
+  - id: EREc7XAQ22Nd0pjVdPm6O
+    key: components
+    type: source
+    source:
+      variableFrom: tool
+      agent:
+        id: 20240513213411-LpgUcm
+        from: assistant
+        parameters: {}
+  - id: DXmLFHgstbGDA9hiMYFdX
+    key: framework
+  - id: 0IcQd4ZJJwq8CTdIkn5t1
+    key: question
+prompts:
+  Uj0m-ctvoWgzA_IJFDPGu:
+    index: 0
+    data:
+      type: message
+      data:
+        id: Uj0m-ctvoWgzA_IJFDPGu
+        role: user
+        content: "{{ question }}"
+outputVariables:
+  - id: BzAp-83bBvsJg5pUtbx0v
+    name: supportedList
+    type: array
+    required: true
+    element:
+      id: -ew2QOcGf778mkzdTugs5
+      name: element
+      type: string
+      required: false
+  - id: SHkfltI0TMTnIsT1PNhar
+    name: examplesList
+    type: array
+    element:
+      id: qvypHo5hTw677af_YafhI
+      name: element
+      type: string
+      required: false
+    required: true
+  - id: ZMjZKNOKHx2E9pj4jucx5
+    name: designedPrompt
+    type: string
+    required: true
+id: 20240514194312-Jdkxzd
+createdAt: 2024-05-13T13:34:11.700Z
+updatedAt: 2024-05-13T13:34:11.700Z
+createdBy: z1TCComgCJNHbHWetTWGdhPB6NYZ2ReDjLu
+updatedBy: z1TCComgCJNHbHWetTWGdhPB6NYZ2ReDjLu
+name: inject-designed-components
+code: >+
+  let supportedList = [];
+
+  let examplesList = [];
+
+
+
+
+  designed.packages?.forEach(item => {
+    components.supportedList.forEach(ytem => {
+      if(ytem.startsWith(item)) supportedList.push(ytem)
+    })
+    components.examplesList.forEach(ytem => {
+      if(ytem.startsWith(item)) examplesList.push(ytem)
+    })
+  })
+
+
+
+
+  const designedPrompt = `Multiple library components can be used while creating
+  a new component in order to help you do a better design job, faster.
+
+
+  Very important: you must use the components provided by the built-in
+  libraries, any other components not provided by the built-in libraries will
+  result in an error!
+
+
+  Builtin Libraries: 
+
+  ---------------------------
+
+  ${supportedList.join('\n')}
+
+  ---------------------------
+
+
+  Builtin Libraries Example: 
+
+  ---------------------------
+
+  ${examplesList.join('\n')}
+
+  ---------------------------
+
+
+  Very important : Any components you need to import should be imported from
+  \`@blocklet/pages-kit/builtin/{libraryName}\`
+
+  `
+
+  console.log({supportedList, examplesList, designedPrompt})
+
+
+
+  return {
+    supportedList,
+    examplesList,
+    designedPrompt
+  }
+
+
+

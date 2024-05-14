@@ -1262,8 +1262,6 @@ code: >+
   return {
     supportedList: supportedList,
     examplesList: examplesList,
-    dumpJSON: JSON.stringify(dumpJSON),
-    dumpJSONSimple: JSON.stringify(dumpJSONSimple)
   }
 
 
