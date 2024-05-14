@@ -30,7 +30,7 @@ updatedAt: 2024-05-13T13:34:11.700Z
 createdBy: z1TCComgCJNHbHWetTWGdhPB6NYZ2ReDjLu
 updatedBy: z1TCComgCJNHbHWetTWGdhPB6NYZ2ReDjLu
 name: inject-global-components
-code: >-
+code: >+
   type DumpJSONProps = {
     name: string; // the package name
     description: string; // the package description
@@ -1233,9 +1233,14 @@ code: >-
   });
 
 
+  // --------- protected code ---------
+
 
   return {
     value: supportedPackagesDescription,
     dumpJSON: JSON.stringify(dumpJSON),
     dumpJSONSimple: JSON.stringify(dumpJSONSimple)
   }
+
+
+

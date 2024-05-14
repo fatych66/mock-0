@@ -12,14 +12,6 @@ parameters:
           framework: "{{framework}}"
           question: "{{question}}"
           components: "{{components}}"
-  - id: Ge8IIfOxTFDTvRYGQGSl7
-    key: code
-    type: source
-    source:
-      variableFrom: datastore
-      variable:
-        key: codes
-        scope: session
   - id: KnI2yA801cjf3XsgBMPxu
     key: components
     type: source
@@ -28,7 +20,16 @@ parameters:
       agent:
         id: 20240513213411-LpgUcm
         from: assistant
-        parameters: {}
+        parameters:
+          designed: "{{designed}}"
+  - id: Ge8IIfOxTFDTvRYGQGSl7
+    key: code
+    type: source
+    source:
+      variableFrom: datastore
+      variable:
+        key: codes
+        scope: session
   - id: EDHr1ZYu7vOet16THY5U2
     key: framework
   - id: RjPXQ6v8EcwzFqtjoMtID
@@ -53,21 +54,18 @@ prompts:
         // Last generated code: {{code}}
   - type: message
     data:
-      id: 20240509163543-wc4Egy
+      id: 20240514153747-En2uvb
       role: user
-      content: >+
-        Components can optionally be used when making the {{framework}}
-        component
-
-
-        Suggested components: {{designed.components}}
+      content: >-
+        Multiple library components can be used while creating a new component
+        in order to help you do a better design job, faster.
 
 
         Very important: you must use the builtin libraries, any other un-builtin
         libraries will cause error
 
 
-        builtin libraries: 
+        Builtin Libraries: 
 
         ```
 
@@ -76,6 +74,38 @@ prompts:
         ```
 
 
+        Very important : Any components you need to import should be imported
+        from `@blocklet/pages-kit/builtin/${libraryName}`
+
+
+        EXAMPLES:
+
+        You must import mui component this way:
+
+        ```tsx
+
+        import {muiComponentName} from
+        '@blocklet/pages-kit/builtin/mui/material'
+
+        ```
+
+
+        You must import mui lab component this way:
+
+        ```tsx
+
+        import {muiLabComponentName} from '@blocklet/pages-kit/builtin/mui/lab'
+
+        ```
+
+
+        You must import react lib this way:
+
+        ```tsx
+
+        import React from "@blocklet/pages-kit/builtin/react";
+
+        ```
   - type: message
     data:
       id: 20240509164116-OxvZUd
@@ -188,7 +218,7 @@ outputVariables:
   - id: zRvuVDKK-NCOSxR8pa4bu
     name: code
     type: string
-    description: the full code wrapper by ```tsx ```
+    description: the full code
     required: true
 id: 20240509162850-NLpbtg
 createdAt: 2024-05-09T08:28:50.229Z
@@ -196,5 +226,5 @@ updatedAt: 2024-05-09T08:28:50.229Z
 createdBy: z1TCComgCJNHbHWetTWGdhPB6NYZ2ReDjLu
 updatedBy: z1TCComgCJNHbHWetTWGdhPB6NYZ2ReDjLu
 name: component-generation
-model: gpt-4
+model: gpt-4o
 temperature: 0.5

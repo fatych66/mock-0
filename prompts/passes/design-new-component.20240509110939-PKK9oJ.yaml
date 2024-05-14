@@ -33,7 +33,7 @@ prompts:
         libraries will cause error
 
 
-        builtin libraries: 
+        Builtin Libraries: 
 
         ```
 
@@ -67,11 +67,6 @@ parameters:
       - id: E03qLnMEICQ4fEEV
         label: React
         value: react
-  - id: Yr4O4d88k0PTZ0l4bkl5r
-    key: question
-    from: editor
-    placeholder: Say anything
-    required: true
   - id: ia6q5iSuTyYGOmKZtvhWh
     key: components
     type: source
@@ -81,6 +76,11 @@ parameters:
         id: 20240513213411-LpgUcm
         from: assistant
         parameters: {}
+  - id: Yr4O4d88k0PTZ0l4bkl5r
+    key: question
+    from: editor
+    placeholder: Say anything
+    required: true
 outputVariables:
   - id: 8UloarJU8HEOIrMFc1Aih
     name: name
@@ -136,6 +136,9 @@ outputVariables:
           type: string
           name: usage_reason
           description: ""
+        - id: NR6MOJ6gIlxU0Gg1-r9K6
+          type: string
+          name: package
     required: true
 createdBy: zNKn8FYNB9Dw2gX6qHQZJjnWzS4tU3QHTWKX
 updatedBy: zNKn8FYNB9Dw2gX6qHQZJjnWzS4tU3QHTWKX
