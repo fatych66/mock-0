@@ -144,10 +144,22 @@ code: >+
   const componentMetadata = `- COMPONENT NAME : ${designed.name}
 
 
-  - COMPONENT DESCRIPTION: ${question}
+  - COMPONENT DESCRIPTION:
+
+  ---------------------------
+
+  ${question}
+
+  ---------------------------
 
 
-  - COMPONENT SUGGESTION: ${designed.description}
+  - COMPONENT SUGGESTION: 
+
+  ---------------------------
+
+  ${designed.description}
+
+  ---------------------------
 
   ` 
 

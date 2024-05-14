@@ -1,7 +1,7 @@
 type: prompt
 parameters:
   - id: DbTEhcaJgkH2IZYZPBG5e
-    key: code
+    key: codeResult
     type: source
     source:
       variableFrom: tool
@@ -50,7 +50,7 @@ prompts:
       content: |-
         Code: 
         ```
-        {{code}} 
+        {{codeResult.code}} 
         ```
   - type: message
     data:
