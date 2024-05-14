@@ -12,21 +12,23 @@ prompts:
 outputVariables:
   - id: FqmWDOp0hQ_abMK2scON4
     name: supportedList
-    type: string
+    type: array
     description: ""
     required: true
-  - id: in-Mw4iyEHSoEB0kgNP-w
-    name: dumpJSON
-    type: string
-    required: true
-  - id: q833kHjOnunYEYEkOjjb5
-    name: dumpJSONSimple
-    type: string
-    required: true
+    element:
+      id: x42M3i6SUQPpF12afDzUn
+      name: element
+      type: string
+      required: true
   - id: ZfTSAGszKYFiq13ycnKSq
     name: examplesList
-    type: string
+    type: array
     required: true
+    element:
+      id: AI3TjwhK1rCjDy8ZGJ7Ku
+      name: element
+      type: string
+      required: true
 id: 20240513213411-LpgUcm
 createdAt: 2024-05-13T13:34:11.700Z
 updatedAt: 2024-05-13T13:34:11.700Z
@@ -1258,8 +1260,8 @@ code: >+
 
 
   return {
-    supportedList: supportedList.join('\n'),
-    examplesList: examplesList.join('\n'),
+    supportedList: supportedList,
+    examplesList: examplesList,
     dumpJSON: JSON.stringify(dumpJSON),
     dumpJSONSimple: JSON.stringify(dumpJSONSimple)
   }
