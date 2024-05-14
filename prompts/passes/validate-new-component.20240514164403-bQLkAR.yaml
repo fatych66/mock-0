@@ -14,14 +14,17 @@ parameters:
           framework: "{{framework}}"
           question: "{{question}}"
   - id: pNcTws4RhXzogb4Ct8G5b
-    key: components
+    key: designedComponents
     type: source
     source:
       variableFrom: tool
       agent:
-        id: 20240513213411-LpgUcm
+        id: 20240509110939-PKK9oJ
         from: assistant
-        parameters: {}
+        parameters:
+          components: "{{components}}"
+          framework: "{{framework}}"
+          question: "{{question}}"
   - id: 5rpjLPh26M6kOaw06SyIs
     key: framework
   - id: LoaQmts4dj63idbgHyRUe
