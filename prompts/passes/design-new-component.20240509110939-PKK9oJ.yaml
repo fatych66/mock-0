@@ -37,7 +37,7 @@ prompts:
 
         ```
 
-        {{components.value}}
+        {{components.supportedList}}
 
         ```
   - type: message
@@ -57,6 +57,15 @@ prompts:
 
         ```
 parameters:
+  - id: ia6q5iSuTyYGOmKZtvhWh
+    key: components
+    type: source
+    source:
+      variableFrom: tool
+      agent:
+        id: 20240513213411-LpgUcm
+        from: assistant
+        parameters: {}
   - id: WgbfJldbD6q29Uqghf8Xr
     key: framework
     from: editor
@@ -67,15 +76,6 @@ parameters:
       - id: E03qLnMEICQ4fEEV
         label: React
         value: react
-  - id: ia6q5iSuTyYGOmKZtvhWh
-    key: components
-    type: source
-    source:
-      variableFrom: tool
-      agent:
-        id: 20240513213411-LpgUcm
-        from: assistant
-        parameters: {}
   - id: Yr4O4d88k0PTZ0l4bkl5r
     key: question
     from: editor
@@ -135,14 +135,31 @@ outputVariables:
             Menu",     "Popover",     "Progress",     "Radio Group",     "Scroll
             Area",     "Select",     "Separator",     "Sheet",     "Skeleton",     "Slider",     "Switch",     "Table",     "Tabs",     "Textarea",     "Toast",     "Toggle",     "Tooltip"
             ]'
+          required: true
         - id: 4cctOPx8yyEhkbObniMal
           type: string
           name: usage_reason
           description: ""
+          required: true
         - id: NR6MOJ6gIlxU0Gg1-r9K6
           type: string
           name: package
+          required: true
+      required: true
     required: true
+  - id: 4MdmrHO5FQigITkmHXWWO
+    name: packages
+    type: array
+    required: true
+    description: packages data
+    element:
+      id: Qb6zU634OpRuHRBAwgrg0
+      name: element
+      type: string
+      required: true
+    variable:
+      key: designed-component-packages
+      scope: session
 createdBy: zNKn8FYNB9Dw2gX6qHQZJjnWzS4tU3QHTWKX
 updatedBy: zNKn8FYNB9Dw2gX6qHQZJjnWzS4tU3QHTWKX
 createdAt: 2023-09-30T12:23:04.603Z

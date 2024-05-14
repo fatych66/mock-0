@@ -11,7 +11,7 @@ prompts:
         content: "{{ question }}"
 outputVariables:
   - id: FqmWDOp0hQ_abMK2scON4
-    name: value
+    name: supportedList
     type: string
     description: ""
     required: true
@@ -21,6 +21,10 @@ outputVariables:
     required: true
   - id: q833kHjOnunYEYEkOjjb5
     name: dumpJSONSimple
+    type: string
+    required: true
+  - id: ZfTSAGszKYFiq13ycnKSq
+    name: examplesList
     type: string
     required: true
 id: 20240513213411-LpgUcm
@@ -1204,11 +1208,28 @@ code: >+
   ];
 
 
-  const supportedPackagesDescription = dumpJSON
+  const supportedList = dumpJSON
     .map(({ name, description, docs }) => {
-      return `${name}: ${description}, It provides these components: ${docs?.components?.join(', ')};`;
-    })
-    .join('\n');
+      return `${name}: ${description}, provided [${docs?.components?.join(', ')}] components`;
+    });
+
+  const examplesList = dumpJSON
+    .map(({ name, docs }) => {
+      let examplesText = "// No examples"
+
+      if (docs?.examples?.length) {
+        examplesText = docs?.examples?.map(({ source, code }, index) => {
+          return `// [${index + 1}] ${source}
+  ${code}`;
+        }).join('\n');
+      }
+      return `${name} Examples: 
+  \`\`\`tsx
+    ${examplesText}
+  \`\`\
+
+  `;
+    });
 
   // without examples and components
 
@@ -1226,7 +1247,8 @@ code: >+
   // eslint-disable-next-line no-console
 
   console.info('result: ', {
-    supportedPackagesDescription,
+    supportedList,
+    examplesList,
     dumpJSON,
     dumpJSONSimple,
   });
@@ -1236,7 +1258,8 @@ code: >+
 
 
   return {
-    value: supportedPackagesDescription,
+    supportedList: supportedList.join('\n'),
+    examplesList: examplesList.join('\n'),
     dumpJSON: JSON.stringify(dumpJSON),
     dumpJSONSimple: JSON.stringify(dumpJSONSimple)
   }

@@ -61,15 +61,57 @@ prompts:
 
         Builtin Libraries: 
         ```
-        {{components.value}}
+        {{components.supportedList}}
         ```
   - type: message
     data:
       id: 20240514172326-sLBGQs
       role: user
+      content: >-
+        Important :
+
+        - Make sure you import provided components libraries and icons that are
+        provided to you if you use them !
+
+        - The styles should be written directly in the elements sx tags . DO NOT
+        WRITE ANY CSS OUTSIDE OF SX. DO NOT IMPORT ANY CSS FILE.  DO NOT USE ANY
+        <style> IN THE CODE ! SX STYLING ONLY !
+
+        - Do not use libraries or imports except what is provided in this task;
+        otherwise it would crash the component because not installed. Do not
+        import extra libraries besides what is provided above !
+
+        - DO NOT HAVE ANY DYNAMIC DATA OR DATA PROPS ! Components are meant to
+        be working as is without supplying any variable to them when importing
+        them ! Only write a component that render directly with placeholders as
+        data, component not supplied with any dynamic data.
+
+        - Only write the code for the component; Do not write extra code to
+        import it! The code will directly be stored in an individual .tsx file!
+
+        - Very important : Your component should be exported as default!
+
+        - Fix all bugs according to the bugs you find.
+
+        - You are allowed to remove any problematic part of the code and replace
+        it.
+  - type: message
+    data:
+      id: 20240514173100-YFEmgg
+      role: user
+      content: Fix and write the updated version of the {{framework}} component code
+        as the creative genius and {{framework}} component genius you are.
 outputVariables:
   - id: hGGos2HNlRMiW4noztxxr
     name: $text
+  - id: 2gIuvCJAX0LazJ7exg6qN
+    name: code
+    type: string
+    description: fixed code content
+    required: true
+    variable:
+      key: component-code
+      scope: session
 id: 20240514164403-bQLkAR
 createdAt: 2024-05-14T08:44:03.183Z
 updatedAt: 2024-05-14T08:44:03.183Z

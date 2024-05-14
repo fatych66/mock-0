@@ -50,15 +50,16 @@ prompts:
         in order to help you do a better design job, faster.
 
 
-        Very important: you must use the builtin libraries, any other un-builtin
-        libraries will cause error
+        Very important: you must use the components provided by the built-in
+        libraries, any other components not provided by the built-in libraries
+        will result in an error!
 
 
         Builtin Libraries: 
 
         ```
 
-        {{components.value}}
+        {{components.supportedList}}
 
         ```
 
@@ -194,11 +195,8 @@ outputVariables:
   - id: zRvuVDKK-NCOSxR8pa4bu
     name: code
     type: string
-    description: .tsx file code content
+    description: "code content "
     required: true
-    variable:
-      key: component-code
-      scope: session
   - id: QRB4PuL-20erle1l0B9z1
     name: $text
     type: string
@@ -209,4 +207,4 @@ createdBy: z1TCComgCJNHbHWetTWGdhPB6NYZ2ReDjLu
 updatedBy: z1TCComgCJNHbHWetTWGdhPB6NYZ2ReDjLu
 name: create-new-component
 model: gpt-4o
-temperature: 0.5
+temperature: 1

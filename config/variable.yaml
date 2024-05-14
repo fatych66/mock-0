@@ -1,14 +1,19 @@
 variables:
-  - key: designed-components
-    scope: session
-    type:
-      type: object
-    reset: true
-    defaultValue: ""
   - key: component-code
     scope: session
     type:
       type: string
       id: iKSVRDXtoSDV7RqvqJtcRmOGPysUwGsH
     reset: true
+    defaultValue: ""
+  - key: designed-component-packages
+    scope: session
+    type:
+      type: array
+      element:
+        id: vy4yDllpp8kS68enF31bl
+        name: element
+        type: string
+        required: true
+    reset: false
     defaultValue: ""
