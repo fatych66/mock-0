@@ -72,3 +72,6 @@ routes:
     parameters:
       framework: react
       question: "{{question}}"
+  - id: 20240514164403-bQLkAR
+    type: prompt
+    name: validate-new-component

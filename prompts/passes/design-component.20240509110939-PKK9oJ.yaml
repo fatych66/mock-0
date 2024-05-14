@@ -1,6 +1,6 @@
 id: 20240509110939-PKK9oJ
 type: prompt
-name: design-new-component
+name: design-component
 prompts:
   - type: message
     data:

@@ -17,14 +17,6 @@ parameters:
     key: framework
   - id: 3ECd5viySAMjXmDPAajt6
     key: question
-  - id: gKIhitFTVpI7BcDApOnXW
-    key: codeMemory
-    type: source
-    source:
-      variableFrom: datastore
-      variable:
-        key: component-code
-        scope: session
 prompts:
   - type: message
     data:
@@ -34,8 +26,8 @@ prompts:
         You are an expert at writing {{framework}} components.
 
 
-        Your task is to update  {{framework}}  component, according to the
-        provided task details.
+        Your task is to write a new {{framework}}  component for a web app,
+        according to the provided task details.
 
 
         The {{framework}}  component you write can make use of  mui...
@@ -43,15 +35,12 @@ prompts:
     data:
       id: 20240514153747-En2uvb
       role: user
+      content: "{{designedComponents.componentCondition}}"
+  - type: message
+    data:
+      id: 20240515010702-dRm0fF
+      role: user
       content: |-
-        Latest Code: 
-        ------------------------
-        {{codeMemory}}
-        ------------------------
-
-
-        {{designedComponents.componentCondition}}
-
         {{designedComponents.componentMetadata}}
 
         {{designedComponents.importantCondition}}
@@ -101,11 +90,11 @@ outputVariables:
       agents:
         - id: 20240514164403-bQLkAR
           name: validate-new-component
-id: 20240515005021-hSGfBq
+id: 20240514162612-Pf7ouJ
 createdAt: 2024-05-09T08:28:50.229Z
 updatedAt: 2024-05-09T08:28:50.229Z
 createdBy: z1TCComgCJNHbHWetTWGdhPB6NYZ2ReDjLu
 updatedBy: z1TCComgCJNHbHWetTWGdhPB6NYZ2ReDjLu
-name: update-old-component
+name: create-component
 model: gpt-4o
 temperature: 1
