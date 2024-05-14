@@ -105,6 +105,8 @@ code: >+
   Very important: You must import icon this way: <Icon icon="iconName"
   {...otherIconProps}/>
 
+  Very important: You must import React from '@blocklet/pages-kit/builtin/react'
+  in code line 1
 
 
   Builtin Libraries: 
@@ -151,7 +153,7 @@ code: >+
 
 
 
-  const importantMetadata = `Important :
+  const importantMetadata = `Important:
 
   - Make sure you import provided components libraries and icons that are
   provided to you if you use them !

@@ -1228,7 +1228,7 @@ code: >+
       return `${name} Examples: 
   \`\`\`tsx
     ${examplesText}
-  \`\`\
+  \`\`\`
 
   `;
     });
