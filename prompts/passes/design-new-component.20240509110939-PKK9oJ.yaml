@@ -86,9 +86,6 @@ outputVariables:
     name: name
     type: string
     required: true
-    variable:
-      key: component-code
-      scope: session
   - id: BLKzpe8BoTPYVn1Zy0Wc5
     name: description
     type: string

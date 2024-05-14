@@ -6,14 +6,3 @@ variables:
       id: iKSVRDXtoSDV7RqvqJtcRmOGPysUwGsH
     reset: true
     defaultValue: ""
-  - key: designed-component-packages
-    scope: session
-    type:
-      type: array
-      element:
-        id: vy4yDllpp8kS68enF31bl
-        name: element
-        type: string
-        required: true
-    reset: false
-    defaultValue: ""
