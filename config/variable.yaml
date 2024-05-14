@@ -1,8 +1,14 @@
 variables:
-  - key: codes
+  - key: designed-components
+    scope: session
+    type:
+      type: object
+    reset: true
+    defaultValue: ""
+  - key: component-code
     scope: session
     type:
       type: string
-      id: ziQ4vTa7_kIdoWdjdY-IIwiv8apQMUuh
+      id: iKSVRDXtoSDV7RqvqJtcRmOGPysUwGsH
     reset: true
     defaultValue: ""

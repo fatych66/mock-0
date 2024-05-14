@@ -28,7 +28,7 @@ parameters:
     source:
       variableFrom: datastore
       variable:
-        key: codes
+        key: component-code
         scope: session
   - id: EDHr1ZYu7vOet16THY5U2
     key: framework
@@ -155,12 +155,8 @@ prompts:
 
         The full code of the new {{framework}} component that you write will be
         written directly to a .tsx file inside the {{framework}} project. Make
-        sure all necessary imports are done, and that your full code is enclosed
-        with ```tsx blocks.
+        sure all necessary imports are done.
 
-        Answer with generated code only. DO NOT ADD ANY EXTRA TEXT DESCRIPTION
-        OR COMMENTS BESIDES THE CODE. Your answer contains code only ! component
-        code only !
 
 
         Important :
@@ -169,8 +165,8 @@ prompts:
         provided to you if you use them !
 
         - The styles should be written directly in the elements sx tags . DO NOT
-        WRITE ANY CSS OUTSIDE OF CLASSES. DO NOT IMPORT ANY CSS FILE.  DO NOT
-        USE ANY <style> IN THE CODE ! CLASSES STYLING ONLY !
+        WRITE ANY CSS OUTSIDE OF SX. DO NOT IMPORT ANY CSS FILE.  DO NOT USE ANY
+        <style> IN THE CODE ! SX STYLING ONLY !
 
         - Do not use libraries or imports except what is provided in this task;
         otherwise it would crash the component because not installed. Do not
@@ -181,19 +177,18 @@ prompts:
         them ! Only write a component that render directly with placeholders as
         data, component not supplied with any dynamic data.
 
-        - DO NOT HAVE ANY DYNAMIC DATA OR DATA PROPS ! - Only write the code for
-        the component; Do not write extra code to import it! The code will
-        directly be stored in an individual {{framework}} .tsx file !
+        - Only write the code for the component; Do not write extra code to
+        import it! The code will directly be stored in an individual
+        {{framework}} .tsx file !
 
         - Very important : Your component should be exported as default !
-
-
-        Write the {{framework}} component code as the creative genius and
+  - type: message
+    data:
+      id: 20240514162637-f5PyS7
+      role: user
+      content: Write the {{framework}} component code as the creative genius and
         {{framework}} component genius you are - with good ui formatting.
 outputVariables:
-  - id: FH_jXQV_SSYspHm86V6ly
-    name: $text
-    type: string
   - id: Q2WTzv6RMk9ICJsX6vGPL
     name: $appearance.input
     type: string
@@ -218,13 +213,19 @@ outputVariables:
   - id: zRvuVDKK-NCOSxR8pa4bu
     name: code
     type: string
-    description: the full code
+    description: .tsx file code content
     required: true
-id: 20240509162850-NLpbtg
+    variable:
+      key: component-code
+      scope: session
+  - id: QRB4PuL-20erle1l0B9z1
+    name: $text
+    type: string
+id: 20240514162612-Pf7ouJ
 createdAt: 2024-05-09T08:28:50.229Z
 updatedAt: 2024-05-09T08:28:50.229Z
 createdBy: z1TCComgCJNHbHWetTWGdhPB6NYZ2ReDjLu
 updatedBy: z1TCComgCJNHbHWetTWGdhPB6NYZ2ReDjLu
-name: component-generation
+name: create-new-component
 model: gpt-4o
 temperature: 0.5
