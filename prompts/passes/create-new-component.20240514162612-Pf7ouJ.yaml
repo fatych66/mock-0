@@ -22,14 +22,6 @@ parameters:
         from: assistant
         parameters:
           designed: "{{designed}}"
-  - id: Ge8IIfOxTFDTvRYGQGSl7
-    key: code
-    type: source
-    source:
-      variableFrom: datastore
-      variable:
-        key: component-code
-        scope: session
   - id: EDHr1ZYu7vOet16THY5U2
     key: framework
   - id: RjPXQ6v8EcwzFqtjoMtID
@@ -49,9 +41,6 @@ prompts:
 
 
         The {{framework}}  component you write can make use of  mui...
-
-
-        // Last generated code: {{code}}
   - type: message
     data:
       id: 20240514153747-En2uvb
@@ -78,7 +67,7 @@ prompts:
         from `@blocklet/pages-kit/builtin/${libraryName}`
 
 
-        EXAMPLES:
+        Examples:
 
         You must import mui component this way:
 
@@ -171,10 +160,9 @@ prompts:
         data, component not supplied with any dynamic data.
 
         - Only write the code for the component; Do not write extra code to
-        import it! The code will directly be stored in an individual
-        {{framework}} .tsx file !
+        import it! The code will directly be stored in an individual .tsx file!
 
-        - Very important : Your component should be exported as default !
+        - Very important : Your component should be exported as default!
   - type: message
     data:
       id: 20240514162637-f5PyS7

@@ -1,7 +1,5 @@
 type: function
-parameters:
-  - id: DRMW30n1wLRA0gdweAi23
-    key: designed
+parameters: []
 prompts:
   Uj0m-ctvoWgzA_IJFDPGu:
     index: 0
@@ -24,6 +22,7 @@ outputVariables:
   - id: q833kHjOnunYEYEkOjjb5
     name: dumpJSONSimple
     type: string
+    required: true
 id: 20240513213411-LpgUcm
 createdAt: 2024-05-13T13:34:11.700Z
 updatedAt: 2024-05-13T13:34:11.700Z

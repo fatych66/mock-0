@@ -1,11 +1,72 @@
 type: prompt
-parameters: []
+parameters:
+  - id: DbTEhcaJgkH2IZYZPBG5e
+    key: code
+    type: source
+    source:
+      variableFrom: tool
+      agent:
+        id: 20240514162612-Pf7ouJ
+        from: assistant
+        parameters:
+          designed: "{{designed}}"
+          components: "{{components}}"
+          framework: "{{framework}}"
+          question: "{{question}}"
+  - id: pNcTws4RhXzogb4Ct8G5b
+    key: components
+    type: source
+    source:
+      variableFrom: tool
+      agent:
+        id: 20240513213411-LpgUcm
+        from: assistant
+        parameters: {}
+  - id: 5rpjLPh26M6kOaw06SyIs
+    key: framework
+  - id: LoaQmts4dj63idbgHyRUe
+    key: question
 prompts:
+  - type: message
+    data:
+      id: 20240514165057-5m5AmT
+      role: system
+      content: >
+        You are an expert in writing {{framework}} components and fixing
+        {{framework}} error code.
+
+
+        Your task is to detect component errors based on the provided code and
+        built-in components and user requirements, and if there are errors, you
+        need to fix the {{framework}} component code.
+
+
+        You will write the complete {{framework}} component code, which should
+        include all imports, and the component files will be used directly in
+        production!
   - type: message
     data:
       id: o-BWJhQXYjkicLge2LB7t
       role: user
-      content: ""
+      content: |
+        Code: 
+        ```
+        {{code}} 
+        ```
+
+        User Query: 
+        ```
+        {{question}}
+        ```
+
+        Builtin Libraries: 
+        ```
+        {{components.value}}
+        ```
+  - type: message
+    data:
+      id: 20240514172326-sLBGQs
+      role: user
 outputVariables:
   - id: hGGos2HNlRMiW4noztxxr
     name: $text
