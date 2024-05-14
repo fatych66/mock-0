@@ -35,9 +35,12 @@ prompts:
     data:
       id: 20240514153747-En2uvb
       role: user
+      content: "{{designedComponents.componentCondition}}"
+  - type: message
+    data:
+      id: 20240515010702-dRm0fF
+      role: user
       content: |-
-        {{designedComponents.componentCondition}}
-
         {{designedComponents.componentMetadata}}
 
         {{designedComponents.importantCondition}}

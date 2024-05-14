@@ -1,10 +1,10 @@
 type: prompt
 parameters:
   - id: DbTEhcaJgkH2IZYZPBG5e
-    key: codeResult
+    key: codeMemory
     type: source
     source:
-      variableFrom: tool
+      variableFrom: datastore
       agent:
         id: 20240514162612-Pf7ouJ
         from: assistant
@@ -13,6 +13,9 @@ parameters:
           components: "{{components}}"
           framework: "{{framework}}"
           question: "{{question}}"
+      variable:
+        key: component-code
+        scope: session
   - id: pNcTws4RhXzogb4Ct8G5b
     key: designedComponents
     type: source
@@ -48,10 +51,10 @@ prompts:
       id: o-BWJhQXYjkicLge2LB7t
       role: user
       content: |-
-        Code: 
-        ```
-        {{codeResult.code}} 
-        ```
+        Latest Code: 
+        ------------------------
+        {{codeMemory}}
+        ------------------------
   - type: message
     data:
       id: 20240514172326-sLBGQs

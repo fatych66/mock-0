@@ -77,6 +77,8 @@ code: >+
   let examplesList = [];
 
 
+  console.log(designed)
+
 
 
   designed.packages?.forEach(item => {
@@ -94,13 +96,12 @@ code: >+
   const componentCondition = `Multiple library components can be used while
   creating a new component in order to help you do a better design job, faster.
 
+  Very important: Any components you need to import should be imported from
+  \`@blocklet/pages-kit/builtin/{libraryName}\`
 
   Very important: You must use the components provided by the built-in
   libraries, any other components not provided by the built-in libraries will
   result in an error!
-
-  Very important: Any components you need to import should be imported from
-  \`@blocklet/pages-kit/builtin/{libraryName}\`
 
   Very important: You must import icon this way: <Icon icon="iconName"
   {...otherIconProps}/>
