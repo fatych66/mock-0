@@ -41,7 +41,7 @@ prompts:
       id: 20240509164656-jcRG7Q
       role: user
       content: >
-        {{designedComponents.designedMetadata}}
+        {{designedComponents.componentMetadata}}
 
 
         The full code for the new component, which uses mui sx props if needed,
@@ -49,7 +49,7 @@ prompts:
         design task.
 
 
-        {{designedComponents.importantMetadata}}
+        {{designedComponents.importantCondition}}
   - type: message
     data:
       id: 20240514162637-f5PyS7
