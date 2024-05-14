@@ -12,16 +12,6 @@ parameters:
           framework: "{{framework}}"
           question: "{{question}}"
           components: "{{components}}"
-  - id: Vs5TNf47Eyx45JqkfC3ZX
-    key: components
-    type: source
-    source:
-      variableFrom: knowledge
-      knowledge:
-        id: "443696818363039744"
-        from: knowledge
-        parameters:
-          message: "{{framework}}"
   - id: Ge8IIfOxTFDTvRYGQGSl7
     key: code
     type: source
@@ -31,7 +21,7 @@ parameters:
         key: codes
         scope: session
   - id: KnI2yA801cjf3XsgBMPxu
-    key: componentsFromScript
+    key: components
     type: source
     source:
       variableFrom: tool
@@ -65,7 +55,7 @@ prompts:
     data:
       id: 20240509163543-wc4Egy
       role: user
-      content: >-
+      content: >+
         Components can optionally be used when making the {{framework}}
         component
 
@@ -81,44 +71,11 @@ prompts:
 
         ```
 
-        {{componentsFromScript.value}}
+        {{components.value}}
 
         ```
 
 
-
-        // Very important : Any components you need to import should be imported
-        from `@blocklet/pages-kit/builtin/${libraryName}`
-
-
-        EXAMPLES:
-
-        You must import mui component this way:
-
-        ```tsx
-
-        import {muiComponentName} from
-        '@blocklet/pages-kit/builtin/mui/material'
-
-        ```
-
-
-        You must import mui lab component this way:
-
-        ```tsx
-
-        import {muiLabComponentName} from '@blocklet/pages-kit/builtin/mui/lab'
-
-        ```
-
-
-        You must import react lib this way:
-
-        ```tsx
-
-        import React from "@blocklet/pages-kit/builtin/react";
-
-        ```
   - type: message
     data:
       id: 20240509164116-OxvZUd
