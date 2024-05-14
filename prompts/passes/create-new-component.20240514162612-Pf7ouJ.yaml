@@ -147,16 +147,9 @@ prompts:
         ```
 
 
-
-        Write the full code for the new {{framework}} web component, which uses
-        mui sx props if needed, and optionally, library components and icons,
-        based on the provided design task.
-
-
-        The full code of the new {{framework}} component that you write will be
-        written directly to a .tsx file inside the {{framework}} project. Make
-        sure all necessary imports are done.
-
+        The full code for the new {{framework}} web component, which uses mui sx
+        props if needed, and optionally, library components and icons, based on
+        the provided design task.
 
 
         Important :

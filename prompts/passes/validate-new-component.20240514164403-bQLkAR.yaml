@@ -1,0 +1,18 @@
+type: prompt
+parameters: []
+prompts:
+  - type: message
+    data:
+      id: o-BWJhQXYjkicLge2LB7t
+      role: user
+      content: ""
+outputVariables:
+  - id: hGGos2HNlRMiW4noztxxr
+    name: $text
+id: 20240514164403-bQLkAR
+createdAt: 2024-05-14T08:44:03.183Z
+updatedAt: 2024-05-14T08:44:03.183Z
+createdBy: z1TCComgCJNHbHWetTWGdhPB6NYZ2ReDjLu
+updatedBy: z1TCComgCJNHbHWetTWGdhPB6NYZ2ReDjLu
+name: validate-new-component
+model: gpt-4o
