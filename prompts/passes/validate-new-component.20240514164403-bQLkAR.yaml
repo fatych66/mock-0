@@ -51,48 +51,22 @@ prompts:
     data:
       id: o-BWJhQXYjkicLge2LB7t
       role: user
-      content: |
+      content: |-
         Code: 
         ```
         {{code}} 
         ```
 
-        User Query: 
-        ```
-        {{question}}
-        ```
-
-        Builtin Libraries: 
-        ```
-        {{components.supportedList}}
-        ```
+        {{designedComponents.componentCondition}}
   - type: message
     data:
       id: 20240514172326-sLBGQs
       role: user
       content: >-
-        Important :
+        {{designedComponents.componentMetadata}}
 
-        - Make sure you import provided components libraries and icons that are
-        provided to you if you use them !
 
-        - The styles should be written directly in the elements sx tags . DO NOT
-        WRITE ANY CSS OUTSIDE OF SX. DO NOT IMPORT ANY CSS FILE.  DO NOT USE ANY
-        <style> IN THE CODE ! SX STYLING ONLY !
-
-        - Do not use libraries or imports except what is provided in this task;
-        otherwise it would crash the component because not installed. Do not
-        import extra libraries besides what is provided above !
-
-        - DO NOT HAVE ANY DYNAMIC DATA OR DATA PROPS ! Components are meant to
-        be working as is without supplying any variable to them when importing
-        them ! Only write a component that render directly with placeholders as
-        data, component not supplied with any dynamic data.
-
-        - Only write the code for the component; Do not write extra code to
-        import it! The code will directly be stored in an individual .tsx file!
-
-        - Very important : Your component should be exported as default!
+        {{designedComponents.importantCondition}}
 
         - Fix all bugs according to the bugs you find.
 

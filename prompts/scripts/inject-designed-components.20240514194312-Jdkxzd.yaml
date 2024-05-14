@@ -153,7 +153,12 @@ code: >+
 
 
 
-  const importantCondition = `Important:
+  const importantCondition = `The full code for the component, which uses mui sx
+  props if needed, and optionally, library components and icons, based on the
+  provided design task.
+
+
+  Important:
 
   - Make sure you import provided components libraries and icons that are
   provided to you if you use them !
