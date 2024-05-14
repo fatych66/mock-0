@@ -1,5 +1,18 @@
 type: prompt
 parameters:
+  - id: pNcTws4RhXzogb4Ct8G5b
+    key: designedComponents
+    type: source
+    source:
+      variableFrom: tool
+      agent:
+        id: 20240514194312-Jdkxzd
+        from: assistant
+        parameters:
+          designed: "{{designed}}"
+          components: "{{components}}"
+          framework: "{{framework}}"
+          question: "{{question}}"
   - id: DbTEhcaJgkH2IZYZPBG5e
     key: codeMemory
     type: source
@@ -16,19 +29,6 @@ parameters:
       variable:
         key: component-code
         scope: session
-  - id: pNcTws4RhXzogb4Ct8G5b
-    key: designedComponents
-    type: source
-    source:
-      variableFrom: tool
-      agent:
-        id: 20240514194312-Jdkxzd
-        from: assistant
-        parameters:
-          designed: "{{designed}}"
-          components: "{{components}}"
-          framework: "{{framework}}"
-          question: "{{question}}"
   - id: 5rpjLPh26M6kOaw06SyIs
     key: framework
   - id: LoaQmts4dj63idbgHyRUe

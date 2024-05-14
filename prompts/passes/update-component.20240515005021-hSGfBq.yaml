@@ -13,10 +13,6 @@ parameters:
           components: "{{components}}"
           framework: "{{framework}}"
           question: "{{question}}"
-  - id: EDHr1ZYu7vOet16THY5U2
-    key: framework
-  - id: 3ECd5viySAMjXmDPAajt6
-    key: question
   - id: gKIhitFTVpI7BcDApOnXW
     key: codeMemory
     type: source
@@ -25,6 +21,10 @@ parameters:
       variable:
         key: component-code
         scope: session
+  - id: EDHr1ZYu7vOet16THY5U2
+    key: framework
+  - id: 3ECd5viySAMjXmDPAajt6
+    key: question
 prompts:
   - type: message
     data:

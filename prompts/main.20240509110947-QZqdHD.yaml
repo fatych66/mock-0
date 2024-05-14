@@ -75,3 +75,4 @@ routes:
   - id: 20240514164403-bQLkAR
     type: prompt
     name: validate-new-component
+    functionName: if exists History Code, and user want to validate component
