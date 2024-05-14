@@ -54,7 +54,15 @@ outputVariables:
       required: false
     required: true
   - id: ZMjZKNOKHx2E9pj4jucx5
-    name: designedPrompt
+    name: componentCondition
+    type: string
+    required: true
+  - id: 8PduEgAf9i2OKcLUntudY
+    name: designedMetadata
+    type: string
+    required: true
+  - id: mXrPK90UGMuoWFvLJUrOf
+    name: importantMetadata
     type: string
     required: true
 id: 20240514194312-Jdkxzd
@@ -83,13 +91,20 @@ code: >+
 
 
 
-  const designedPrompt = `Multiple library components can be used while creating
-  a new component in order to help you do a better design job, faster.
+  const componentCondition = `Multiple library components can be used while
+  creating a new component in order to help you do a better design job, faster.
 
 
-  Very important: you must use the components provided by the built-in
+  Very important: You must use the components provided by the built-in
   libraries, any other components not provided by the built-in libraries will
   result in an error!
+
+  Very important: Any components you need to import should be imported from
+  \`@blocklet/pages-kit/builtin/{libraryName}\`
+
+  Very important: You must import icon this way: <Icon icon="iconName"
+  {...otherIconProps}/>
+
 
 
   Builtin Libraries: 
@@ -110,19 +125,65 @@ code: >+
   ---------------------------
 
 
-  Very important : Any components you need to import should be imported from
-  \`@blocklet/pages-kit/builtin/{libraryName}\`
+  Icons can optionally be used when making the ${framework} component
+
+
+  Suggested icons:
+
+  ---------------------------
+
+  ${designed.icons.join('\n')}
+
+  ---------------------------
+
+  ` 
+
+
+  const designedMetadata = `- COMPONENT NAME : ${designed.name}
+
+
+  - COMPONENT DESCRIPTION: ${question}
+
+
+  - COMPONENT SUGGESTION: ${designed.description}
+
+  ` 
+
+
+
+  const importantMetadata = `Important :
+
+  - Make sure you import provided components libraries and icons that are
+  provided to you if you use them !
+
+  - The styles should be written directly in the elements sx tags . DO NOT WRITE
+  ANY CSS OUTSIDE OF SX. DO NOT IMPORT ANY CSS FILE.  DO NOT USE ANY <style> IN
+  THE CODE ! SX STYLING ONLY !
+
+  - Do not use libraries or imports except what is provided in this task;
+  otherwise it would crash the component because not installed. Do not import
+  extra libraries besides what is provided above !
+
+  - DO NOT HAVE ANY DYNAMIC DATA OR DATA PROPS ! Components are meant to be
+  working as is without supplying any variable to them when importing them !
+  Only write a component that render directly with placeholders as data,
+  component not supplied with any dynamic data.
+
+  - Only write the code for the component; Do not write extra code to import it!
+  The code will directly be stored in an individual .tsx file!
+
+  - Very important : Your component should be exported as default!
 
   `
-
-  console.log({supportedList, examplesList, designedPrompt})
 
 
 
   return {
     supportedList,
     examplesList,
-    designedPrompt
+    componentCondition,
+    designedMetadata,
+    importantMetadata
   }
 
 

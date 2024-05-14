@@ -1,19 +1,7 @@
 type: prompt
 parameters:
-  - id: o95D2doxBJhdRgZCS58x9
-    key: designed
-    type: source
-    source:
-      variableFrom: tool
-      agent:
-        id: 20240509110939-PKK9oJ
-        from: assistant
-        parameters:
-          framework: "{{framework}}"
-          question: "{{question}}"
-          components: "{{components}}"
   - id: KnI2yA801cjf3XsgBMPxu
-    key: components
+    key: designedComponents
     type: source
     source:
       variableFrom: tool
@@ -21,15 +9,14 @@ parameters:
         id: 20240514194312-Jdkxzd
         from: assistant
         parameters:
-          designed: "{{designed}}"
+          designed: undefined
           components: "{{components}}"
           framework: "{{framework}}"
           question: "{{question}}"
   - id: EDHr1ZYu7vOet16THY5U2
     key: framework
-  - id: RjPXQ6v8EcwzFqtjoMtID
+  - id: 3ECd5viySAMjXmDPAajt6
     key: question
-    from: editor
 prompts:
   - type: message
     data:
@@ -48,134 +35,21 @@ prompts:
     data:
       id: 20240514153747-En2uvb
       role: user
-      content: >-
-        Multiple library components can be used while creating a new component
-        in order to help you do a better design job, faster.
-
-
-        Very important: you must use the components provided by the built-in
-        libraries, any other components not provided by the built-in libraries
-        will result in an error!
-
-
-        Builtin Libraries: 
-
-        ```
-
-        {{components.supportedList}}
-
-        ```
-
-
-        Builtin Libraries Example: 
-
-        ```
-
-        {{components.examplesList}}
-
-        ```
-
-
-        Very important : Any components you need to import should be imported
-        from `@blocklet/pages-kit/builtin/${libraryName}`
-
-
-        Examples:
-
-        You must import mui component this way:
-
-        ```tsx
-
-        import {muiComponentName} from
-        '@blocklet/pages-kit/builtin/mui/material'
-
-        ```
-
-
-        You must import mui lab component this way:
-
-        ```tsx
-
-        import {muiLabComponentName} from '@blocklet/pages-kit/builtin/mui/lab'
-
-        ```
-
-
-        You must import react lib this way:
-
-        ```tsx
-
-        import React from "@blocklet/pages-kit/builtin/react";
-
-        ```
-  - type: message
-    data:
-      id: 20240509164116-OxvZUd
-      role: user
-      content: |
-        Icons can optionally be used when making the {{framework}} component
-
-        Suggested icons: {{designed.icons}}
-
-        You must import icon this way:
-        ```tsx
-        import { Icon } from '@blocklet/pages-kit/builtin/iconify/react'
-
-        <Icon icon="iconName"/>
-        ```
+      content: "{{designedComponents.componentCondition}}"
   - type: message
     data:
       id: 20240509164656-jcRG7Q
       role: user
       content: >
-        - COMPONENT NAME : {{designed.name}}
+        {{designedComponents.designedMetadata}}
 
 
-        - COMPONENT DESCRIPTION :
-
-        ```
-
-        {{question}}
-
-        ```
+        The full code for the new component, which uses mui sx props if needed,
+        and optionally, library components and icons, based on the provided
+        design task.
 
 
-        - additional component suggestions :
-
-        ```
-
-        {{designed.description}}
-
-        ```
-
-
-        The full code for the new {{framework}} web component, which uses mui sx
-        props if needed, and optionally, library components and icons, based on
-        the provided design task.
-
-
-        Important :
-
-        - Make sure you import provided components libraries and icons that are
-        provided to you if you use them !
-
-        - The styles should be written directly in the elements sx tags . DO NOT
-        WRITE ANY CSS OUTSIDE OF SX. DO NOT IMPORT ANY CSS FILE.  DO NOT USE ANY
-        <style> IN THE CODE ! SX STYLING ONLY !
-
-        - Do not use libraries or imports except what is provided in this task;
-        otherwise it would crash the component because not installed. Do not
-        import extra libraries besides what is provided above !
-
-        - DO NOT HAVE ANY DYNAMIC DATA OR DATA PROPS ! Components are meant to
-        be working as is without supplying any variable to them when importing
-        them ! Only write a component that render directly with placeholders as
-        data, component not supplied with any dynamic data.
-
-        - Only write the code for the component; Do not write extra code to
-        import it! The code will directly be stored in an individual .tsx file!
-
-        - Very important : Your component should be exported as default!
+        {{designedComponents.importantMetadata}}
   - type: message
     data:
       id: 20240514162637-f5PyS7
