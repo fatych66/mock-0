@@ -6,20 +6,22 @@ prompts:
       id: 3z-V2JFB9MJmHHnNEE6RV
       role: user
       content: >-
-        Help me parse the following data and generate usable data
+        This is a ts file describing a built-in component for production code,
+        please help me format it for usable data
 
 
-        ```
+        ```ts
 
         type DumpJSONProps = {
-          name: string;
-          description: string;
+          name: string; // the package name
+          description: string; // the package description
           docs: {
-            import: string;
-            export: string;
+            import: string; // the package import way
+            export: string; // the components exported from this package.
             examples?: {
-              source: string;
-              code: string;
+              // the package usage examples
+              source: string; // filename
+              code: string; // example code
             }[];
           };
         };
@@ -1048,8 +1050,8 @@ prompts:
 
 
         const componentString = dumpJSON
-          .map(({ name, description, doc }) => {
-            return `${name}: ${description}; package: content: ${doc.export}`;
+          .map(({ name, description }) => {
+            return `${name}: ${description};`;
           })
           .join('\n');
 
@@ -1061,8 +1063,6 @@ prompts:
 
         ```
 outputVariables:
-  - id: nE2lIcbpWahPwALuTgmr9
-    name: $text
   - id: CEGPOvkgDBD_cKqxjVUcD
     name: dumpJSON
     type: array
@@ -1094,8 +1094,9 @@ outputVariables:
             - id: CqrlhD8BeRErqo5l_VCvA
               type: array
               name: exportList
-              description: Parses which packages were exported from docs.export and generates
-                a string array of them
+              description: "parses the package names exported from docs.export and generates
+                an array of strings, very important: the main needs to contain
+                the package names"
               required: true
               element:
                 id: zsowcVcFsPnE0E93U0RyI
@@ -1111,3 +1112,4 @@ updatedAt: 2024-05-13T14:22:01.959Z
 createdBy: z1TCComgCJNHbHWetTWGdhPB6NYZ2ReDjLu
 updatedBy: z1TCComgCJNHbHWetTWGdhPB6NYZ2ReDjLu
 name: Test memory
+model: gpt-3.5-turbo-16k
