@@ -6,3 +6,72 @@ variables:
       id: iKSVRDXtoSDV7RqvqJtcRmOGPysUwGsH
     reset: true
     defaultValue: ""
+  - key: component-name
+    scope: session
+    type:
+      type: string
+      id: EY9Lqv8H8R6NBA3dVS1RMZWanOaC42JJ
+    reset: true
+    defaultValue: ""
+  - key: component-description
+    scope: session
+    type:
+      type: string
+      id: S5BMxPz-YV5DBCKwMINZSCnrOj4iKd1S
+    reset: true
+    defaultValue: ""
+  - key: component-components
+    scope: session
+    type:
+      type: array
+      element:
+        id: WJ7WC3n-lTGc0EoBlf7HN
+        name: element
+        type: object
+        properties:
+          jXvQvAtDGmx9CqglSWbSB:
+            index: 0
+            data:
+              id: jXvQvAtDGmx9CqglSWbSB
+              type: string
+              required: true
+              name: name
+          EUrQwoOi3_r8r2zXNe5Np:
+            index: 1
+            data:
+              id: EUrQwoOi3_r8r2zXNe5Np
+              type: string
+              required: true
+              name: usage_reason
+          v0rdkfXF5To1CaXawd9UG:
+            index: 2
+            data:
+              id: v0rdkfXF5To1CaXawd9UG
+              type: string
+              required: true
+              name: package
+        required: true
+    reset: true
+    defaultValue: ""
+  - key: components-packages
+    scope: session
+    type:
+      type: array
+      element:
+        id: EWS-0vecl-3KedqjIsOrW
+        name: element
+        type: string
+        required: true
+    reset: true
+    defaultValue: ""
+  - key: component-icons
+    scope: session
+    type:
+      type: array
+      element:
+        id: DmT6y-JY79Y5KKOV_jdGB
+        name: element
+        type: string
+        required: true
+    reset: false
+    defaultValue: ""

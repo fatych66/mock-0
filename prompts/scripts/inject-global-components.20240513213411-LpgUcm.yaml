@@ -1,5 +1,16 @@
 type: function
-parameters: []
+parameters:
+  - id: kVhmpA5FkbioHwUGpnAng
+    key: dumpList
+    type: source
+    source:
+      variableFrom: knowledge
+      knowledge:
+        id: "443696818363039744"
+        from: knowledge
+        parameters:
+          message: "{{message}}"
+          all: true
 prompts:
   Uj0m-ctvoWgzA_IJFDPGu:
     index: 0
@@ -36,6 +47,9 @@ createdBy: z1TCComgCJNHbHWetTWGdhPB6NYZ2ReDjLu
 updatedBy: z1TCComgCJNHbHWetTWGdhPB6NYZ2ReDjLu
 name: inject-global-components
 code: >+
+  console.log(dumpList)
+
+
   type DumpJSONProps = {
     name: string; // the package name
     description: string; // the package description

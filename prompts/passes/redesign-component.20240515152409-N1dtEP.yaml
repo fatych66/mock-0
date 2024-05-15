@@ -1,12 +1,12 @@
-id: 20240509110939-PKK9oJ
+id: 20240515152409-N1dtEP
 type: prompt
-name: design-component
+name: redesign-component
 prompts:
   - type: message
     data:
       id: 20231208131000-LgzRpn
       content: >-
-        Your task is to design a {{framework}} component for a web app,
+        Your task is to modify a {{framework}} component for a web app,
         according to the user's request.
 
         If you judge it is relevant to do so, you can specify builtin library
@@ -26,7 +26,7 @@ prompts:
       role: user
       content: >
         Multiple library components can be used while creating a new component
-        in order to help you do a better design job, faster.
+        update in order to help you do a better design job, faster.
 
 
         Very important: you must use the builtin libraries, any other un-builtin
@@ -44,18 +44,20 @@ prompts:
     data:
       id: 20240509112755-aNk72Z
       role: user
-      content: >
-        Design the new {{framework}}  web component task for the user as the
-        creative genius you are.
+      content: >-
+        
 
-
-        User Query: 
+        New Component Updates User Query: 
 
         ```
 
         {{question}}
 
         ```
+
+
+        Design the  {{framework}}  web component updates for the user as the
+        creative genius you are.
 parameters:
   - id: ia6q5iSuTyYGOmKZtvhWh
     key: components
@@ -86,9 +88,6 @@ outputVariables:
     name: name
     type: string
     required: true
-    variable:
-      key: component-name
-      scope: session
   - id: BLKzpe8BoTPYVn1Zy0Wc5
     name: description
     type: string
@@ -96,9 +95,6 @@ outputVariables:
       query. Stick strictly to what the user wants in their request - do not go
       off track
     required: true
-    variable:
-      key: component-description
-      scope: session
   - id: sshhAUcg3VcYhh6AyMG2t
     name: icons
     type: array
@@ -108,9 +104,6 @@ outputVariables:
       id: 7-qNBKsldaUgHBQMEFVGC
       name: element
       type: string
-    variable:
-      key: component-icons
-      scope: session
   - id: QSlnf1Fo58rgsT1MQO2U5
     name: components
     type: array
@@ -153,9 +146,6 @@ outputVariables:
           required: true
       required: true
     required: true
-    variable:
-      key: component-components
-      scope: session
   - id: 4MdmrHO5FQigITkmHXWWO
     name: packages
     type: array
@@ -166,9 +156,6 @@ outputVariables:
       name: element
       type: string
       required: true
-    variable:
-      key: components-packages
-      scope: session
 createdBy: zNKn8FYNB9Dw2gX6qHQZJjnWzS4tU3QHTWKX
 updatedBy: zNKn8FYNB9Dw2gX6qHQZJjnWzS4tU3QHTWKX
 createdAt: 2023-09-30T12:23:04.603Z

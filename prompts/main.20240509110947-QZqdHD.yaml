@@ -3,7 +3,7 @@ parameters:
   - id: tqcP1X50IOZkGVqlyzHTY
     key: question
   - id: dAyMukT9YJqLh2bnH7fO6
-    key: code
+    key: codeMemory
     type: source
     source:
       variableFrom: datastore
@@ -48,9 +48,9 @@ updatedBy: z1TCComgCJNHbHWetTWGdhPB6NYZ2ReDjLu
 name: main
 model: gpt-4o
 prompt: |-
-  History Code: 
+  Latest Code: 
   -----------------------
-  {{code}}
+  {{codeMemory}}
   -----------------------
 
   User Query:
@@ -61,18 +61,18 @@ routes:
   - id: 20240514162612-Pf7ouJ
     type: prompt
     name: create-new-component
-    functionName: if History Code is empty
+    functionName: if Latest Code is empty
     parameters:
       framework: react
       question: "{{question}}"
   - id: 20240515005021-hSGfBq
     type: prompt
     name: update-old-component
-    functionName: if exists History Code, and user want to update component
+    functionName: if exists Latest Code, and user want to update component
     parameters:
       framework: react
       question: "{{question}}"
   - id: 20240514164403-bQLkAR
     type: prompt
     name: validate-new-component
-    functionName: if exists History Code, and user want to validate component
+    functionName: if exists Latest Code, and user want to validate component
