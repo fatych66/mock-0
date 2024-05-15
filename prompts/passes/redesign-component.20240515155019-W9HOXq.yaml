@@ -45,7 +45,13 @@ prompts:
       id: 20240509112755-aNk72Z
       role: user
       content: >-
-        - Latest Component Name:  {{nameMemory}}
+        - Latest Component Name:  
+
+        ```
+
+        {{nameMemory}}
+
+        ```
 
 
         - Latest Component Description: 
@@ -61,12 +67,14 @@ prompts:
 
         ```
 
-        # the builtin libraries data
-
         {{packagesMemory}}
 
+        ```
 
-        # the components data
+
+        - Latest Component Builtin Libraries Components: 
+
+        ```
 
         {{componentsMemory}}
 
@@ -89,6 +97,8 @@ prompts:
         {{question}}
 
         ```
+
+
 
 
         Design the  {{framework}}  web component updates for the user as the
@@ -231,6 +241,7 @@ outputVariables:
     variable:
       key: component-components
       scope: session
+    description: ""
   - id: 4MdmrHO5FQigITkmHXWWO
     name: packages
     type: array
@@ -249,5 +260,5 @@ updatedBy: zNKn8FYNB9Dw2gX6qHQZJjnWzS4tU3QHTWKX
 createdAt: 2023-09-30T12:23:04.603Z
 updatedAt: 2023-09-30T12:23:04.603Z
 model: gpt-4o
-description: generate the required design details to update the component
+description: generate the required design details to updated the provided component
 temperature: 0.5
