@@ -1,7 +1,7 @@
 type: function
 parameters:
-  - id: kVhmpA5FkbioHwUGpnAng
-    key: dumpList
+  - id: MEMA2TgAQhszFgoGs9dCB
+    key: dumpListText
     type: source
     source:
       variableFrom: knowledge
@@ -10,7 +10,7 @@ parameters:
         from: knowledge
         parameters:
           message: "{{message}}"
-          all: true
+          searchAll: true
 prompts:
   Uj0m-ctvoWgzA_IJFDPGu:
     index: 0
@@ -47,6 +47,17 @@ createdBy: z1TCComgCJNHbHWetTWGdhPB6NYZ2ReDjLu
 updatedBy: z1TCComgCJNHbHWetTWGdhPB6NYZ2ReDjLu
 name: inject-global-components
 code: >+
+  let dumpList = [];
+
+
+  try{
+    dumpList = JSON.parse(dumpListText)
+  } catch (e){
+    // ignore error
+    console.error(e)
+  }
+
+
   console.log(dumpList)
 
 

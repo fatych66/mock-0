@@ -65,12 +65,12 @@ outputVariables:
     name: importantCondition
     type: string
     required: true
-id: 20240514194312-Jdkxzd
+id: 20240515163530-uInNND
 createdAt: 2024-05-13T13:34:11.700Z
 updatedAt: 2024-05-13T13:34:11.700Z
 createdBy: z1TCComgCJNHbHWetTWGdhPB6NYZ2ReDjLu
 updatedBy: z1TCComgCJNHbHWetTWGdhPB6NYZ2ReDjLu
-name: inject-designed-components
+name: inject-redesigned-components
 code: >+
   let supportedList = [];
 
