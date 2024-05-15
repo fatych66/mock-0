@@ -1,4 +1,4 @@
-id: 20240515152409-N1dtEP
+id: 20240515155019-W9HOXq
 type: prompt
 name: redesign-component
 prompts:
@@ -26,7 +26,7 @@ prompts:
       role: user
       content: >
         Multiple library components can be used while creating a new component
-        update in order to help you do a better design job, faster.
+        in order to help you do a better design job, faster.
 
 
         Very important: you must use the builtin libraries, any other un-builtin
@@ -88,6 +88,9 @@ outputVariables:
     name: name
     type: string
     required: true
+    variable:
+      key: component-name
+      scope: session
   - id: BLKzpe8BoTPYVn1Zy0Wc5
     name: description
     type: string
@@ -95,6 +98,9 @@ outputVariables:
       query. Stick strictly to what the user wants in their request - do not go
       off track
     required: true
+    variable:
+      key: component-description
+      scope: session
   - id: sshhAUcg3VcYhh6AyMG2t
     name: icons
     type: array
@@ -104,6 +110,9 @@ outputVariables:
       id: 7-qNBKsldaUgHBQMEFVGC
       name: element
       type: string
+    variable:
+      key: component-icons
+      scope: session
   - id: QSlnf1Fo58rgsT1MQO2U5
     name: components
     type: array
@@ -146,6 +155,9 @@ outputVariables:
           required: true
       required: true
     required: true
+    variable:
+      key: component-components
+      scope: session
   - id: 4MdmrHO5FQigITkmHXWWO
     name: packages
     type: array
@@ -156,10 +168,13 @@ outputVariables:
       name: element
       type: string
       required: true
+    variable:
+      key: components-packages
+      scope: session
 createdBy: zNKn8FYNB9Dw2gX6qHQZJjnWzS4tU3QHTWKX
 updatedBy: zNKn8FYNB9Dw2gX6qHQZJjnWzS4tU3QHTWKX
 createdAt: 2023-09-30T12:23:04.603Z
 updatedAt: 2023-09-30T12:23:04.603Z
 model: gpt-4o
-description: generate the required design details to create a new component
+description: generate the required design details to update the component
 temperature: 0.5
