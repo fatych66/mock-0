@@ -25,8 +25,8 @@ prompts:
       id: 20240509111635-mSMXKW
       role: user
       content: >
-        Multiple library components can be used while creating a new component
-        in order to help you do a better design job, faster.
+        Multiple library components can be used while updating the component in
+        order to help you do a better design job, faster.
 
 
         Very important: you must use the builtin libraries, any other un-builtin
@@ -98,6 +98,10 @@ prompts:
 
         ```
 
+
+        Very Important: you must update the component based on the latest
+        design(if latest design exists), any deletion of the latest design
+        behaviour will result in an error!
 
 
 
