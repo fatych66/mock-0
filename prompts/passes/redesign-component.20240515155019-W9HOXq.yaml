@@ -45,7 +45,42 @@ prompts:
       id: 20240509112755-aNk72Z
       role: user
       content: >-
-        
+        - Latest Component Name:  {{nameMemory}}
+
+
+        - Latest Component Description: 
+
+        ```
+
+        {{descriptionMemory}}
+
+        ```
+
+
+        - Latest Component Builtin Libraries: 
+
+        ```
+
+        # the builtin libraries data
+
+        {{packagesMemory}}
+
+
+        # the components data
+
+        {{componentsMemory}}
+
+        ```
+
+
+        - Latest Component Icons: 
+
+        ```
+
+        {{iconsMemory}}
+
+        ```
+
 
         New Component Updates User Query: 
 
@@ -78,11 +113,49 @@ parameters:
       - id: E03qLnMEICQ4fEEV
         label: React
         value: react
-  - id: Yr4O4d88k0PTZ0l4bkl5r
+  - id: dlV76kY2ZPX2K04aB35UH
+    key: nameMemory
+    type: source
+    source:
+      variableFrom: datastore
+      variable:
+        key: component-name
+        scope: session
+  - id: iWnq6nT2ynLVsPGvpLXZl
+    key: descriptionMemory
+    type: source
+    source:
+      variableFrom: datastore
+      variable:
+        key: component-description
+        scope: session
+  - id: 7D8hWnSTmm8gZ8QwMroKI
+    key: componentsMemory
+    type: source
+    source:
+      variableFrom: datastore
+      variable:
+        key: component-components
+        scope: session
+  - id: RXRpVpAQ8xuT65okk7RRd
+    key: packagesMemory
+    type: source
+    source:
+      variableFrom: datastore
+      variable:
+        key: components-packages
+        scope: session
+  - id: u2bsdXjoafPy6AVobRsUl
+    key: iconsMemory
+    type: source
+    source:
+      variableFrom: datastore
+      variable:
+        key: component-icons
+        scope: session
+  - id: twNLO8F8vrRz1WNnAKeXZ
     key: question
     from: editor
-    placeholder: Say anything
-    required: true
 outputVariables:
   - id: 8UloarJU8HEOIrMFc1Aih
     name: name
