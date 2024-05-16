@@ -6,11 +6,16 @@ parameters:
     source:
       variableFrom: tool
       agent:
-        id: 20240509110939-PKK9oJ
+        id: 20240515155019-W9HOXq
         from: assistant
         parameters:
           components: "{{components}}"
           framework: "{{framework}}"
+          nameMemory: "{{nameMemory}}"
+          descriptionMemory: "{{descriptionMemory}}"
+          componentsMemory: "{{componentsMemory}}"
+          packagesMemory: "{{packagesMemory}}"
+          iconsMemory: "{{iconsMemory}}"
           question: "{{question}}"
   - id: EREc7XAQ22Nd0pjVdPm6O
     key: components

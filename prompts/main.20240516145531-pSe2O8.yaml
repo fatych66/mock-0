@@ -21,8 +21,8 @@ outputVariables:
     name: $appearance.page
     type: string
     initialValue:
-      componentId: ctnxha29uu8cx4xv
-      componentName: Simple Page
+      componentId: p1eqzolxqgl18thy
+      componentName: V0Page
       componentProps:
         evl2bioet801efpe:
           value: v0 component
@@ -42,12 +42,20 @@ outputVariables:
     type: string
   - id: FDn8h5qMhVlwfUWFfWNnv
     name: $appearance.output
+    initialValue:
+      componentId: t96p3exslgk3ek44
+      componentName: V0Output
+  - id: 9SNyoz56VOVZI4kXLbCYV
+    name: $appearance.input
+    initialValue:
+      componentId: bkeab9ebbdqzri2x
+      componentName: V0Input
 id: 20240516145531-pSe2O8
 createdAt: 2024-05-09T03:09:47.771Z
 updatedAt: 2024-05-09T03:09:47.771Z
 createdBy: z1TCComgCJNHbHWetTWGdhPB6NYZ2ReDjLu
 updatedBy: z1TCComgCJNHbHWetTWGdhPB6NYZ2ReDjLu
-name: main Copy
+name: main
 model: gpt-4o
 prompt: |-
   Latest Code: 
@@ -74,3 +82,5 @@ routes:
     parameters:
       framework: react
       question: "{{question}}"
+      codeMemory: "{{codeMemory}}"
+temperature: 0.8

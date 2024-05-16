@@ -6,10 +6,10 @@ parameters:
     source:
       variableFrom: tool
       agent:
-        id: 20240514194312-Jdkxzd
+        id: 20240515163530-uInNND
         from: assistant
         parameters:
-          designed: undefined
+          designed: "{{designed}}"
           components: "{{components}}"
           framework: "{{framework}}"
           question: "{{question}}"
@@ -25,6 +25,9 @@ parameters:
     key: framework
   - id: 3ECd5viySAMjXmDPAajt6
     key: question
+  - id: VGctCJz2btIngfVdHiJm3
+    key: designed
+    from: agentParameter
 prompts:
   - type: message
     data:
