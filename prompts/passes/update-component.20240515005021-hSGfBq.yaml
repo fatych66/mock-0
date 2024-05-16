@@ -62,27 +62,6 @@ prompts:
       content: Write the {{framework}} component code as the creative genius and
         {{framework}} component genius you are - with good ui formatting.
 outputVariables:
-  - id: Q2WTzv6RMk9ICJsX6vGPL
-    name: $appearance.input
-    type: string
-    initialValue:
-      componentId: 1wwtemqcdio6nqf0
-      componentName: Auto Form
-      componentProps:
-        wd7bj76kom8y46cj:
-          value: true
-        otf831cy4ebbdwil:
-          value: true
-        4y8wjmju1pllq6f1:
-          value: true
-        a1pldnt6iwmfghqc:
-          value: Generate Code
-  - id: mpHHz4WeIEv1a14H6oP4R
-    name: $appearance.output
-    type: string
-    initialValue:
-      componentId: cjjrsoiyh0ka2dq6
-      componentName: Chat Output
   - id: zRvuVDKK-NCOSxR8pa4bu
     name: code
     type: string
@@ -94,13 +73,6 @@ outputVariables:
   - id: QRB4PuL-20erle1l0B9z1
     name: $text
     type: string
-  - id: yf1YvMd1U0DYzHcyvsHRj
-    name: $children
-    type: string
-    initialValue:
-      agents:
-        - id: 20240514164403-bQLkAR
-          name: validate-new-component
 id: 20240515005021-hSGfBq
 createdAt: 2024-05-09T08:28:50.229Z
 updatedAt: 2024-05-09T08:28:50.229Z

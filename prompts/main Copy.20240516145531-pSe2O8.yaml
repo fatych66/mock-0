@@ -40,12 +40,14 @@ outputVariables:
   - id: w0QQJa0JEftvbC3-ETVkP
     name: $text
     type: string
-id: 20240516111007-9rVFAd
+  - id: FDn8h5qMhVlwfUWFfWNnv
+    name: $appearance.output
+id: 20240516145531-pSe2O8
 createdAt: 2024-05-09T03:09:47.771Z
 updatedAt: 2024-05-09T03:09:47.771Z
 createdBy: z1TCComgCJNHbHWetTWGdhPB6NYZ2ReDjLu
 updatedBy: z1TCComgCJNHbHWetTWGdhPB6NYZ2ReDjLu
-name: main v0 generated Copy
+name: main Copy
 model: gpt-4o
 prompt: |-
   Latest Code: 
