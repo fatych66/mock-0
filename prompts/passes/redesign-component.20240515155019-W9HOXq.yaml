@@ -35,11 +35,11 @@ prompts:
 
         Builtin Libraries: 
 
-        ```
+        ---------------------------
 
         {{components.supportedList}}
 
-        ```
+        ---------------------------
   - type: message
     data:
       id: 20240509112755-aNk72Z
@@ -47,56 +47,56 @@ prompts:
       content: >-
         - Latest Component Name:  
 
-        ```
+        ---------------------------
 
         {{nameMemory}}
 
-        ```
+        ---------------------------
 
 
         - Latest Component Description: 
 
-        ```
+        ---------------------------
 
         {{descriptionMemory}}
 
-        ```
+        ---------------------------
 
 
         - Latest Component Builtin Libraries: 
 
-        ```
+        ---------------------------
 
         {{packagesMemory}}
 
-        ```
+        ---------------------------
 
 
         - Latest Component Builtin Libraries Components: 
 
-        ```
+        ---------------------------
 
         {{componentsMemory}}
 
-        ```
+        ---------------------------
 
 
         - Latest Component Icons: 
 
-        ```
+        ---------------------------
 
         {{iconsMemory}}
 
-        ```
+        ---------------------------
 
 
         New Component Updates User Query: 
 
-        ```
+        ---------------------------
 
         {{question}}
 
-        ```
+        ---------------------------
 
 
         Very Important: you must update the component based on the latest

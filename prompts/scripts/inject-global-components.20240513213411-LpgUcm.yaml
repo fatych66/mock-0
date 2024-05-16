@@ -58,7 +58,7 @@ code: >+
   }
 
 
-  console.log(dumpList)
+  console.log(dumpList.length)
 
 
   type DumpJSONProps = {

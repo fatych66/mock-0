@@ -35,11 +35,11 @@ prompts:
 
         Builtin Libraries: 
 
-        ```
+        ---------------------------
 
         {{components.supportedList}}
 
-        ```
+        ---------------------------
   - type: message
     data:
       id: 20240509112755-aNk72Z
@@ -51,11 +51,11 @@ prompts:
 
         User Query: 
 
-        ```
+        ---------------------------
 
         {{question}}
 
-        ```
+        ---------------------------
 parameters:
   - id: ia6q5iSuTyYGOmKZtvhWh
     key: components

@@ -68,6 +68,7 @@ prompts:
 
         {{designedComponents.importantCondition}}
 
+
         - Fix all bugs according to the bugs you find
 
         - You are allowed to remove any problematic part of the code and replace
