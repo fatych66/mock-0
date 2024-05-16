@@ -1,16 +1,5 @@
 type: function
-parameters:
-  - id: MEMA2TgAQhszFgoGs9dCB
-    key: dumpListText
-    type: source
-    source:
-      variableFrom: knowledge
-      knowledge:
-        id: "443696818363039744"
-        from: knowledge
-        parameters:
-          message: "{{message}}"
-          searchAll: true
+parameters: []
 prompts:
   Uj0m-ctvoWgzA_IJFDPGu:
     index: 0
@@ -47,18 +36,23 @@ createdBy: z1TCComgCJNHbHWetTWGdhPB6NYZ2ReDjLu
 updatedBy: z1TCComgCJNHbHWetTWGdhPB6NYZ2ReDjLu
 name: inject-global-components
 code: >+
-  let dumpList = [];
+  // let dumpList = [];
 
 
-  try{
-    dumpList = JSON.parse(dumpListText)
-  } catch (e){
-    // ignore error
-    console.error(e)
-  }
+  // try{
+
+  //   dumpList = JSON.parse(dumpListText)
+
+  // } catch (e){
+
+  //   // ignore error
+
+  //   console.error(e)
+
+  // }
 
 
-  console.log(dumpList.length)
+  // console.log(dumpList.length)
 
 
   type DumpJSONProps = {
