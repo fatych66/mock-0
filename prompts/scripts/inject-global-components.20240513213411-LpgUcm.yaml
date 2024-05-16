@@ -68,12 +68,21 @@ code: >+
   }
 
 
+  // filter empty 
+
+  dumpList = dumpList.filter(({name, description, docs}) => {
+    if(!name || !description || !docs){
+      return false
+    }
+    return true
+  })
+
+
 
   const supportedList = dumpList
     .map(({ name, description, docs }) => {
-      if(!name || !description || !docs) return null
       return `${name}: ${description}, provided [${docs?.components?.join(', ')}] components`;
-    }).filter(Boolean);
+    });
 
   const examplesList = dumpList
     .map(({ name, docs }) => {
