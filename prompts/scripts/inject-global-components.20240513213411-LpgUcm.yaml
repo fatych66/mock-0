@@ -71,9 +71,9 @@ code: >+
 
   const supportedList = dumpList
     .map(({ name, description, docs }) => {
-      if(!name || !description || !docs) return ''
+      if(!name || !description || !docs) return null
       return `${name}: ${description}, provided [${docs?.components?.join(', ')}] components`;
-    });
+    }).filter(Boolean);
 
   const examplesList = dumpList
     .map(({ name, docs }) => {
@@ -91,7 +91,7 @@ code: >+
   \`\`\`
 
   `;
-    });
+    }).filter(Boolean);
 
   // without examples and components
 
