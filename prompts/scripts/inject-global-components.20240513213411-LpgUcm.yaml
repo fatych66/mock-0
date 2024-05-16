@@ -71,6 +71,7 @@ code: >+
 
   const supportedList = dumpList
     .map(({ name, description, docs }) => {
+      if(!name || !description || !docs) return ''
       return `${name}: ${description}, provided [${docs?.components?.join(', ')}] components`;
     });
 
