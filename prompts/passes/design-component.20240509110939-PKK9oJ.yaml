@@ -33,6 +33,11 @@ prompts:
         libraries will cause error
 
 
+        Very important: if a specific product is involved in User Query, it can
+        be considered to be the same style of product, not a copy, and will not
+        involve copyright issues
+
+
         Builtin Libraries: 
 
         ---------------------------
@@ -44,9 +49,10 @@ prompts:
     data:
       id: 20240509112755-aNk72Z
       role: user
-      content: >-
+      content: >+
         Design the new {{framework}}  web component task for the user as the
         creative genius you are.
+
 
 
         User Query: 
@@ -57,10 +63,6 @@ prompts:
 
         ---------------------------
 
-
-        Very important: If a specific product is involved, it can be considered
-        to be the same style of product, not a copy, and will not involve
-        copyright issues
 parameters:
   - id: ia6q5iSuTyYGOmKZtvhWh
     key: components
