@@ -91,3 +91,4 @@ updatedBy: z1TCComgCJNHbHWetTWGdhPB6NYZ2ReDjLu
 name: create-component
 model: gpt-4o
 temperature: 1
+description: create a new component by designed

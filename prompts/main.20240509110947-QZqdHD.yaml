@@ -72,7 +72,3 @@ routes:
     parameters:
       framework: react
       question: "{{question}}"
-  - id: 20240514164403-bQLkAR
-    type: prompt
-    name: validate-new-component
-    functionName: if exists Latest Code, and user want to validate component
