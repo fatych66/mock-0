@@ -68,6 +68,9 @@ code: >+
   }
 
 
+  console.log('dumpList count: ', dumpList.length)
+
+
   // filter empty 
 
   dumpList = dumpList.filter(({name, description, docs}) => {
