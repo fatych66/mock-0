@@ -61,7 +61,8 @@ prompts:
 
 
         Very important: Any components you need to import should be imported
-        from `@blocklet/pages-kit/builtin/{libraryName}`
+        from `@blocklet/pages-kit/builtin/{libraryName}`, the libraryName only
+        can use Builtin Libraries 
 
 
         Very important: You must use the components provided by the built-in
@@ -69,8 +70,17 @@ prompts:
         will result in an error!
 
 
-        Very important: You must import icon this way: <Icon icon="iconName"
-        {...otherIconProps}/>
+        Very important: You must import and use icon this way, ONLY CAN USE
+        ICONIFY: 
+
+        ---------------------------
+
+        import { Icon } from '@blocklet/pages-kit/builtin/iconify/react';
+
+
+        <Icon icon="iconName" {...otherIconProps}/>
+
+        ---------------------------
 
 
         Very important: You must import React from
