@@ -53,18 +53,6 @@ outputVariables:
       type: string
       required: false
     required: true
-  - id: ZMjZKNOKHx2E9pj4jucx5
-    name: componentCondition
-    type: string
-    required: true
-  - id: 8PduEgAf9i2OKcLUntudY
-    name: componentMetadata
-    type: string
-    required: true
-  - id: mXrPK90UGMuoWFvLJUrOf
-    name: importantCondition
-    type: string
-    required: true
   - id: uDynK7qoCJ_T78Ixk-F3_
     name: designed
     from:
@@ -76,11 +64,9 @@ updatedAt: 2024-05-13T13:34:11.700Z
 createdBy: z1TCComgCJNHbHWetTWGdhPB6NYZ2ReDjLu
 updatedBy: z1TCComgCJNHbHWetTWGdhPB6NYZ2ReDjLu
 name: inject-designed-components
-code: >+
+code: |+
   let supportedList = [];
-
   let examplesList = [];
-
 
   designed.packages?.forEach(item => {
     components.supportedList.forEach(ytem => {
@@ -92,118 +78,9 @@ code: >+
   })
 
 
-
-  const componentCondition = `Multiple library components can be used while
-  creating a new component in order to help you do a better design job, faster.
-
-  Very important: Any components you need to import should be imported from
-  \`@blocklet/pages-kit/builtin/{libraryName}\`
-
-  Very important: You must use the components provided by the built-in
-  libraries, any other components not provided by the built-in libraries will
-  result in an error!
-
-  Very important: You must import icon this way: <Icon icon="iconName"
-  {...otherIconProps}/>
-
-  Very important: You must import React from '@blocklet/pages-kit/builtin/react'
-  in code line 1
-
-
-  Builtin Libraries: 
-
-  ---------------------------
-
-  ${supportedList.join('\n')}
-
-  ---------------------------
-
-
-  Builtin Libraries Examples: 
-
-  ---------------------------
-
-  ${examplesList.join('\n')}
-
-  ---------------------------
-
-
-  Icons can optionally be used when making the ${framework} component
-
-
-  Suggested Icons:
-
-  ---------------------------
-
-  ${designed.icons.join('\n')}
-
-  ---------------------------
-
-  ` 
-
-
-  const componentMetadata = `- COMPONENT NAME: ${designed.name}
-
-
-  - COMPONENT DESCRIPTION:
-
-  ---------------------------
-
-  ${question}
-
-  ---------------------------
-
-
-  - COMPONENT SUGGESTION: 
-
-  ---------------------------
-
-  ${designed.description}
-
-  ---------------------------
-
-  ` 
-
-
-
-  const importantCondition = `The full code for the component, which uses mui sx
-  props if needed, and optionally, library components and icons, based on the
-  provided design task.
-
-
-  Important:
-
-  - Make sure you import provided components libraries and icons that are
-  provided to you if you use them !
-
-  - The styles should be written directly in the elements sx tags . DO NOT WRITE
-  ANY CSS OUTSIDE OF SX. DO NOT IMPORT ANY CSS FILE.  DO NOT USE ANY <style> IN
-  THE CODE ! SX STYLING ONLY !
-
-  - Do not use libraries or imports except what is provided in this task;
-  otherwise it would crash the component because not installed. Do not import
-  extra libraries besides what is provided above !
-
-  - DO NOT HAVE ANY DYNAMIC DATA OR DATA PROPS ! Components are meant to be
-  working as is without supplying any variable to them when importing them !
-  Only write a component that render directly with placeholders as data,
-  component not supplied with any dynamic data.
-
-  - Only write the code for the component; Do not write extra code to import it!
-  The code will directly be stored in an individual .tsx file!
-
-  - Very important: Your component should be exported as default!
-
-  `
-
-
-
   return {
     supportedList,
     examplesList,
-    componentCondition,
-    componentMetadata,
-    importantCondition
   }
 
 
