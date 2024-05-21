@@ -78,7 +78,7 @@ routes:
   - id: 20240515005021-hSGfBq
     type: prompt
     name: update-old-component
-    functionName: if exists Latest Code, and user want to update component
+    functionName: if exists Latest Code
     parameters:
       framework: react
       question: "{{question}}"
