@@ -125,6 +125,10 @@ code: >+
   creating a new component in order to help you do a better design job, faster.
 
 
+  Very important: You must import React from '@blocklet/pages-kit/builtin/react'
+  in code line 1
+
+
   Very important: Any components you need to import should be imported from
   '@blocklet/pages-kit/builtin/{libraryName}', the libraryName only can use
   Builtin Libraries 
@@ -146,9 +150,6 @@ code: >+
 
   ---------------------------
 
-
-  Very important: You must import React from '@blocklet/pages-kit/builtin/react'
-  in code line 1
 
   `
 
