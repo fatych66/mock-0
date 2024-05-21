@@ -181,13 +181,33 @@ code: >+
 
   - Your component should be exported as default
 
-  - The data in the component needs to be passed in as variables, which you can
-  set by referring to PROPERTIES_SCHEMA
+  - The data rendering and text in the component need to be passed externally,
+  so don't write dead data inside the component if possible
+
+  - You need to output the array object with the constant named
+  PROPERTIES_SCHEMA based on the following PROPERTIES_SCHEMA_PROPS to tell
+  people how to use the component, PROPERTIES_SCHEMA should be earlier in the
+  code
 
 
 
-  PROPERTIES_SCHEMA:
+  PROPERTIES_SCHEMA_PROPS:
 
+  ---------------------------
+
+  type PROPERTIES_SCHEMA_PROPS {
+    id: string;
+    key?: string;
+    type: 'number' | 'boolean' | 'json' | 'url' | 'string';
+    locales?: { // locales has at least a value for en | zh.
+      [locale: string]: {
+        name?: string;
+        defaultValue?: any;
+      };
+    };
+  }
+
+  ---------------------------
 
   `
 
