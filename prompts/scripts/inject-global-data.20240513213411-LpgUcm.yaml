@@ -40,12 +40,15 @@ outputVariables:
       name: element
       type: string
       required: true
+  - id: Ai4zja-gLV1h0vHrky71J
+    name: librariesCondiction
+    required: true
 id: 20240513213411-LpgUcm
 createdAt: 2024-05-13T13:34:11.700Z
 updatedAt: 2024-05-13T13:34:11.700Z
 createdBy: z1TCComgCJNHbHWetTWGdhPB6NYZ2ReDjLu
 updatedBy: z1TCComgCJNHbHWetTWGdhPB6NYZ2ReDjLu
-name: inject-global-components
+name: inject-global-data
 code: >+
   let dumpList = [];
 
@@ -105,27 +108,46 @@ code: >+
   `;
     }).filter(Boolean);
 
-  // without examples and components
-
-  const dumpListSimple = dumpList.map((item) => {
-    const ytem = { ...item };
-    // @ts-ignore
-    ytem.docs = {
-      import: ytem.docs?.import,
-      export: ytem.docs?.export,
-    };
-    return ytem;
-  });
-
 
   // eslint-disable-next-line no-console
 
   console.info('result: ', {
     supportedList,
     examplesList,
-    dumpList,
-    dumpListSimple,
   });
+
+
+
+  const librariesCondiction = `Multiple library components can be used while
+  creating a new component in order to help you do a better design job, faster.
+
+
+  Very important: Any components you need to import should be imported from
+  '@blocklet/pages-kit/builtin/{libraryName}', the libraryName only can use
+  Builtin Libraries 
+
+
+  Very important: You must use the components provided by the built-in
+  libraries, any other components not provided by the built-in libraries will
+  result in an error!
+
+
+  Very important: You must import and use icon this way, ONLY CAN USE ICONIFY: 
+
+  ---------------------------
+
+  import { Icon } from '@blocklet/pages-kit/builtin/iconify/react';
+
+
+  <Icon icon="iconName" {...otherIconProps}/>
+
+  ---------------------------
+
+
+  Very important: You must import React from '@blocklet/pages-kit/builtin/react'
+  in code line 1
+
+  `
 
 
   // --------- protected code ---------
@@ -134,6 +156,7 @@ code: >+
   return {
     supportedList: supportedList,
     examplesList: examplesList,
+    librariesCondiction: librariesCondiction
   }
 
 

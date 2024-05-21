@@ -18,7 +18,7 @@ parameters:
           iconsMemory: "{{iconsMemory}}"
           question: "{{question}}"
   - id: EREc7XAQ22Nd0pjVdPm6O
-    key: components
+    key: globalData
     type: source
     source:
       variableFrom: tool
@@ -58,6 +58,16 @@ outputVariables:
       type: string
       required: false
     required: true
+  - id: QFKu9ie5hDVQZLI6P-Gpk
+    name: designed
+    from:
+      type: input
+      id: mElAMdW9foRjZXTbLpUNW
+  - id: b80qSX2HTYwkblxbE02lS
+    name: globalData
+    from:
+      type: input
+      id: EREc7XAQ22Nd0pjVdPm6O
 id: 20240515163530-uInNND
 createdAt: 2024-05-13T13:34:11.700Z
 updatedAt: 2024-05-13T13:34:11.700Z
@@ -69,10 +79,10 @@ code: |+
   let examplesList = [];
 
   designed.packages?.forEach(item => {
-    components.supportedList.forEach(ytem => {
+    globalData.supportedList.forEach(ytem => {
       if(ytem.startsWith(item)) supportedList.push(ytem)
     })
-    components.examplesList.forEach(ytem => {
+    globalData.examplesList.forEach(ytem => {
       if(ytem.startsWith(item)) examplesList.push(ytem)
     })
   })

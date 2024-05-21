@@ -35,65 +35,24 @@ prompts:
     data:
       id: 20240514153747-En2uvb
       role: user
-      content: >-
-        Multiple library components can be used while creating a new component
-        in order to help you do a better design job, faster.
-
-
-        Very important: Any components you need to import should be imported
-        from `@blocklet/pages-kit/builtin/{libraryName}`, the libraryName only
-        can use Builtin Libraries 
-
-
-        Very important: You must use the components provided by the built-in
-        libraries, any other components not provided by the built-in libraries
-        will result in an error!
-
-
-        Very important: You must import and use icon this way, ONLY CAN USE
-        ICONIFY: 
-
-        ---------------------------
-
-        import { Icon } from '@blocklet/pages-kit/builtin/iconify/react';
-
-
-        <Icon icon="iconName" {...otherIconProps}/>
-
-        ---------------------------
-
-
-        Very important: You must import React from
-        '@blocklet/pages-kit/builtin/react' in code line 1
-
+      content: |-
+        {{designedComponents.globalData.librariesCondiction}}
 
         Builtin Libraries: 
-
         ---------------------------
-
         {{designedComponents.supportedList}}
-
         ---------------------------
-
 
         Builtin Libraries Examples: 
-
         ---------------------------
-
         {{designedComponents.examplesList}}
-
         ---------------------------
-
 
         Icons can optionally be used when making the {{framework}} component
 
-
         Suggested Icons:
-
         ---------------------------
-
         {{designedComponents.designed.icons}}
-
         ---------------------------
   - type: message
     data:
