@@ -49,7 +49,7 @@ prompts:
     data:
       id: 20240509112755-aNk72Z
       role: user
-      content: >+
+      content: >
         Design the new {{framework}}  web component task for the user as the
         creative genius you are.
 
@@ -62,7 +62,6 @@ prompts:
         {{question}}
 
         ---------------------------
-
 parameters:
   - id: ia6q5iSuTyYGOmKZtvhWh
     key: components

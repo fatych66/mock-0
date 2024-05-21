@@ -45,65 +45,48 @@ prompts:
     data:
       id: 20240509112755-aNk72Z
       role: user
-      content: >-
+      content: |-
         - Latest Component Name:  
-
         ---------------------------
-
         {{nameMemory}}
-
         ---------------------------
-
 
         - Latest Component Description: 
-
         ---------------------------
-
         {{descriptionMemory}}
-
         ---------------------------
-
 
         - Latest Component Builtin Libraries: 
-
         ---------------------------
-
         {{packagesMemory}}
-
         ---------------------------
-
 
         - Latest Component Builtin Libraries Components: 
-
         ---------------------------
-
         {{componentsMemory}}
-
         ---------------------------
-
 
         - Latest Component Icons: 
-
         ---------------------------
-
         {{iconsMemory}}
-
         ---------------------------
+  - type: message
+    data:
+      id: 20240521161029-MJNwXM
+      role: user
+      content: >-
+        Very Important: you must update the component based on the latest
+        design(if latest design exists), any deletion of the latest design
+        behaviour will result in an error!
 
 
-        New Component Updates User Query: 
+        - User Updates Query: 
 
         ---------------------------
 
         {{question}}
 
         ---------------------------
-
-
-        Very Important: you must update the component based on the latest
-        design(if latest design exists), any deletion of the latest design
-        behaviour will result in an error!
-
 
 
         Design the  {{framework}}  web component updates for the user as the
@@ -168,7 +151,7 @@ parameters:
       variable:
         key: component-icons
         scope: session
-  - id: twNLO8F8vrRz1WNnAKeXZ
+  - id: 0plFdZauD0GlNqzBYsKem
     key: question
     from: editor
 outputVariables:
@@ -251,7 +234,7 @@ outputVariables:
     name: packages
     type: array
     required: true
-    description: packages data
+    description: packages data from components package
     element:
       id: Qb6zU634OpRuHRBAwgrg0
       name: element

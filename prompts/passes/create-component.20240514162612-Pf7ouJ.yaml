@@ -59,7 +59,10 @@ prompts:
       id: 20240515010702-dRm0fF
       role: user
       content: |-
-        - COMPONENT NAME:  {{designedComponents.designed.name}}
+        - COMPONENT NAME: 
+        ---------------------------
+         {{designedComponents.designed.name}}
+        ---------------------------
 
         - COMPONENT DESCRIPTION:
         ---------------------------
@@ -74,34 +77,7 @@ prompts:
     data:
       id: 20240520164448-WLiJGA
       role: user
-      content: >-
-        The full code for the component, which uses mui sx props if needed, and
-        optionally, library components and icons, based on the provided design
-        task.
-
-
-        Important:
-
-        - Make sure you import provided components libraries and icons that are
-        provided to you if you use them !
-
-        - The styles should be written directly in the elements sx tags . DO NOT
-        WRITE ANY CSS OUTSIDE OF SX. DO NOT IMPORT ANY CSS FILE.  DO NOT USE ANY
-        <style> IN THE CODE ! SX STYLING ONLY !
-
-        - Do not use libraries or imports except what is provided in this task;
-        otherwise it would crash the component because not installed. Do not
-        import extra libraries besides what is provided above !
-
-        - DO NOT HAVE ANY DYNAMIC DATA OR DATA PROPS ! Components are meant to
-        be working as is without supplying any variable to them when importing
-        them ! Only write a component that render directly with placeholders as
-        data, component not supplied with any dynamic data.
-
-        - Only write the code for the component; Do not write extra code to
-        import it! The code will directly be stored in an individual .tsx file!
-
-        - Very important: Your component should be exported as default!
+      content: "{{designedComponents.globalData.codingCondiction}}"
   - type: message
     data:
       id: 20240514162637-f5PyS7
