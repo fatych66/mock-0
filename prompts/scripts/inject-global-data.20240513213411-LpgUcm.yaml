@@ -196,7 +196,7 @@ code: >+
   ---------------------------
 
   type PROPERTIES_SCHEMA_PROPS {
-    id: string; // 16-bit uuid
+    id: string; // unique random 16-bit uuid
     key: string; // prop key
     type: 'number' | 'boolean' | 'json' | 'url' | 'string'; // prop type
     locales?: { // locales has at least a value for en | zh.
