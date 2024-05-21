@@ -184,10 +184,9 @@ code: >+
   - All data in the component needs to be passed in externally, don't write any
   data to death, including but not limited to: data, text, etc
 
-  - You need to output the array object with the constant named
-  PROPERTIES_SCHEMA based on the following PROPERTIES_SCHEMA_PROPS to tell
-  people how to use the component, PROPERTIES_SCHEMA should be earlier in the
-  code
+  - You need to export a constant array object called PROPERTIES_SCHEMA based on
+  PROPERTIES_SCHEMA_PROPS below to tell people how to use the component.
+  PROPERTIES_SCHEMA should be placed in front of the code
 
 
 
