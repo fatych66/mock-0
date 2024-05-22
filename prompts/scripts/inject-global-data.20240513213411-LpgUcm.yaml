@@ -200,7 +200,7 @@ code: >+
     type: 'number' | 'boolean' | 'json' | 'url' | 'string'; // prop type
     locales?: { // locales has at least a value for en | zh.
       [locale: string]: {
-        name?: string;
+        name?: string; // input label name
         defaultValue?: any; // match type
       };
     };
