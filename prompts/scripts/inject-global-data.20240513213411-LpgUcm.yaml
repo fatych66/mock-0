@@ -201,7 +201,7 @@ code: >+
     locales?: { // locales has at least a value for en | zh.
       [locale: string]: {
         name?: string;
-        defaultValue?: any;
+        defaultValue?: any; // match type
       };
     };
   }
