@@ -197,7 +197,7 @@ code: >+
   type PROPERTIES_SCHEMA_PROPS = {
     id: string; // unique random uuid
     key: string; // prop key
-    type: 'number' | 'boolean' | 'json' | 'url' | 'string'; // prop type
+    type: 'number' | 'boolean' | 'json' | 'url' | 'string'; // enum type
     locales?: { // locales has at least a value for en | zh.
       [locale: string]: {
         name?: string; // input label name
