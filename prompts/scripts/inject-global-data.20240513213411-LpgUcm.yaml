@@ -201,7 +201,7 @@ code: >+
     locales?: { // locales has at least a value for en | zh.
       [locale: string]: {
         name?: string; // input label name
-        defaultValue?: any; // match the type, when the type is "json", defaultValue should be the string value after JSON.stringify
+        defaultValue?: any; // match the type, when the type is "json", defaultValue should be a string after JSON.stringify(defaultValue, null, 2)
       };
     };
   }
