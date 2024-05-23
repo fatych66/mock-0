@@ -194,7 +194,7 @@ code: >+
 
   ---------------------------
 
-  type PROPERTIES_SCHEMA_PROPS {
+  type PROPERTIES_SCHEMA_PROPS = {
     id: string; // Unique random uuid
     key: string; // prop key
     type: 'number' | 'boolean' | 'json' | 'url' | 'string'; // prop type
