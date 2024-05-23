@@ -195,13 +195,13 @@ code: >+
   ---------------------------
 
   type PROPERTIES_SCHEMA_PROPS = {
-    id: string; // Unique random uuid
+    id: string; // unique random uuid
     key: string; // prop key
     type: 'number' | 'boolean' | 'json' | 'url' | 'string'; // prop type
     locales?: { // locales has at least a value for en | zh.
       [locale: string]: {
         name?: string; // input label name
-        defaultValue?: any; // match type
+        defaultValue?: any; // match the type, when the type is "json", defaultValue should be the string value after JSON.stringify
       };
     };
   }
