@@ -50,6 +50,10 @@ prompts:
       id: 20240509112755-aNk72Z
       role: user
       content: >
+        Very important: you don't need to generate the code for me, you just
+        need to give me the designed json schema.
+
+
         Design the new {{framework}}  web component task for the user as the
         creative genius you are.
 
