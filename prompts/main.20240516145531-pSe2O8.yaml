@@ -72,16 +72,22 @@ outputVariables:
       items:
         - id: N_MMX-lVC5cmq-oPviQew
           parameters:
-            question: A TODO List component
-          title: A TODO List component
+            question: A list of product categories with image, name and description.
+          title: Product categories
         - id: kAvuQwVRacEzWgAvaV9bb
           parameters:
-            question: A Counter component
-          title: A Counter component
+            question: A landing page hero section with a heading, leading text and an opt-in
+              form.
+          title: Hero selection
         - id: 3jtniEwlZ08sUMI4lhA3r
           parameters:
-            question: A Hello World Component
-          title: A Hello World Component
+            question: A contact form with first name, last name, email, and message fields.
+              Put the form in a card with a submit button.
+          title: Contract form
+        - id: ir-VIuIrVZpkd1xxMCwO1
+          parameters:
+            question: An iOS dialing keyboard
+          title: iOS dialing keyboard
 id: 20240516145531-pSe2O8
 createdAt: 2024-05-09T03:09:47.771Z
 updatedAt: 2024-05-09T03:09:47.771Z
