@@ -106,14 +106,14 @@ routes:
   - id: 20240514162612-Pf7ouJ
     type: prompt
     name: create-new-component
-    functionName: if Latest Code is empty, which refers to the content area wrapped by -----
+    functionName: if Latest Code is empty
     parameters:
       framework: react
       question: "{{question}}"
   - id: 20240515005021-hSGfBq
     type: prompt
     name: update-old-component
-    functionName: if exists Latest Code
+    functionName: if Latest Code is exists
     parameters:
       framework: react
       question: "{{question}}"
