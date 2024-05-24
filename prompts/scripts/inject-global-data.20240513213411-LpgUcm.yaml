@@ -56,19 +56,19 @@ code: >+
   let dumpList = [];
 
 
-  try{
+  try {
     dumpList = JSON.parse(dumpListText)
     dumpList = dumpList.map(item => {
-      if(item.content){
-        try{
+      if (item.content) {
+        try {
           return JSON.parse(item.content)
-        } catch (e){
+        } catch (e) {
           // ignore error
         }
       }
       return false
     }).filter(Boolean)
-  } catch (e){
+  } catch (e) {
     // ignore error
     console.error(e)
   }
@@ -79,8 +79,8 @@ code: >+
 
   // filter empty 
 
-  dumpList = dumpList.filter(({name, description, docs}) => {
-    if(!name || !description || !docs){
+  dumpList = dumpList.filter(({ name, description, docs }) => {
+    if (!name || !description || !docs) {
       return false
     }
     return true
@@ -185,8 +185,7 @@ code: >+
   data to death, including but not limited to: data, text, etc
 
   - You need to export a constant array object called PROPERTIES_SCHEMA based on
-  PROPERTIES_SCHEMA_PROPS below to tell people how to use the component.
-  PROPERTIES_SCHEMA should be placed in front of the code
+  PROPERTIES_SCHEMA_PROPS below to tell people how to use the component. 
 
 
 
@@ -195,7 +194,7 @@ code: >+
   ---------------------------
 
   type PROPERTIES_SCHEMA_PROPS = {
-    id: string; // unique random uuid
+    id: string; // unique random id
     key: string; // prop key
     type: 'number' | 'boolean' | 'json' | 'url' | 'string'; // enum type
     locales?: { // locales has at least a value for en | zh.
