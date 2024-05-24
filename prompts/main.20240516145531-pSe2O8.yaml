@@ -47,9 +47,6 @@ outputVariables:
     type: string
     description: "code content "
     required: true
-  - id: w0QQJa0JEftvbC3-ETVkP
-    name: $text
-    type: string
   - id: FDn8h5qMhVlwfUWFfWNnv
     name: $appearance.output
     initialValue:
@@ -109,7 +106,7 @@ routes:
   - id: 20240514162612-Pf7ouJ
     type: prompt
     name: create-new-component
-    functionName: if Latest Code is empty
+    functionName: if Latest Code is empty, which refers to the content area wrapped by -----
     parameters:
       framework: react
       question: "{{question}}"
@@ -122,3 +119,4 @@ routes:
       question: "{{question}}"
       codeMemory: "{{codeMemory}}"
 temperature: 0.8
+defaultToolId: 20240515005021-hSGfBq
