@@ -50,6 +50,9 @@ outputVariables:
     initialValue:
       componentId: bkeab9ebbdqzri2x
       componentName: V0Input
+  - id: VT5eCc1dMDRRKDGdFmhHJ
+    name: $suggested.questions
+    description: simple component
 id: 20240516145531-pSe2O8
 createdAt: 2024-05-09T03:09:47.771Z
 updatedAt: 2024-05-09T03:09:47.771Z
