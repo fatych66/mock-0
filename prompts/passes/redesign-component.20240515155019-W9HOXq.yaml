@@ -75,9 +75,13 @@ prompts:
       id: 20240521161029-MJNwXM
       role: user
       content: >-
-        Very Important: you must update the component based on the latest
+        Very important: you must update the component based on the latest
         design(if latest design exists), any deletion of the latest design
         behaviour will result in an error!
+
+
+        Very important: you don't need to generate the code for me, you just
+        need to give me the re-designed json schema.
 
 
         - User Updates Query: 
