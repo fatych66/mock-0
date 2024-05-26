@@ -56,17 +56,17 @@ prompts:
       id: 20240515010702-dRm0fF
       role: user
       content: |-
-        - COMPONENT NAME: 
+        COMPONENT NAME: 
         ---------------------------
          {{designedComponents.designed.name}}
         ---------------------------
 
-        - COMPONENT DESCRIPTION:
+        COMPONENT DESCRIPTION:
         ---------------------------
         {{designedComponents.designed.description}}
         ---------------------------
 
-        - User Query: 
+        User Query: 
         ---------------------------
         {{question}}
         ---------------------------

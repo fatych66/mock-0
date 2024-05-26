@@ -73,19 +73,19 @@ prompts:
       id: 20240520163944-a7Brth
       role: user
       content: |-
-        - COMPONENT NAME:
+        COMPONENT NAME: 
         ---------------------------
          {{designedComponents.designed.name}}
         ---------------------------
 
-        - COMPONENT DESCRIPTION:
-        ---------------------------
-        {{question}}
-        ---------------------------
-
-        - COMPONENT SUGGESTION: 
+        COMPONENT DESCRIPTION:
         ---------------------------
         {{designedComponents.designed.description}}
+        ---------------------------
+
+        User Query: 
+        ---------------------------
+        {{question}}
         ---------------------------
   - type: message
     data:
