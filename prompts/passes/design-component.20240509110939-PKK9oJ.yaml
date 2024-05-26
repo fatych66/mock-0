@@ -93,8 +93,8 @@ outputVariables:
     name: description
     type: string
     description: Write a description for the component design task based on the user
-      query. Stick strictly to what the user wants in their request - do not go
-      off track
+      query. You need to use your creativity to add more details and stick
+      strictly to what the user wants in their request - do not go off track
     required: true
     variable:
       key: component-description
