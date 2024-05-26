@@ -153,9 +153,8 @@ code: >+
   - Make sure you import provided components libraries and icons that are
   provided to you if you use them !
 
-  - The mui component's styles should be written directly in the elements sx
-  tags . DO NOT WRITE ANY CSS OUTSIDE OF SX. DO NOT IMPORT ANY CSS FILE.  DO NOT
-  USE ANY <style> IN THE CODE ! SX STYLING ONLY !
+  - The styles for mui components should be written directly into the element sx
+  tags. Do not import any css files. Do not use any <style> in your code!
 
   - Do not use libraries or imports except what is provided in this task;
   otherwise it would crash the component because not installed. Do not import
