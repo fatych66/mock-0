@@ -47,7 +47,7 @@ outputVariables:
     name: codingCondiction
     required: true
   - id: k13gHZGgYwJO-C0vYOwQF
-    name: systemCondiction
+    name: designSystemCondiction
     required: true
 id: 20240513213411-LpgUcm
 createdAt: 2024-05-13T13:34:11.700Z
