@@ -6,13 +6,9 @@ parameters:
     source:
       variableFrom: tool
       agent:
+        projectId: "443610478048968704"
         id: 20240515163530-uInNND
         from: assistant
-        parameters:
-          designed: "{{designed}}"
-          components: "{{components}}"
-          framework: "{{framework}}"
-          question: "{{question}}"
   - id: gKIhitFTVpI7BcDApOnXW
     key: codeMemory
     type: source
@@ -76,7 +72,10 @@ prompts:
       id: 20240520163944-a7Brth
       role: user
       content: |-
-        - COMPONENT NAME: {{designedComponents.designed.name}}
+        - COMPONENT NAME:
+        ---------------------------
+         {{designedComponents.designed.name}}
+        ---------------------------
 
         - COMPONENT DESCRIPTION:
         ---------------------------

@@ -73,9 +73,9 @@ parameters:
     source:
       variableFrom: tool
       agent:
+        projectId: "443610478048968704"
         id: 20240513213411-LpgUcm
         from: assistant
-        parameters: {}
   - id: WgbfJldbD6q29Uqghf8Xr
     key: framework
     from: editor
@@ -86,7 +86,7 @@ parameters:
       - id: E03qLnMEICQ4fEEV
         label: React
         value: react
-  - id: 72OGLLouP60WKKnlvVDJk
+  - id: U5glKMNCG1Cvt6mlAtgxl
     key: question
     from: editor
 outputVariables:

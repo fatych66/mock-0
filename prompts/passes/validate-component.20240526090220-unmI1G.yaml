@@ -7,8 +7,16 @@ parameters:
       variableFrom: tool
       agent:
         projectId: "443610478048968704"
-        id: 20240514194312-Jdkxzd
+        id: 20240515163530-uInNND
         from: assistant
+  - id: gKIhitFTVpI7BcDApOnXW
+    key: codeMemory
+    type: source
+    source:
+      variableFrom: datastore
+      variable:
+        key: component-code
+        scope: session
   - id: EDHr1ZYu7vOet16THY5U2
     key: framework
   - id: 3ECd5viySAMjXmDPAajt6
@@ -19,17 +27,25 @@ prompts:
       id: mOKmJv7arsJbaRmr-6zw7
       role: system
       content: >-
-        You are an expert at writing {{framework}} components.
+        You are an expert in writing {{framework}} components and fixing
+        {{framework}} error code.
 
 
-        Your task is to write a new {{framework}}  component for a web app,
-        according to the provided task details.
-
-
-        The {{framework}}  component you write can make use of  mui...
+        Your task is to detect component errors based on the provided code and
+        built-in components and user requirements, and if there are errors, you
+        need to fix the {{framework}} component code.
   - type: message
     data:
       id: 20240514153747-En2uvb
+      role: user
+      content: |-
+        Latest Code: 
+        ------------------------
+        {{codeMemory}}
+        ------------------------
+  - type: message
+    data:
+      id: 20240520164322-8ngRCF
       role: user
       content: |-
         {{designedComponents.globalData.librariesCondiction}}
@@ -52,10 +68,10 @@ prompts:
         ---------------------------
   - type: message
     data:
-      id: 20240515010702-dRm0fF
+      id: 20240520163944-a7Brth
       role: user
       content: |-
-        - COMPONENT NAME: 
+        - COMPONENT NAME:
         ---------------------------
          {{designedComponents.designed.name}}
         ---------------------------
@@ -71,15 +87,23 @@ prompts:
         ---------------------------
   - type: message
     data:
-      id: 20240520164448-WLiJGA
+      id: 20240520163908-ROmNTJ
       role: user
-      content: "{{designedComponents.globalData.codingCondiction}}"
+      content: >-
+        {{designedComponents.globalData.codingCondiction}}
+
+        - Fix all bugs according to the bugs you find
+
+        - You are allowed to remove any problematic part of the code and replace
+        it
+
+        - Very important: You must follow the Component Condition
   - type: message
     data:
       id: 20240514162637-f5PyS7
       role: user
-      content: Write the {{framework}} component code as the creative genius and
-        {{framework}} component genius you are - with good ui formatting.
+      content: Fix and write the updated version of the {{framework}} component code
+        as the creative genius and {{framework}} component genius you are.
 outputVariables:
   - id: zRvuVDKK-NCOSxR8pa4bu
     name: code
@@ -92,12 +116,12 @@ outputVariables:
   - id: QRB4PuL-20erle1l0B9z1
     name: $text
     type: string
-id: 20240514162612-Pf7ouJ
+id: 20240526090220-unmI1G
 createdAt: 2024-05-09T08:28:50.229Z
 updatedAt: 2024-05-09T08:28:50.229Z
 createdBy: z1TCComgCJNHbHWetTWGdhPB6NYZ2ReDjLu
 updatedBy: z1TCComgCJNHbHWetTWGdhPB6NYZ2ReDjLu
-name: create-component
+name: validate-component
 model: gpt-4o
 temperature: 1
-description: create a new component by designed
+description: update the component by designed

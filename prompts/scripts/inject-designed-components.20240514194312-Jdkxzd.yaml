@@ -6,21 +6,18 @@ parameters:
     source:
       variableFrom: tool
       agent:
+        projectId: "443610478048968704"
         id: 20240509110939-PKK9oJ
         from: assistant
-        parameters:
-          components: "{{components}}"
-          framework: "{{framework}}"
-          question: "{{question}}"
   - id: EREc7XAQ22Nd0pjVdPm6O
     key: globalData
     type: source
     source:
       variableFrom: tool
       agent:
+        projectId: "443610478048968704"
         id: 20240513213411-LpgUcm
         from: assistant
-        parameters: {}
   - id: DXmLFHgstbGDA9hiMYFdX
     key: framework
   - id: 0IcQd4ZJJwq8CTdIkn5t1
