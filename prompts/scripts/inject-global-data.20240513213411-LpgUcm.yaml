@@ -46,6 +46,9 @@ outputVariables:
   - id: bzQ0aqTpqWyenbIU9yZw4
     name: codingCondiction
     required: true
+  - id: k13gHZGgYwJO-C0vYOwQF
+    name: systemCondiction
+    required: true
 id: 20240513213411-LpgUcm
 createdAt: 2024-05-13T13:34:11.700Z
 updatedAt: 2024-05-13T13:34:11.700Z
@@ -203,6 +206,18 @@ code: >+
   `
 
 
+  const systemCondiction = `
+
+  You can also specify the use of icons if you see that the user's update
+  request requires it.
+
+
+  You are very familiar with mui and are skilled in applying their components
+  and understanding their parameters.
+
+  `
+
+
 
   // --------- protected code ---------
 
@@ -211,7 +226,8 @@ code: >+
     supportedList: supportedList,
     examplesList: examplesList,
     librariesCondiction: librariesCondiction,
-    codingCondiction: codingCondiction
+    codingCondiction: codingCondiction,
+    systemCondiction: systemCondiction
   }
 
 
