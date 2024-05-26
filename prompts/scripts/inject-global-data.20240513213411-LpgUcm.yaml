@@ -181,8 +181,9 @@ code: >+
 
   - Your component should be exported as default
 
-  - All data in the component needs to be passed in externally, don't write any
-  data to death, including but not limited to: data, text, etc
+  - All data in the component needs to be passed in externally, do not write any
+  data to death, including but not limited to: data, text, etc., but functions
+  do not need to be passed in externally
 
   - You need to export a constant array object called PROPERTIES_SCHEMA based on
   PROPERTIES_SCHEMA_PROPS below to tell people how to use the component. 
