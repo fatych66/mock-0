@@ -119,7 +119,7 @@ outputVariables:
     variable:
       key: component-icons
       scope: session
-    description: iconify icon name (icon-set-prefix:icon-name)
+    description: iconify icon
   - id: QSlnf1Fo58rgsT1MQO2U5
     name: components
     type: array
