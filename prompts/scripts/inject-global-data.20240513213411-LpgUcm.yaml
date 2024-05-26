@@ -130,8 +130,8 @@ code: >+
 
   Very important: 
 
-  - You must use the components provided by the built-in libraries, any other
-  components not provided by the built-in libraries will result in an error!
+  - You must use the components provided by the Builtin Libraries, any other
+  components not provided by the Builtin Libraries will result in an error!
 
   - Any components you need to import should be imported from
   '@blocklet/pages-kit/builtin/{libraryName}', the libraryName only can use
@@ -208,8 +208,8 @@ code: >+
 
   const systemCondiction = `
 
-  If you judge it is relevant to do so, you can specify builtin library
-  components to use in the component update.
+  If you judge it is relevant to do so, you can specify Builtin Libraries
+  Components to use in the component update.
 
 
   You can also specify the use of iconify icons if you see that the user's
