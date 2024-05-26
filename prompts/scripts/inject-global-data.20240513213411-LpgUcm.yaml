@@ -172,8 +172,9 @@ code: >+
 
   - Your component should be exported as default
 
-  - All data (except for function) in the component need to be passed in from
-  outside, including but not limited to: data, text, etc.
+  - Some of the data in the component needs to be passed in externally,
+  including, but not limited to: data, text, etc. Passing in functions
+  externally is not allowed and will result in a component error!
 
   - The code must be formatted
 
@@ -190,7 +191,7 @@ code: >+
   type PROPERTIES_SCHEMA_PROPS = {
     id: string; // unique random id
     key: string; // prop key
-    type: 'number' | 'boolean' | 'json' | 'url' | 'string'; // enum type
+    type: 'number' | 'boolean' | 'json' | 'url' | 'string'; // enum type, not include function
     locales?: { // locales has at least a value for en | zh.
       [locale: string]: {
         name?: string; // input label name

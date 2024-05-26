@@ -86,7 +86,8 @@ outputVariables:
           title: Contract form
         - id: ir-VIuIrVZpkd1xxMCwO1
           parameters:
-            question: An iOS dialing keyboard
+            question: An iOS dialling keypad, where tapping on the number keys records the
+              number entered.
           title: An iOS dialing keyboard
 id: 20240516145531-pSe2O8
 createdAt: 2024-05-09T03:09:47.771Z
