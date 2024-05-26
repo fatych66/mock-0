@@ -118,5 +118,5 @@ routes:
       framework: react
       question: "{{question}}"
       codeMemory: "{{codeMemory}}"
-temperature: 0.8
+temperature: 1
 defaultToolId: 20240515005021-hSGfBq
