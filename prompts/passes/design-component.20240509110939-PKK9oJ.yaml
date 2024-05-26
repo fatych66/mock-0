@@ -119,6 +119,7 @@ outputVariables:
     variable:
       key: component-icons
       scope: session
+    description: iconify icon name (icon-set-prefix:icon-name)
   - id: QSlnf1Fo58rgsT1MQO2U5
     name: components
     type: array
@@ -168,7 +169,7 @@ outputVariables:
     name: packages
     type: array
     required: true
-    description: packages data from components package
+    description: Packages data from components package
     element:
       id: Qb6zU634OpRuHRBAwgrg0
       name: element
