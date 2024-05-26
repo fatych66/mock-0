@@ -159,7 +159,7 @@ code: >+
   tags. Do not import any css files. Do not use any <style> in your code!
 
   - If you need to override the style of a component, you can wrap it with mui's
-  <Box sx={{... .rewriteStyles}}> to wrap it!
+  <Box sx={{...rewriteStyles}}> to wrap it!
 
   - Do not use libraries or imports except what is provided in this task;
   otherwise it would crash the component because not installed. Do not import
