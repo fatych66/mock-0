@@ -125,21 +125,23 @@ code: >+
   creating a new component in order to help you do a better design job, faster.
 
 
-  Very important: You must import React from '@blocklet/pages-kit/builtin/react'
-  in code line 1
+  Very important: 
 
+  - You must import React from '@blocklet/pages-kit/builtin/react' in code line
+  1
 
-  Very important: Any components you need to import should be imported from
+  - Any components you need to import should be imported from
   '@blocklet/pages-kit/builtin/{libraryName}', the libraryName only can use
   Builtin Libraries 
 
+  - You must use the components provided by the built-in libraries, any other
+  components not provided by the built-in libraries will result in an error!
 
-  Very important: You must use the components provided by the built-in
-  libraries, any other components not provided by the built-in libraries will
-  result in an error!
+  - You must import and use icon this way, ONLY CAN USE ICONIFY, see below for
+  the Using Icon Example
 
 
-  Very important: You must import and use icon this way, ONLY CAN USE ICONIFY: 
+  Using Icon Example:
 
   ---------------------------
 
@@ -164,9 +166,9 @@ code: >+
   - Make sure you import provided components libraries and icons that are
   provided to you if you use them !
 
-  - The styles should be written directly in the elements sx tags . DO NOT WRITE
-  ANY CSS OUTSIDE OF SX. DO NOT IMPORT ANY CSS FILE.  DO NOT USE ANY <style> IN
-  THE CODE ! SX STYLING ONLY !
+  - The styles about mui should be written directly in the elements sx tags . DO
+  NOT WRITE ANY CSS OUTSIDE OF SX. DO NOT IMPORT ANY CSS FILE.  DO NOT USE ANY
+  <style> IN THE CODE ! SX STYLING ONLY !
 
   - Do not use libraries or imports except what is provided in this task;
   otherwise it would crash the component because not installed. Do not import
@@ -185,10 +187,10 @@ code: >+
   data to death, including but not limited to: data, text, etc., but functions
   do not need to be passed in externally
 
+  - The code must be formatted
+
   - You need to export a constant array object called PROPERTIES_SCHEMA based on
   PROPERTIES_SCHEMA_PROPS below to tell people how to use the component. 
-
-  - Your code must be formatted
 
 
   PROPERTIES_SCHEMA_PROPS:
