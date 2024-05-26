@@ -192,7 +192,7 @@ code: >+
     id: string; // unique random id
     key: string; // prop key
     type: 'number' | 'boolean' | 'json' | 'url' | 'string'; // enum type, not include function
-    locales?: { // locales has at least a value for en | zh.
+    locales?: { // locales contains at least the values en and zh.
       [locale: string]: {
         name?: string; // input label name
         defaultValue?: any; // match the type, when the type is "json", defaultValue should be a string after JSON.stringify(defaultValue, null, 2)
