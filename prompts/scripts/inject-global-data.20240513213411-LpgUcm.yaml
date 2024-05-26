@@ -187,6 +187,7 @@ code: >+
   - You need to export a constant array object called PROPERTIES_SCHEMA based on
   PROPERTIES_SCHEMA_PROPS below to tell people how to use the component. 
 
+  - Your code must be formatted
 
 
   PROPERTIES_SCHEMA_PROPS:
