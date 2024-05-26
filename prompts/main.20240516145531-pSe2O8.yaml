@@ -47,6 +47,9 @@ outputVariables:
     type: string
     description: "code content "
     required: true
+    variable:
+      key: component-code
+      scope: session
   - id: FDn8h5qMhVlwfUWFfWNnv
     name: $appearance.output
     initialValue:
@@ -118,5 +121,5 @@ routes:
       framework: react
       question: "{{question}}"
       codeMemory: "{{codeMemory}}"
-temperature: 1
+temperature: 0.5
 defaultToolId: 20240515005021-hSGfBq

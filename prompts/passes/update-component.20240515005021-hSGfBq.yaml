@@ -116,5 +116,5 @@ createdBy: z1TCComgCJNHbHWetTWGdhPB6NYZ2ReDjLu
 updatedBy: z1TCComgCJNHbHWetTWGdhPB6NYZ2ReDjLu
 name: update-component
 model: gpt-4o
-temperature: 1
+temperature: 0.5
 description: update the component by designed
