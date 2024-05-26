@@ -208,6 +208,10 @@ code: >+
 
   const systemCondiction = `
 
+  If you judge it is relevant to do so, you can specify builtin library
+  components to use in the component update.
+
+
   You can also specify the use of icons if you see that the user's update
   request requires it.
 
