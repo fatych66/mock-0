@@ -128,7 +128,7 @@ code: >+
   creating a new component in order to help you do a better design job, faster.
 
 
-  Very important: 
+  Very Important: 
 
   - You must use the components provided by the Builtin Libraries, any other
   components not provided by the Builtin Libraries will result in an error!
