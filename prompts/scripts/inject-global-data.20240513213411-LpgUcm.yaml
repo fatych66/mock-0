@@ -172,9 +172,8 @@ code: >+
 
   - Your component should be exported as default
 
-  - All data in the component needs to be passed in externally, do not write any
-  data to death, including but not limited to: data, text, etc., but functions
-  do not need to be passed in externally
+  - All data in the component other than functions need to be passed in from
+  outside, including but not limited to: data, text, etc.
 
   - The code must be formatted
 
