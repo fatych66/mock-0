@@ -7,7 +7,7 @@ prompts:
       id: 20231208131000-LgzRpn
       content: >-
         Your task is to modify a {{framework}} component for a web app,
-        according to the user's request.
+        according to the User Updates Query
 
 
         {{components.designSystemCondiction}}
@@ -42,27 +42,27 @@ prompts:
       id: 20240509112755-aNk72Z
       role: user
       content: |-
-        - Latest Component Name:  
+        Latest Component Name:  
         ---------------------------
         {{nameMemory}}
         ---------------------------
 
-        - Latest Component Description: 
+        Latest Component Description: 
         ---------------------------
         {{descriptionMemory}}
         ---------------------------
 
-        - Latest Component Builtin Libraries: 
+        Latest Component Builtin Libraries: 
         ---------------------------
         {{packagesMemory}}
         ---------------------------
 
-        - Latest Component Builtin Libraries Components: 
+        Latest Component Builtin Libraries Components: 
         ---------------------------
         {{componentsMemory}}
         ---------------------------
 
-        - Latest Component Icons: 
+        Latest Component Icons: 
         ---------------------------
         {{iconsMemory}}
         ---------------------------
@@ -80,17 +80,17 @@ prompts:
         need to give me the re-designed json schema.
 
 
-        - User Updates Query: 
+        As a creative genius, update the {{framework}} web component design
+        according to the User Updates Query.
+
+
+        User Updates Query: 
 
         ---------------------------
 
         {{question}}
 
         ---------------------------
-
-
-        Design the  {{framework}}  web component updates for the user as the
-        creative genius you are.
 parameters:
   - id: ia6q5iSuTyYGOmKZtvhWh
     key: components
