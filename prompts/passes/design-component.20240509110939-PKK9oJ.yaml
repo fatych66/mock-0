@@ -13,12 +13,12 @@ prompts:
         components to use in the component update.
 
 
-        You can also specify the use of icons(from iconify) if you see that the
-        user's update request requires it.
+        You can also specify the use of icons if you see that the user's update
+        request requires it.
 
 
-        You are very familiar with mui  and iconify and are skilled in applying
-        their components and understanding their parameters.
+        You are very familiar with mui and are skilled in applying their
+        components and understanding their parameters.
       role: system
   - type: message
     data:
