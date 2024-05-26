@@ -165,9 +165,9 @@ outputVariables:
   - id: BLKzpe8BoTPYVn1Zy0Wc5
     name: description
     type: string
-    description: Write a description for the component design task based on the user
-      query. You need to use your creativity to add more details and stick
-      strictly to what the user wants in their request - do not go off track
+    description: Update the component design task description based on user queries.
+      You need to use your creativity to add more details and strictly adhere to
+      the user's requirements - don't go off track!
     required: true
     variable:
       key: component-description
