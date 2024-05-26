@@ -177,7 +177,9 @@ code: >+
   - The code must be formatted
 
   - You need to export a constant array object called PROPERTIES_SCHEMA based on
-  PROPERTIES_SCHEMA_PROPS below to tell people how to use the component. 
+  PROPERTIES_SCHEMA_PROPS below to tell people how to use the component.
+  PROPERTIES_SCHEMA should be as close to the last line of the import statement
+  as possible, to make it easier for you to see this code.
 
 
   PROPERTIES_SCHEMA_PROPS:
