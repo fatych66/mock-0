@@ -137,7 +137,8 @@ code: >+
   - You must use the components provided by the built-in libraries, any other
   components not provided by the built-in libraries will result in an error!
 
-  - You must import and use icon via '@blocklet/pages-kit/builtin/iconify/react'
+  - You must import and use icon via
+  '@blocklet/pages-kit/builtin/iconify/react', DO NOT IMPORT FROM OTHER LIBRARY!
 
 
   `
