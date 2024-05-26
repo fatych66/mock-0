@@ -26,7 +26,8 @@ prompts:
         according to the provided task details.
 
 
-        The {{framework}}  component you write can make use of  mui...
+        The {{framework}}  component you write can make use of mui, iconify
+        icon...
   - type: message
     data:
       id: 20240514153747-En2uvb
@@ -102,3 +103,4 @@ model: gpt-4o
 temperature: 0.2
 description: create a new component by designed
 presencePenalty: 1
+frequencyPenalty: 1

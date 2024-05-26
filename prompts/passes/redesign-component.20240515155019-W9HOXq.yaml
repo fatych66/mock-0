@@ -10,7 +10,7 @@ prompts:
         according to the user's request.
 
 
-        {{components.systemCondiction}}
+        {{components.designSystemCondiction}}
       role: system
   - type: message
     data:

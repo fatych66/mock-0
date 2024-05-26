@@ -205,7 +205,7 @@ code: >+
   `
 
 
-  const systemCondiction = `
+  const designSystemCondiction = `
 
   If you judge it is relevant to do so, you can specify Builtin Libraries
   Components to use in the component update.
@@ -230,7 +230,7 @@ code: >+
     examplesList: examplesList,
     librariesCondiction: librariesCondiction,
     codingCondiction: codingCondiction,
-    systemCondiction: systemCondiction
+    designSystemCondiction: designSystemCondiction
   }
 
 
