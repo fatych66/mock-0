@@ -73,12 +73,12 @@ prompts:
       id: 20240520163944-a7Brth
       role: user
       content: |-
-        COMPONENT NAME: 
+        Component Name: 
         ---------------------------
          {{designedComponents.designed.name}}
         ---------------------------
 
-        COMPONENT DESCRIPTION:
+        Component Description:
         ---------------------------
         {{designedComponents.designed.description}}
         ---------------------------
