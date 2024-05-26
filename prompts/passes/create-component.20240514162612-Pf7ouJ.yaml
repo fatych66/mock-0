@@ -63,12 +63,12 @@ prompts:
 
         - COMPONENT DESCRIPTION:
         ---------------------------
-        {{question}}
+        {{designedComponents.designed.description}}
         ---------------------------
 
-        - COMPONENT SUGGESTION: 
+        - User Query: 
         ---------------------------
-        {{designedComponents.designed.description}}
+        {{question}}
         ---------------------------
   - type: message
     data:
