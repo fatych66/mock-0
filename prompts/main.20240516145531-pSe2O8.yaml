@@ -69,7 +69,7 @@ outputVariables:
       items:
         - id: N_MMX-lVC5cmq-oPviQew
           parameters:
-            question: A list of product categories with image, name and description.
+            question: A list of product categories with image, icon, name and description.
           title: Product categories
         - id: kAvuQwVRacEzWgAvaV9bb
           parameters:
