@@ -89,6 +89,7 @@ outputVariables:
     variable:
       key: component-name
       scope: session
+    description: Component name
   - id: BLKzpe8BoTPYVn1Zy0Wc5
     name: description
     type: string
@@ -111,7 +112,7 @@ outputVariables:
     variable:
       key: component-icons
       scope: session
-    description: iconify icons
+    description: The icons supported by iconify
   - id: QSlnf1Fo58rgsT1MQO2U5
     name: components
     type: array
@@ -157,11 +158,12 @@ outputVariables:
     variable:
       key: component-components
       scope: session
+    description: The usable components
   - id: 4MdmrHO5FQigITkmHXWWO
     name: packages
     type: array
     required: true
-    description: Packages data from components package
+    description: Packages data group by components package
     element:
       id: Qb6zU634OpRuHRBAwgrg0
       name: element
@@ -176,4 +178,4 @@ createdAt: 2023-09-30T12:23:04.603Z
 updatedAt: 2023-09-30T12:23:04.603Z
 model: gpt-4o
 description: generate the required design details to create a new component
-temperature: 1
+temperature: 0.5

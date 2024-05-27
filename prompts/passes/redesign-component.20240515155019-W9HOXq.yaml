@@ -162,6 +162,7 @@ outputVariables:
     variable:
       key: component-name
       scope: session
+    description: Component name
   - id: BLKzpe8BoTPYVn1Zy0Wc5
     name: description
     type: string
@@ -184,7 +185,7 @@ outputVariables:
     variable:
       key: component-icons
       scope: session
-    description: iconify icons
+    description: The icons supported by iconify
   - id: QSlnf1Fo58rgsT1MQO2U5
     name: components
     type: array
