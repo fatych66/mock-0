@@ -251,4 +251,4 @@ createdAt: 2023-09-30T12:23:04.603Z
 updatedAt: 2023-09-30T12:23:04.603Z
 model: gpt-4o
 description: generate the required design details to updated the provided component
-temperature: 1
+temperature: 0.5
