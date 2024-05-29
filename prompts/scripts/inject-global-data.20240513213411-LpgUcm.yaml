@@ -6,10 +6,10 @@ parameters:
     source:
       variableFrom: knowledge
       knowledge:
-        id: "443696818363039744"
+        id: "450871155390152704"
         from: knowledge
         parameters:
-          message: "{{message}}"
+          message: ""
           searchAll: true
 prompts:
   Uj0m-ctvoWgzA_IJFDPGu:

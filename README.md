@@ -1,6 +1,6 @@
-# Mock 0
+# mock-0
 
-Mock 0 is an AI-based code tool that can help you generate code quickly.
+
 
 ## Install And Run
 
