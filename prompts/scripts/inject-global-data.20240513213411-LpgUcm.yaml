@@ -133,10 +133,6 @@ code: >+
   - You must use the components provided by the Builtin Libraries, any other
   components not provided by the Builtin Libraries will result in an error!
 
-  - Any components you need to import should be imported from
-  '@blocklet/pages-kit/builtin/{libraryName}', the libraryName only can use
-  Builtin Libraries 
-
   - You must import React from '@blocklet/pages-kit/builtin/react' in code line
   1
 
