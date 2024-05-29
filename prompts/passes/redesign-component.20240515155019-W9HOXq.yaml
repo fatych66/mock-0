@@ -10,7 +10,7 @@ prompts:
         according to the User Updates Query
 
 
-        {{components.designSystemCondiction}}
+        {{globalData.designSystemCondiction}}
       role: system
   - type: message
     data:
@@ -34,7 +34,7 @@ prompts:
 
         ---------------------------
 
-        {{components.supportedList}}
+        {{globalData.supportedList}}
 
         ---------------------------
   - type: message
@@ -93,7 +93,7 @@ prompts:
         ---------------------------
 parameters:
   - id: ia6q5iSuTyYGOmKZtvhWh
-    key: components
+    key: globalData
     type: source
     source:
       variableFrom: tool
