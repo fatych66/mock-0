@@ -46,7 +46,7 @@ outputVariables:
     name: code
     type: string
     description: "code content "
-    required: false
+    required: true
     variable:
       key: component-code
       scope: session
