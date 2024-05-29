@@ -1,7 +1,7 @@
 type: prompt
 parameters:
   - id: KnI2yA801cjf3XsgBMPxu
-    key: designedComponents
+    key: redesignedComponents
     type: source
     source:
       variableFrom: tool
@@ -50,23 +50,23 @@ prompts:
       id: 20240520164322-8ngRCF
       role: user
       content: |-
-        {{designedComponents.globalData.librariesCondiction}}
+        {{redesignedComponents.globalData.librariesCondiction}}
 
         Builtin Libraries: 
         ---------------------------
-        {{designedComponents.supportedList}}
+        {{redesignedComponents.supportedList}}
         ---------------------------
 
         Builtin Libraries Examples: 
         ---------------------------
-        {{designedComponents.examplesList}}
+        {{redesignedComponents.examplesList}}
         ---------------------------
 
         Icons can optionally be used when making the {{framework}} component
 
         Suggested Icons:
         ---------------------------
-        {{designedComponents.designed.icons}}
+        {{redesignedComponents.designed.icons}}
         ---------------------------
   - type: message
     data:
@@ -75,12 +75,12 @@ prompts:
       content: |-
         Component Name: 
         ---------------------------
-         {{designedComponents.designed.name}}
+         {{redesignedComponents.designed.name}}
         ---------------------------
 
         Component Description:
         ---------------------------
-        {{designedComponents.designed.description}}
+        {{redesignedComponents.designed.description}}
         ---------------------------
 
         User Query: 
@@ -91,7 +91,7 @@ prompts:
     data:
       id: 20240520163908-ROmNTJ
       role: user
-      content: "{{designedComponents.globalData.codingCondiction}}"
+      content: "{{redesignedComponents.globalData.codingCondiction}}"
   - type: message
     data:
       id: 20240514162637-f5PyS7
