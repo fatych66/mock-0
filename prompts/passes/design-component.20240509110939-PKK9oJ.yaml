@@ -73,11 +73,14 @@ parameters:
     from: editor
     defaultValue: react
     label: Framework
-    type: select
+    type: string
     options:
-      - id: E03qLnMEICQ4fEEV
-        label: React
-        value: react
+      E03qLnMEICQ4fEEV:
+        index: 0
+        data:
+          id: E03qLnMEICQ4fEEV
+          label: React
+          value: react
   - id: U5glKMNCG1Cvt6mlAtgxl
     key: question
     from: editor
@@ -180,4 +183,4 @@ createdAt: 2023-09-30T12:23:04.603Z
 updatedAt: 2023-09-30T12:23:04.603Z
 model: gpt-4o
 description: generate the required design details to create a new component
-temperature: 1
+temperature: 0.5

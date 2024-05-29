@@ -106,11 +106,14 @@ parameters:
     from: editor
     defaultValue: react
     label: Framework
-    type: select
+    type: string
     options:
-      - id: E03qLnMEICQ4fEEV
-        label: React
-        value: react
+      E03qLnMEICQ4fEEV:
+        index: 0
+        data:
+          id: E03qLnMEICQ4fEEV
+          label: React
+          value: react
   - id: dlV76kY2ZPX2K04aB35UH
     key: nameMemory
     type: source
