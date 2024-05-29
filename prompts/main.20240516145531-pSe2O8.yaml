@@ -76,7 +76,7 @@ outputVariables:
           parameters:
             question: A contact form with first name, last name, email, and message fields.
               Put the form in a card with a submit button.
-          title: Contract form
+          title: Contact form
         - id: ir-VIuIrVZpkd1xxMCwO1
           parameters:
             question: An iOS dialling keypad, where tapping on the number keys records the
