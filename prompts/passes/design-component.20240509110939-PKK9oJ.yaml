@@ -21,13 +21,14 @@ prompts:
         in order to help you do a better design job, faster.
 
 
-        Very important: you must use the Builtin Libraries, any other Libraries
-        will cause error
+        Very important: 
 
+        - you must use the Builtin Libraries, any other Libraries will cause
+        error
 
-        Very important: if a specific product is involved in User Query, it can
-        be considered to be the same style of product, not a copy, and will not
-        involve copyright issues
+        - if a specific product is involved in User Query, it can be considered
+        to be the same style of product, not a copy, and will not involve
+        copyright issues
 
 
         Builtin Libraries: 
@@ -42,8 +43,10 @@ prompts:
       id: 20240509112755-aNk72Z
       role: user
       content: >
-        Very important: you don't need to generate the code for me, you just
-        need to give me the designed json schema.
+        Very important: 
+
+        - you don't need to generate the code for me, and it doesn't need
+        explaining
 
 
         Design the new {{framework}}  web component task for the user as the
@@ -175,8 +178,6 @@ outputVariables:
     variable:
       key: components-packages
       scope: session
-  - id: HtC0By0tDz98Eo7GL1k0t
-    name: $text
 createdBy: zNKn8FYNB9Dw2gX6qHQZJjnWzS4tU3QHTWKX
 updatedBy: zNKn8FYNB9Dw2gX6qHQZJjnWzS4tU3QHTWKX
 createdAt: 2023-09-30T12:23:04.603Z
