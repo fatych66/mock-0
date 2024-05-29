@@ -3,7 +3,7 @@ name: Mock 0
 description: Mock v0 is an AI-based code tool that can help you generate code quickly.
 model: ""
 createdAt: 2024-05-09T03:09:39.851Z
-updatedAt: 2024-05-29T03:47:23.191Z
+updatedAt: 2024-05-29T03:50:13.808Z
 createdBy: z1TCComgCJNHbHWetTWGdhPB6NYZ2ReDjLu
 updatedBy: z1TCComgCJNHbHWetTWGdhPB6NYZ2ReDjLu
 pinnedAt: null
@@ -13,4 +13,4 @@ topP: 1
 presencePenalty: null
 frequencyPenalty: null
 maxTokens: null
-gitAutoSync: null
+gitAutoSync: true
