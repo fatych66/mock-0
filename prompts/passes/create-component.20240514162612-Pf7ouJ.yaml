@@ -90,9 +90,6 @@ outputVariables:
     variable:
       key: component-code
       scope: session
-  - id: QRB4PuL-20erle1l0B9z1
-    name: $text
-    type: string
 id: 20240514162612-Pf7ouJ
 createdAt: 2024-05-09T08:28:50.229Z
 updatedAt: 2024-05-09T08:28:50.229Z
