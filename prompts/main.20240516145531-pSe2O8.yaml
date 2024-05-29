@@ -33,15 +33,8 @@ outputVariables:
       name: Blocklet v0
       description: Blocklet v0 faster gogogo!
     appearance:
-      componentId: p1eqzolxqgl18thy
+      componentId: 02lt4uk0tzaqcp32
       componentName: V0Page
-      componentProperties:
-        evl2bioet801efpe:
-          value: v0 component
-        okdfqqnpsmwpf454:
-          value: "#333"
-        221i6we6srwk66fm:
-          value: "#333"
   - id: m6UU_97GPVk2iRrB_Nrxo
     name: code
     type: string
@@ -56,7 +49,7 @@ outputVariables:
       componentId: t96p3exslgk3ek44
       componentName: V0Output
     appearance:
-      componentId: t96p3exslgk3ek44
+      componentId: n8udxk84r26pti73
       componentName: V0Output
   - id: 9SNyoz56VOVZI4kXLbCYV
     name: $appearance.input
@@ -64,7 +57,7 @@ outputVariables:
       componentId: bkeab9ebbdqzri2x
       componentName: V0Input
     appearance:
-      componentId: bkeab9ebbdqzri2x
+      componentId: ut1dkvyomgxfnx4b
       componentName: V0Input
   - id: Vi5eoMLtqxA3iTDGysc_i
     name: $openingQuestions
