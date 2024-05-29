@@ -55,7 +55,7 @@ prompts:
     data:
       id: 20240515010702-dRm0fF
       role: user
-      content: |-
+      content: |+
         Component Name: 
         ---------------------------
          {{designedComponents.designed.name}}
@@ -66,10 +66,6 @@ prompts:
         {{designedComponents.designed.description}}
         ---------------------------
 
-        User Query: 
-        ---------------------------
-        {{question}}
-        ---------------------------
   - type: message
     data:
       id: 20240520164448-WLiJGA
