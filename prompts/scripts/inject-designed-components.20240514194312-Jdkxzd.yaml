@@ -70,6 +70,7 @@ code: |+
   let supportedList = [];
   let examplesList = [];
 
+  // filter data
   designedComponent.packages?.forEach(item => {
     globalData.supportedList.forEach(ytem => {
       if(ytem.startsWith(item)) supportedList.push(ytem)
