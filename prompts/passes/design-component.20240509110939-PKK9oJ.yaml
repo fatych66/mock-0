@@ -184,3 +184,4 @@ updatedAt: 2023-09-30T12:23:04.603Z
 model: gpt-4o
 description: generate the required design details to create a new component
 temperature: 0.5
+topP: 1

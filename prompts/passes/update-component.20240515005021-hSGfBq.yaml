@@ -119,5 +119,5 @@ name: update-component
 model: gpt-4o
 temperature: 0.2
 description: update the component by designed
-presencePenalty: 1
+presencePenalty: 0
 frequencyPenalty: 0

@@ -101,5 +101,5 @@ name: create-component
 model: gpt-4o
 temperature: 0.2
 description: create a new component by designed
-presencePenalty: 1
+presencePenalty: 0
 frequencyPenalty: 0
