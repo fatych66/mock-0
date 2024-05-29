@@ -1,1 +1,11 @@
 id: 20240509110939-PKK9oJ
+tests:
+  - id: 1716960825266-WgJ6QmVPeVl2o5yU
+    parameters:
+      framework: react
+      question: ios 拨号键盘
+    createdBy: z1TCComgCJNHbHWetTWGdhPB6NYZ2ReDjLu
+    output: |+
+      The user is requesting a design for an iOS dial pad component.
+
+

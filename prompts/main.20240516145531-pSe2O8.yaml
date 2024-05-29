@@ -89,6 +89,8 @@ outputVariables:
             question: An iOS dialling keypad, where tapping on the number keys records the
               number entered.
           title: An iOS dialing keyboard
+  - id: _Yz4jv9Hco1KQpd_r3XHm
+    name: $text
 id: 20240516145531-pSe2O8
 createdAt: 2024-05-09T03:09:47.771Z
 updatedAt: 2024-05-09T03:09:47.771Z
