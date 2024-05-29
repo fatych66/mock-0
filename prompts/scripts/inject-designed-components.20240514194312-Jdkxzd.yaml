@@ -1,7 +1,7 @@
 type: function
 parameters:
   - id: mElAMdW9foRjZXTbLpUNW
-    key: designed
+    key: designedComponent
     type: source
     source:
       variableFrom: tool
@@ -70,7 +70,7 @@ code: |+
   let supportedList = [];
   let examplesList = [];
 
-  designed.packages?.forEach(item => {
+  designedComponent.packages?.forEach(item => {
     globalData.supportedList.forEach(ytem => {
       if(ytem.startsWith(item)) supportedList.push(ytem)
     })
