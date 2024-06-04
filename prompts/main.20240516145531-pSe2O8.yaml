@@ -119,3 +119,4 @@ routes:
       codeMemory: "{{codeMemory}}"
 temperature: 0.5
 defaultToolId: 20240515005021-hSGfBq
+description: Main entrance of the mock V0 demo
