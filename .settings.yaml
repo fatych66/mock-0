@@ -1,16 +1,8 @@
-_id: "443610478048968704"
-name: Mock 0
-description: null
-model: ""
+id: "443610478048968704"
+name: mock-0
 createdAt: 2024-05-09T03:09:39.851Z
-updatedAt: 2024-06-04T07:53:09.177Z
-createdBy: z1oHa79x3H6vxv9hfW8bHczPmwHKfAaRRmS
-updatedBy: z1U5GTVaSjnar3nLsE9WapbERRRAx45LJoq
-pinnedAt: null
-gitType: simple
+updatedAt: 2024-06-12T00:57:58.034Z
+createdBy: z1UBtWCNo2dAv1s4weaLoi77WMr5qoVvz11
+updatedBy: z1UBtWCNo2dAv1s4weaLoi77WMr5qoVvz11
 temperature: 1
 topP: 1
-presencePenalty: null
-frequencyPenalty: null
-maxTokens: null
-gitAutoSync: true
