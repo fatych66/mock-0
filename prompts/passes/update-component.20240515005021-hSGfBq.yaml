@@ -39,7 +39,7 @@ prompts:
   - type: message
     data:
       id: 20240514153747-En2uvb
-      role: user
+      role: system
       content: |-
         Latest Code: 
         ------------------------
@@ -48,7 +48,7 @@ prompts:
   - type: message
     data:
       id: 20240520164322-8ngRCF
-      role: user
+      role: system
       content: |-
         {{redesignedComponents.globalData.librariesCondiction}}
 
@@ -71,7 +71,7 @@ prompts:
   - type: message
     data:
       id: 20240520163944-a7Brth
-      role: user
+      role: system
       content: |-
         Component Name: 
         ---------------------------
@@ -90,12 +90,12 @@ prompts:
   - type: message
     data:
       id: 20240520163908-ROmNTJ
-      role: user
+      role: system
       content: "{{redesignedComponents.globalData.codingCondiction}}"
   - type: message
     data:
       id: 20240514162637-f5PyS7
-      role: user
+      role: system
       content: Write the {{framework}} component code as the creative genius and
         {{framework}} component genius you are - with good ui formatting.
 outputVariables:

@@ -15,7 +15,7 @@ prompts:
   - type: message
     data:
       id: 20240509111635-mSMXKW
-      role: user
+      role: system
       content: >
         Multiple library components can be used while updating the component in
         order to help you do a better design job, faster.
@@ -41,7 +41,7 @@ prompts:
   - type: message
     data:
       id: 20240509112755-aNk72Z
-      role: user
+      role: system
       content: |-
         Latest Component Name:  
         ---------------------------
@@ -70,7 +70,7 @@ prompts:
   - type: message
     data:
       id: 20240521161029-MJNwXM
-      role: user
+      role: system
       content: >-
         Very important: 
 
